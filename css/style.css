@@ -8,6 +8,7 @@ body{
   background-color: grey;
   width: 15vw;
   height: 100vh;
+  position: absolute;
 }
 .nav-wrapper{
 margin: 0;
@@ -15,6 +16,22 @@ margin: 0;
 .student-navbar p:first-child {
   margin: 0;
 }
+.main-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 85vw;
+  transform: translateX(15vw);
+}
+.small-box{
+  width:25vw;
+  background: white;
+  border:solid 1px #dedede;
+  margin-top: 10px;
+}
+
+
 @media only screen and (max-width:769px){
 .student-navbar{
   position: fixed;
@@ -23,11 +40,11 @@ margin: 0;
   transform: translateX(-51vw);
   }
   .main-content{
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100vw;
+    transform: translateX(0vw);
   }
   .small-box{
     background: white;
@@ -49,10 +66,7 @@ margin: 0;
   .small-box h4{
     margin-bottom:-5px;
   }
-
-}
-
-
-.main-content .small-box:last-child{
-  margin-bottom:6vh;
+  .main-content .small-box:last-child{
+    margin-bottom:6vh;
+  }
 }
