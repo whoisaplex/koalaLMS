@@ -6,7 +6,7 @@ body{
 }
 .student-navbar {
   background-color: grey;
-  width: 15vw;
+  width: 200px;
   min-width: 200px;
   height: 100vh;
   position: absolute;
@@ -44,6 +44,13 @@ margin: 0;
   margin-left:80px;
   width:50px;
 }
+ .nav-user-block img {
+  border-radius: 50%;
+  width: 59px;
+  border: solid 5px white;
+  position: absolute;
+ }
+
 
 
 @media only screen and (max-width:769px){
