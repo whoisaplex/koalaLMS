@@ -1,0 +1,23 @@
+#all_courses .small-box{
+  border-radius: 3px;
+}
+#all_courses .small-box h2, #all_courses .small-box h4, #all_courses .small-box p{
+  margin-left:10px;
+  color:#424242;
+}
+#all_courses .small-box p{
+  margin-top:-10px;
+
+}
+
+@media only screen and (max-width:769px){
+  #all_courses .small-box{
+    width:80vw;
+  }
+  #all_courses .small-box p{
+    margin-top:10px;
+  }
+  #all_courses .small-box div:last-child h4{
+    padding-bottom:20px;
+  }
+}
