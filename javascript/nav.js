@@ -23,13 +23,15 @@ function changeContent(ho){
   }
 }
 
-function toggleNavBar(){
+function toggleNavBar(that){
   if(mobileNavActive === true && self.innerWidth <= 769){
     document.getElementById('www').style.transform = 'translateX(-51vw)';
     mobileNavActive = false;
   }else{
-    document.getElementById('www').style.transform = 'translateX(0vw)';
-    document.getElementById('www').style.transition = '1s';
-    mobileNavActive = true;
+    if(that.id === 'openNav'){
+      document.getElementById('www').style.transform = 'translateX(0vw)';
+      document.getElementById('www').style.transition = '1s';
+      mobileNavActive = true;
+    }
   }
 }

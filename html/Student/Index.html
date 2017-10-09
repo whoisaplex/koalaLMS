@@ -24,21 +24,21 @@
 
     <nav class="mobile-nav">
       <div>
-        <img src="../../imgs/mobile-nav-button.png" width="50px;" onclick="toggleNavBar()">
+        <img src="../../imgs/mobile-nav-button.png" width="50px;" onclick="toggleNavBar(this)" id="openNav">
         <h2></h2>
       </div>
     </nav>
 
 
 
-      <section class="main-content" id="Home" onclick="toggleNavBar()">
+      <section class="main-content" id="Home" onclick="toggleNavBar(this)">
         <p>heeey</p>
         <p>heeey</p>
         <p>heeey</p>
         <p>heeey</p>
       </section>
                   <!--HELA SIDANS CONTENT -->
-        <section class="main-content" id="Upcoming">
+        <section class="main-content" id="Upcoming" onclick="toggleNavBar(this)">
             <!-- Article är våra textboxar -->
             <article class="small-box">
                 <h2>Kommande examinationer</h2>
@@ -56,7 +56,7 @@
             </article>
           </section>
 
-          <section class="main-content" id="Courses">
+          <section class="main-content" id="Courses" onclick="toggleNavBar(this)">
               <!-- Article är våra textboxar -->
               <article class="small-box" id="upcoming-courses">
                   <h2>Upcoming Courses</h2>
