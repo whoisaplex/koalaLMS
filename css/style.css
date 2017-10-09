@@ -177,6 +177,9 @@ img {
   }
 }
 @media only screen and (max-width:769px){
+  #Upcoming .small-box {
+    width: 80vw;
+  }
   #Upcoming .small-box:first-child {
     margin-top: 100px;
   }
