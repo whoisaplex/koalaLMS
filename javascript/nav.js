@@ -1,6 +1,6 @@
 let currentPage = "currentNavPme";
 let mobileNavActive = false;
-let pages = ['currentNavPme', 'Courses','Upcoming'];
+let pages = ['Home', 'Courses','Upcoming'];
 for(let countPages = 0; countPages < pages.length; countPages++){
   if(pages[countPages] === currentPage){
     document.getElementById(currentPage).style.display = 'flex';
