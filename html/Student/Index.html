@@ -9,61 +9,23 @@
         <link rel="stylesheet" href="../../css/style.css"/>
     </head>
     <body>
-    <nav class="student-navbar" style="position:absolute;">
+    <nav class="student-navbar" style="position:fixed;">
       <div class="nav-user-block">
         <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
         <p>Welcome,</p>
         <h4>Alexander Dahlberg</h4>
       </div>
-      <p><i class="fa fa-home" aria-hidden="true"></i>Home</p>
-      <p><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
-      <p><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</p>
-      <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</p>
-      <p><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</p>
+      <p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
+      <p onclick="changeContent(this)"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+      <p onclick="changeContent(this)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</p>
+      <p onclick="changeContent(this)"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</p>
+      <p onclick="changeContent(this)"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</p>
     </nav>
 
-        <!--HELA SIDANS CONTENT -->
-        <section class="main-content">
-            <!-- Article är våra textboxar -->
-            <article class="small-box">
-                <h2>Pågående kurser</h2>
-                <hr>
-                <!-- denna div är för varje list/kurs -->
-                <div>
-                  <h4>Programmering</h4>
-                  <div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                    <p>Hello</p>
-                  </div>
-                </div>
-            </article>
-            <article class="small-box">
-                <h2>Pågående kurser</h2>
-                <hr>
-                <!-- denna div är för varje list/kurs -->
-                <div>
-                  <h4>Programmering</h4>
-                  <div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                    <p>Hello</p>
-                  </div>
-                </div>
-            </article>
-            <article class="small-box">
-                <h2>Pågående kurser</h2>
-                <hr>
-                <!-- denna div är för varje list/kurs -->
-                <div>
-                  <h4>Programmering</h4>
-                  <div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                    <p>Hello</p>
-                  </div>
-                </div>
-            </article>
-          </section>
+      <section class="main-content" id="Home">
+      </section>
                   <!--HELA SIDANS CONTENT -->
-        <section class="main-content" id="upcoming">
+        <section class="main-content" id="Upcoming">
             <!-- Article är våra textboxar -->
             <article class="small-box">
                 <h2>Kommande examinationer</h2>
@@ -81,7 +43,7 @@
             </article>
           </section>
 
-          <section class="main-content" id="all_courses">
+          <section class="main-content" id="Courses">
               <!-- Article är våra textboxar -->
               <article class="small-box" id="upcoming-courses">
                   <h2>Upcoming Courses</h2>
@@ -99,6 +61,7 @@
 
               </article>
           </section>
+      <script src="../../javascript/nav.js"></script>
       <script src="../../javascript/upcoming.js"></script>
       <script src="../../javascript/courses.js"></script>
 

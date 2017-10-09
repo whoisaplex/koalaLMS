@@ -113,47 +113,47 @@ margin: 0;
 }
 
 /*/ Upcoming /*/
-#upcoming .small-box {
+#Upcoming .small-box {
   width:38vw;
   margin-top: 25px;
 
 }
-#upcoming .small-box h2 {
+#Upcoming .small-box h2 {
   margin: 5px;
 }
 
-#upcoming .small-box-li {
+#Upcoming .small-box-li {
   margin: 5px;
 }
-#upcoming .small-box-li h4 {
+#Upcoming .small-box-li h4 {
   margin-bottom: -10px;
 }
 @media only screen and (max-width:1225px){
-#upcoming .small-box {
+#Upcoming .small-box {
   width: 55vw;
 }
 }
 
-#all_courses .small-box{
+#Courses .small-box{
   border-radius: 3px;
 }
-#all_courses .small-box h2, #all_courses .small-box h4, #all_courses .small-box p{
+#Courses .small-box h2, #Courses .small-box h4, #Courses .small-box p{
   margin-left:10px;
   color:#424242;
 }
-#all_courses .small-box p{
+#Courses .small-box p{
   margin-top:-10px;
 
 }
 
 @media only screen and (max-width:769px){
-  #all_courses .small-box{
+  #Courses .small-box{
     width:80vw;
   }
-  #all_courses .small-box p{
+  #Courses .small-box p{
     margin-top:10px;
   }
-  #all_courses .small-box div:last-child h4{
+  #Courses .small-box div:last-child h4{
     padding-bottom:20px;
   }
 }
