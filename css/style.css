@@ -8,7 +8,7 @@ body{
   background-color: #353535;
   width: 200px;
   min-width: 200px;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   border-right: 1px solid #909090;
 }
@@ -131,5 +131,29 @@ margin: 0;
 @media only screen and (max-width:1225px){
 #upcoming .small-box {
   width: 55vw;
-} 
+}
+}
+
+#all_courses .small-box{
+  border-radius: 3px;
+}
+#all_courses .small-box h2, #all_courses .small-box h4, #all_courses .small-box p{
+  margin-left:10px;
+  color:#424242;
+}
+#all_courses .small-box p{
+  margin-top:-10px;
+
+}
+
+@media only screen and (max-width:769px){
+  #all_courses .small-box{
+    width:80vw;
+  }
+  #all_courses .small-box p{
+    margin-top:10px;
+  }
+  #all_courses .small-box div:last-child h4{
+    padding-bottom:20px;
+  }
 }
