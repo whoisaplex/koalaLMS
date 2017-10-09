@@ -5,11 +5,12 @@ body{
   font-family: sans-serif;
 }
 .student-navbar {
-  background-color: grey;
+  background-color: #353535;
   width: 200px;
   min-width: 200px;
   height: 100vh;
   position: absolute;
+  border-right: 1px solid #909090;
 }
 .nav-wrapper{
 margin: 0;
@@ -29,7 +30,7 @@ margin: 0;
   width:25vw;
   background: white;
   border:solid 1px #dedede;
-  margin-top: 10px;
+  padding: 10px;
 
 }
 .nav-user-block{
@@ -41,6 +42,7 @@ margin: 0;
   margin-top:-10px;
   margin-left:80px;
   width:50px;
+  color: white;
 }
  .nav-user-block img {
   border-radius: 50%;
@@ -50,6 +52,7 @@ margin: 0;
  }
  .student-navbar p {
   margin-left: 14px;
+  color: white;
  }
 .student-navbar p i {
   width: 25px;
@@ -107,4 +110,26 @@ margin: 0;
     margin:10px auto 10px auto;
     width: 50vw;
   }
+}
+
+/*/ Upcoming /*/
+#upcoming .small-box {
+  width:38vw;
+  margin-top: 25px;
+
+}
+#upcoming .small-box h2 {
+  margin: 5px;
+}
+
+#upcoming .small-box-li {
+  margin: 5px;
+}
+#upcoming .small-box-li h4 {
+  margin-bottom: -10px;
+}
+@media only screen and (max-width:1225px){
+#upcoming .small-box {
+  width: 55vw;
+} 
 }
