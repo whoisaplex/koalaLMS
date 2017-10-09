@@ -1,10 +1,11 @@
-let currentPage = "currentNavPme";
+let currentPage = "Home";
 let mobileNavActive = false;
 let pages = ['Home', 'Courses','Upcoming'];
 for(let countPages = 0; countPages < pages.length; countPages++){
   if(pages[countPages] === currentPage){
     document.getElementById(currentPage).style.display = 'flex';
     document.getElementById('nav-menu').childNodes[1].style.background = '#2e3344';
+    document.getElementById('nav-menu').childNodes[1].style.borderRight = 'solid 4px orange';
   }else{
     document.getElementById(pages[countPages]).style.display = 'none';
   }
@@ -26,6 +27,7 @@ function changeContent(currentNavP){
     let tempP = document.getElementById('nav-menu').querySelectorAll('p');
     for(let x = 0; x < tempP.length; x++){
       tempP[x].style.background = '';
+      tempP[x].style.borderRight = 'none';
     }
     document.getElementById('currentPageHeader').innerHTML = currentPName;
     currentNavP.style.background = '#2e3344';
