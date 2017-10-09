@@ -1,5 +1,4 @@
 let currentPage = "Home";
-alert(self.innerWidth);
 let mobileNavActive = false;
 let pages = ['Home', 'Courses','Upcoming'];
 for(let countPages = 0; countPages < pages.length; countPages++){
@@ -30,6 +29,7 @@ function toggleNavBar(){
     mobileNavActive = false;
   }else{
     document.getElementById('www').style.transform = 'translateX(0vw)';
+    document.getElementById('www').style.transition = '1s';
     mobileNavActive = true;
   }
 }
