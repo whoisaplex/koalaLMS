@@ -81,12 +81,16 @@ margin: 0;
 @media only screen and (max-width:769px){
   .student-navbar{
     position: fixed;
-    background-color:#353535;
+    background-color:#32374a;
     width: 50vw;
     min-width: 0px;
     transform: translateX(-51vw);
     z-index: 3;
   }
+  .nav-menu p {
+  background-color: #32374a;
+
+ }
 
   .mobile-nav{
     position:fixed;
