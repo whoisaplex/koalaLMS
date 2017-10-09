@@ -11,7 +11,12 @@ body{
   height: 100%;
   position: absolute;
   border-right: 1px solid #909090;
+
 }
+.mobile-nav{
+  display:none;
+}
+
 .nav-wrapper{
 margin: 0;
 }
@@ -68,7 +73,20 @@ margin: 0;
   width: 50vw;
   min-width: 0px;
   transform: translateX(-51vw);
+  z-index: 3;
   }
+
+  .mobile-nav{
+    position:fixed;
+    width:100vw;
+    height:75px;
+    background:black;
+    z-index:2;
+    display:block;
+  }
+
+
+
   .main-content{
     display: flex;
     flex-direction: column;
@@ -149,6 +167,9 @@ margin: 0;
 @media only screen and (max-width:769px){
   #Courses .small-box{
     width:80vw;
+  }
+  #Courses .small-box:first-child{
+    margin-top:100px;
   }
   #Courses .small-box p{
     margin-top:10px;

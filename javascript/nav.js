@@ -1,4 +1,6 @@
 let currentPage = "Home";
+alert(self.innerWidth);
+let mobileNavActive = false;
 let pages = ['Home', 'Courses','Upcoming'];
 for(let countPages = 0; countPages < pages.length; countPages++){
   if(pages[countPages] === currentPage){
@@ -19,5 +21,15 @@ function changeContent(ho){
     }else{
       document.getElementById(pages[countPages]).style.display = 'none';
     }
+  }
+}
+
+function toggleNavBar(){
+  if(mobileNavActive === true && self.innerWidth <= 769){
+    document.getElementById('www').style.transform = 'translateX(-51vw)';
+    mobileNavActive = false;
+  }else{
+    document.getElementById('www').style.transform = 'translateX(0vw)';
+    mobileNavActive = true;
   }
 }

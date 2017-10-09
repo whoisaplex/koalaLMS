@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../../css/style.css"/>
     </head>
     <body>
-    <nav class="student-navbar" style="position:fixed;">
+    <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
         <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
         <p>Welcome,</p>
@@ -22,7 +22,20 @@
       <p onclick="changeContent(this)"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</p>
     </nav>
 
-      <section class="main-content" id="Home">
+    <nav class="mobile-nav">
+      <div>
+        <img src="../../imgs/mobile-nav-button.png" width="50px;" onclick="toggleNavBar()">
+        <h2></h2>
+      </div>
+    </nav>
+
+
+
+      <section class="main-content" id="Home" onclick="toggleNavBar()">
+        <p>heeey</p>
+        <p>heeey</p>
+        <p>heeey</p>
+        <p>heeey</p>
       </section>
                   <!--HELA SIDANS CONTENT -->
         <section class="main-content" id="Upcoming">
