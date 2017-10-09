@@ -5,7 +5,7 @@ body{
   font-family: sans-serif;
 }
 .student-navbar {
-  background-color: #353535;
+  background-color: #3b4052;
   width: 200px;
   min-width: 200px;
   height: 100%;
@@ -58,11 +58,18 @@ margin: 0;
  .nav-user-block p {
   color:white;
  }
+ .nav-menu {
+  margin-top: 35px;
+ }
  .nav-menu p {
   color: white;
   padding: 10px 0px 10px 25px;
   margin: 0px;
-  background: #1b1a1b;
+  background-color: #3b4052;
+ }
+ .nav-menu p:hover {
+  background-color: #32374a;
+
  }
 .student-navbar p i {
   width: 25px;
