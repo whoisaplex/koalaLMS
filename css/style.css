@@ -109,7 +109,7 @@ margin: 0;
   .mobile-nav div:first-child{
     justify-self:start;
   }
-  
+
 
 img {
   width: 75px;
@@ -194,8 +194,10 @@ img {
   }
 }
 
+/*COURSES */
 #Courses .small-box{
   border-radius: 3px;
+  margin-top:25px;
 }
 #Courses .small-box h2, #Courses .small-box h4, #Courses .small-box p{
   margin-left:10px;
