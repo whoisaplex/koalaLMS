@@ -233,3 +233,413 @@ img {
     padding-bottom:20px;
   }
 }
+
+/* index.html */
+
+<style media="screen">
+	html {box-sizing: border-box;}
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+		padding: 0;
+		margin: 0;
+	}
+	body {
+		font-family: "Source Sans Pro", Sans-Serif;
+		font-size: 13px;
+		padding: 0;
+		margin: 0;
+		background-color: #FFF;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	.row {
+		display: flex;
+		flex-flow: column wrap;
+	}
+	.col {
+		flex: 1;
+		padding:0px;
+
+	}
+
+    header .col{
+        background-color: #5bb06c;
+    }
+
+    .col.col-logo{
+        flex:1;
+    }
+    .col.col-menu{
+        flex:3;
+    }
+    .col.col-login{
+        flex:2;
+    }
+
+	@media screen and (min-width:768px){
+		.row {flex-flow: row wrap;}
+
+	}
+	.wrapper {
+		display: flex;
+		flex-flow: column wrap;
+		min-height: 100vh;
+	}
+	main {flex: 1;}
+
+    img.header-logo {
+    width: 150px;
+    float:inherit;
+}
+
+ .col ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+    .col ul li{
+        float: left
+    }
+.col li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 20px;
+    text-decoration: none;
+}
+    .col li a:hover{
+    background-color: #111;
+    }
+
+    .col-jumbotron {
+    background-color: #5bb06c;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    clear: both;
+    position: relative;
+    width: 100%;
+
+}
+    .col-info-box{
+        justify-content: space-around;
+        margin:15px;
+    }
+    /*section*/
+.section-padding {
+    padding: 80px 0px 0px 0px;
+    display: flex;
+}
+
+.section-borders span {
+    background: #5bb06c;
+    border-radius: 3px;
+    display: inline-block;
+    height: 5px;
+    width: 50px;
+}
+.section-borders span.black-border {
+    background: #333;
+    height: 5px;
+    margin: 0 10px;
+    width: 30px;
+}
+.section-title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+.section-title h2 span {
+    color: #5bb06c;
+}
+.section-title h2{
+    font-size: 30px;
+}
+
+.section-title p{
+    margin: 10px 0px 10px 0px;
+}
+.single-info-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    flex:1;
+}
+
+.single-info-box:hover{
+    border-color: #5bb06c;
+    box-shadow: 0 0 50px #ccc;
+}
+.single-info-box:hover .info-icon{
+    color:#5bb06c;
+}
+
+.single-info-box:hover .info-icon img{
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+.single-info-box h3 {
+}
+.single-info-box h3 {
+    text-transform: uppercase;
+}
+i {
+}
+.info-icon {
+    font-size: 60px;
+    margin-bottom:20px;
+
+}
+
+.info-icon, .info-icon img{
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+
+.info-icon img {
+    max-width: 88px;
+}
+.choose-us-info {
+    margin: 30px 0;
+    text-align:justify;
+    text-decoration: none;
+}
+.choose-us-info ul {
+   line-height: 25px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+
+.choose-us-info ul li {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.choose-us-info ul li:hover {
+    padding-left: 5px;
+}
+
+.choose-us-info ul li:before{font-family: fontAwesome; content:"\f00c"; color:#5bb06c; padding-right: 10px;}
+.choose-us-info ul li.price-off:before{content:"\f00d"; color: #eb3036;}
+
+
+a.border-button {
+    border: 1px solid #5bb06c;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.single-info-box {
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+a.border-button:hover {
+    background-color: #5bb06c;
+    color: #fff;
+}
+a.border-button {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.container{
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+
+
+}
+.client-testimonial-carousel{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:15px;
+}
+
+.client-testimonial-carousel .owl-dots div {
+    background: #6aaf08 none repeat scroll 0 0;
+    border-radius: 2px;
+    display: inline-block;
+    height: 5px;
+    margin: 5px;
+    transition: all 0.2s ease 0s;
+    width: 20px;
+}
+.client-testimonial-carousel .owl-dots div.active {
+    background: #333 none repeat scroll 0 0;
+    width: 30px;
+}
+.client-testimonial-carousel .owl-dots {
+    margin-top: 25px;
+    text-align: center;
+}
+.single-testimonial {
+    box-shadow: 0 0 2px #d5dccc;
+    font-style: italic;
+    margin: 2px;
+    padding: 20px;
+}
+.single-testimonial h3 {
+    font-size: 20px;
+    font-style: normal;
+}
+.single-testimonial span {
+    color: #b8b8b8;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+.single-testimonial p {
+    color: #b8b8b8;
+}
+.single-testimonial::before{font-family: fontAwesome; content:"\f10e";}
+
+.single-testimonial::before {
+    color: #6aaf08;
+    font-size: 20px;
+    left: 20px;
+    line-height: 30px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+}
+.single-testimonial {
+    position: relative;
+    padding-left: 81px;
+}
+.single-testimonial::after {
+    background: #d5dccc none repeat scroll 0 0;
+    content: "";
+    height: 65%;
+    left: 59px;
+    position: absolute;
+    top: 15%;
+    width: 1px;
+}
+
+
+@media (max-width:768px){.container{width:500px}}
+@media (max-width:600px){.container{width:350px}}
+
+@media (min-width:768px){.container{width:750px}}
+@media (min-width:992px){.container{width:970px}}
+@media (min-width:1200px){.container{width:1170px}}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+/* Add padding to container elements */
+.modal-container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.Login-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+.logout-btn{
+    display: none;
+}
+
+#login-name-display{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 20px;
+    text-decoration: none;
+}
+
