@@ -1,8 +1,3 @@
-if (window.sessionStorage) {
-    sessionStorage.setItem('userName', '');
-    sessionStorage.setItem('logedInStatus', 'NO');
-}
-
 // Get the modal
 let modal = document.getElementById('userRegistration');
 
@@ -66,7 +61,7 @@ function loginFunction(){
 function logOutUser(){
     localStorage.clear();
     localStorage.setItem('logedInStatus', 'NO');
-    window.location.replace("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
+    location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
     document.getElementById('register-btn').style.display='block';
     document.getElementById('login-btn').style.display='block';
     document.getElementById('logout-btn').style.display='none';

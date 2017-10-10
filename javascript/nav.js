@@ -1,6 +1,6 @@
 let currentPage = "Home";
 let mobileNavActive = false;
-let logged_in_user = sessionStorage.getItem('userName');
+let logged_in_user = window.sessionStorage.getItem('userName');
 
 /*let num;
 for(let x = 0; x < users.length; x++){
