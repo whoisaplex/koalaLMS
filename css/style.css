@@ -32,6 +32,17 @@ margin: 0;
   width: 85vw;
   transform: translateX(15vw);
 }
+.main-content-g{
+  display:grid;
+  grid-template-columns: 200px auto;
+}
+.main-content-g-second{
+  display: grid;
+  grid-template-columns: auto  auto;
+  grid-column-gap: 10px;
+}
+
+
 .small-box{
   width:25vw;
   background: white;
