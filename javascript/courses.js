@@ -1,9 +1,5 @@
 let logged_in_user = 'alexander';
-let userss = [{username: 'alexander', password: 'dahlberg123', full_name: 'Alexander Dahlberg', role: 'student',
- all_courses: [{ongoing: [{name: 'HTML', description: 'This is the HTML description', tempo: '100%'}, {name: 'CSS', description: 'This is the CSS description', tempo: '50%'}, {name: 'Javascript', description: 'This is the Javascript description', tempo: '100%'}]},
- {upcoming: [{name: 'Swedish', description: 'This is the Swedish description', tempo: '30%'}, {name: 'English', description: 'This is the English description', tempo: '100%'}]},
- {finished: [{name: 'Java', description: 'This is the Java description', tempo: '100%', grade: 'A'}, {name: 'C++', description: 'This is the C++ description', tempo: '100%', grade: 'C'}]}]}
-];
+
 const u_lengthh = userss.length;
 for(let x = 0; x < u_lengthh; x++){
   if(userss[x].username === logged_in_user && userss[x].role === 'student'){
@@ -27,7 +23,7 @@ for(let x = 0; x < u_lengthh; x++){
 
 
 
-//Shows course content on click
+//Shows/Hides course content on click
 function toggle_course(current){
   if(current.parentElement.childNodes[1].style.display === 'none'){
     current.parentElement.childNodes[1].style.display = 'block';
