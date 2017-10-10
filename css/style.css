@@ -233,8 +233,42 @@ img {
     padding-bottom:20px;
   }
 }
-<<<<<<< HEAD
+/*Grades */
+#Grades .main-content{
+  width: 90vw;
+}   
+#Grades .small-box{
+  border-radius: 3px;
+  width: 80vw;
+}
+#Grades .small-box h2,h4,p{
+  margin-left:10px;
+  color:#424242 ;
+}
+#Grades .small-box p{
+  margin-top:-10px;
+}
+#Grades .small-box div{
+  float:left;
+  margin-left:17px;
+}
+#Grades article div h4{
+  margin-left:30px;
+}
+#Grades article h2{
+  text-align:center;
+}
+@media only screen and (max-width:769px){
+#Grades .small-box{
+  width:80vw;
+}
+#Grades .small-box p{
+  margin-top:10px;
+}
 
-/
-=======
->>>>>>> dcb2252f1e5e88b0315b3f92be99c00de7bc4c8f
+#Grades .small-box div:last-child h4{
+  padding-bottom:20px;
+  margin-left:17px;
+ }
+}
+/*Grades */

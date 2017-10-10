@@ -16,6 +16,10 @@ let users = [{username: 'alexander',
                             {upcoming_assignments: [{name: 'Javascript', description: 'For loops', due_date: '2017-10-30'},
                                         {name: 'HTML', description: 'HTML5 & CSS3', due_date: '2017-11-06'},
                                         {name: 'Backend', description: 'PHP & MYSQL', due_date: '2017-11-15'},
-                                        {name: 'Arbetsmetodiker', description: 'Scrum poker', due_date: '2017-11-27'}]}]}
+                                        {name: 'Arbetsmetodiker', description: 'Scrum poker', due_date: '2017-11-27'}]}],
 
+              all_finished_courses:  [{finished_courses: [{name: 'Java', average_grade: 'A', assignment1: 'For loop', assignment2: 'While loop', assignment3: 'If-else condition', tempo: '100%', grade1: 'A', grade2: 'A', grade3: 'A'},
+                                        {name: 'C#', average_grade: 'B', assignment1: 'Object oriented programming', assignment2: 'Bit-wise operator', assignment3: 'Simple project', tempo: '100%', grade1: 'A', grade2: 'A', grade3: 'B'},
+                                        {name: 'C++', average_grade: 'B', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'B', grade2: 'A', grade3: 'A'}]}]}
+                                        
 ];

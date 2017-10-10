@@ -11,7 +11,7 @@ for(let x = 0; x < users.length; x++){
 document.getElementById('user-Name').innerHTML = users[num].full_name;
 */
 
-let pages = ['Home', 'Courses','Upcoming'];
+let pages = ['Home', 'Courses','Upcoming', 'Grades'];
 for(let countPages = 0; countPages < pages.length; countPages++){
   if(pages[countPages] === currentPage){
     document.getElementById(currentPage).style.display = 'grid';
