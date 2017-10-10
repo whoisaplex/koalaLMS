@@ -1,5 +1,3 @@
-let logged_in_user = 'alexander';
-
 const u_lengthh = users.length;
 for(let x = 0; x < u_lengthh; x++){
   if(users[x].username === logged_in_user && users[x].role === 'student'){

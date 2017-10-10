@@ -11,10 +11,11 @@ let users = [{username: 'alexander',
                                         {name: 'C++', description: 'This is the C++ description', tempo: '100%', grade: 'C'}]}],
 
               all_upcoming: [{upcoming_exams: [{name: 'Javascript', description: 'Vanilla Javascript', due_date: '2017-12-14'},
-                                        {name: 'HTML', description: 'Static websites', due_date: '2018-01-12'}, {name: 'Backend', description: 'Database logic', due_date: '2018-01-30'}, 
+                                        {name: 'HTML', description: 'Static websites', due_date: '2018-01-12'}, {name: 'Backend', description: 'Database logic', due_date: '2018-01-30'},
                                         {name: 'Arbetsmetodiker', description: 'Scrum', due_date: '2018-02-14'} ]},
-                            {upcoming_assignments: [{name: 'Javascript', description: 'For loops', due_date: '2017-10-30'}, 
-                                        {name: 'HTML', description: 'HTML5 & CSS3', due_date: '2017-11-06'}, 
-                                        {name: 'Backend', description: 'PHP & MYSQL', due_date: '2017-11-15'}, 
+                            {upcoming_assignments: [{name: 'Javascript', description: 'For loops', due_date: '2017-10-30'},
+                                        {name: 'HTML', description: 'HTML5 & CSS3', due_date: '2017-11-06'},
+                                        {name: 'Backend', description: 'PHP & MYSQL', due_date: '2017-11-15'},
                                         {name: 'Arbetsmetodiker', description: 'Scrum poker', due_date: '2017-11-27'}]}]}
+
 ];

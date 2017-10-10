@@ -1,9 +1,20 @@
 let currentPage = "Home";
 let mobileNavActive = false;
+let logged_in_user = sessionStorage.getItem('userName');
+
+/*let num;
+for(let x = 0; x < users.length; x++){
+  if(users[x].username === sessionStorage.getItem('userName')){
+    num = x;
+  }
+}
+document.getElementById('user-Name').innerHTML = users[num].full_name;
+*/
+
 let pages = ['Home', 'Courses','Upcoming'];
 for(let countPages = 0; countPages < pages.length; countPages++){
   if(pages[countPages] === currentPage){
-    document.getElementById(currentPage).style.display = 'flex';
+    document.getElementById(currentPage).style.display = 'grid';
     document.getElementById('nav-menu').childNodes[1].style.background = '#2e3344';
     document.getElementById('nav-menu').childNodes[1].style.borderRight = 'solid 4px orange';
   }else{

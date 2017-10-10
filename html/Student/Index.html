@@ -13,7 +13,7 @@
       <div class="nav-user-block">
         <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
         <p>Welcome,</p>
-        <h4>Alexander Dahlberg</h4>
+        <h4 id="user-Name">Alexander</h4>
       </div>
       <div class="nav-menu" id="nav-menu">
       <p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
@@ -35,9 +35,39 @@
 
 
 
-      <section class="main-content" id="Home" onclick="toggleNavBar(this)">
 
-      </section>
+        <div class="main-content-g" id="Home" onclick="toggleNavBar(this)" style="">
+
+          <div style="grid-column-start: 1; grid-row-start: 1;"></div>
+          <div class="main-content-g-second" style="grid-column-start: 2; grid-row-start: 1; grid-template-columns: auto;">
+            <div style="background:white; height:50px; background-color: #3b4052; display:grid; grid-template-columns: auto 80px;">
+              <div style="align-self:center; justify-self: center;">
+                  <h4 style="margin: 0px; color:white; font-size:28px; margin-left:80px;">KYH Koalas</h4>
+              </div>
+              <div style="align-self:center;">
+                  <button style="margin-right:10px;" onclick="logOutUser()">Logout</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="grid-column-start: 1; grid-row-start: 2;"></div>
+          <div class="main-content-g-second" style="grid-column-start: 2; grid-row-start: 2; grid-template-columns: 10px auto 10px auto 10px;">
+            <div></div>
+            <div style="background:white; height:300px; border-radius: 3px; margin-top:10px;"></div>
+            <div></div>
+            <div style="background:white; height:300px; border-radius: 3px; margin-top:10px;"></div>
+            <div></div>
+          </div>
+
+          <div style="grid-column-start: 1; grid-row-start: 3;"></div>
+          <div class="main-content-g-second" style="grid-column-start: 2; grid-row-start: 3; grid-template-columns: 10px auto auto 10px;">
+            <div></div>
+            <div style="background:white; height:300px; border-radius: 3px; margin-bottom:50px; margin-top:10px;"></div>
+            <div style="background:white; height:300px; border-radius: 3px; margin-bottom:50px; margin-top:10px;"></div>
+            <div></div>
+          </div>
+        </div>
+
                   <!--HELA SIDANS CONTENT -->
         <section class="main-content" id="Upcoming" onclick="toggleNavBar(this)">
             <!-- Article är våra textboxar -->
@@ -75,10 +105,12 @@
 
               </article>
           </section>
-      <script src="../../javascript/nav.js"></script>
+
       <script src="../../javascript/database.js"></script>
+      <script src="../../javascript/nav.js"></script>
       <script src="../../javascript/upcoming.js"></script>
       <script src="../../javascript/courses.js"></script>
+      <script src="../../javascript/login.js"></script>
 
 
     </body>

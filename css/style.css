@@ -11,7 +11,7 @@ body{
   min-width: 200px;
   height: 100%;
   position: absolute;
-  border-right: 1px solid #909090;
+
 
 }
 .mobile-nav{
@@ -32,6 +32,17 @@ margin: 0;
   width: 85vw;
   transform: translateX(15vw);
 }
+.main-content-g{
+  display:grid;
+  grid-template-columns: 200px auto;
+}
+.main-content-g-second{
+  display: grid;
+  grid-template-columns: auto  auto;
+  grid-column-gap: 10px;
+}
+
+
 .small-box{
   width:25vw;
   background: white;
@@ -222,5 +233,8 @@ img {
     padding-bottom:20px;
   }
 }
+<<<<<<< HEAD
 
 /
+=======
+>>>>>>> dcb2252f1e5e88b0315b3f92be99c00de7bc4c8f

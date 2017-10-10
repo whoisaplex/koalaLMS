@@ -1,7 +1,7 @@
 if (window.sessionStorage) {
     sessionStorage.setItem('userName', '');
     sessionStorage.setItem('logedInStatus', 'NO');
-} 
+}
 
 // Get the modal
 let modal = document.getElementById('userRegistration');
@@ -46,6 +46,7 @@ function loginFunction(){
        if(users[i].username === loginUserName && users[i].password === loginPsw ){
             //sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
+                location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/html/Student/Index.html");
                console.log(sessionStorage);
                 $('#login-name-display').append("Logged is as "+loginUserName);
                document.getElementById('logout-btn').style.display='block';
@@ -65,6 +66,7 @@ function loginFunction(){
 function logOutUser(){
     localStorage.clear();
     localStorage.setItem('logedInStatus', 'NO');
+    window.location.replace("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
     document.getElementById('register-btn').style.display='block';
     document.getElementById('login-btn').style.display='block';
     document.getElementById('logout-btn').style.display='none';
