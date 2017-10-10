@@ -1,4 +1,4 @@
-let userss = [{username: 'alexander',
+let users = [{username: 'alexander',
               password: 'dahlberg123',
               full_name: 'Alexander Dahlberg',
               role: 'student',
