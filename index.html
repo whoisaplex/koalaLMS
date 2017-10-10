@@ -33,13 +33,13 @@
 	.col {
 		flex: 1;
 		padding:0px;
-		
+
 	}
-    
+
     header .col{
         background-color: #5bb06c;
     }
-    
+
     .col.col-logo{
         flex:1;
     }
@@ -49,10 +49,10 @@
     .col.col-login{
         flex:2;
     }
-    
+
 	@media screen and (min-width:768px){
 		.row {flex-flow: row wrap;}
-		
+
 	}
 	.wrapper {
 		display: flex;
@@ -60,7 +60,7 @@
 		min-height: 100vh;
 	}
 	main {flex: 1;}
-    
+
     img.header-logo {
     width: 150px;
     float:inherit;
@@ -71,7 +71,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    
+
 }
     .col ul li{
         float: left
@@ -86,14 +86,14 @@
     .col li a:hover{
     background-color: #111;
     }
-    
+
     .col-jumbotron {
     background-color: #5bb06c;
     border-top: 1px solid rgba(255,255,255,0.2);
     clear: both;
     position: relative;
     width: 100%;
-    
+
 }
     .col-info-box{
         justify-content: space-around;
@@ -164,12 +164,12 @@ i {
 .info-icon {
     font-size: 60px;
     margin-bottom:20px;
-    
+
 }
 
 .info-icon, .info-icon img{
     -webkit-transition: .3s;
-    transition: .3s;    
+    transition: .3s;
 }
 
 
@@ -228,15 +228,15 @@ a.border-button {
     padding-left:15px;
     margin-right:auto;
     margin-left:auto;
-    
-    
+
+
 }
 .client-testimonial-carousel{
-     
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:15px;   
+    margin:15px;
 }
 
 .client-testimonial-carousel .owl-dots div {
@@ -304,11 +304,11 @@ a.border-button {
 
 @media (max-width:768px){.container{width:500px}}
 @media (max-width:600px){.container{width:350px}}
-    
+
 @media (min-width:768px){.container{width:750px}}
 @media (min-width:992px){.container{width:970px}}
 @media (min-width:1200px){.container{width:1170px}}
-   
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -372,7 +372,7 @@ button {
     border: 1px solid #888;
     width: 30%; /* Could be more or less, depending on screen size */
 }
-    
+
 /* The Close Button (x) */
 .close {
     position: absolute;
@@ -402,7 +402,7 @@ button {
        width: 100%;
     }
 }
-    
+
 .logout-btn{
     display: none;
 }
@@ -433,22 +433,22 @@ button {
 				</div>
 				<div class="col" id="login-name-display"></div>
 				<div class="col col-login">
-                    
+
 				    <ul class="menu-bar">
                       <li><button id="register-btn" onclick="document.getElementById('userRegistration').style.display='block'" style="width:auto;">Register</button></li>
-                      
+
                       <li><button id="login-btn" onclick="document.getElementById('userLogin').style.display='block'" style="width:auto;">Login</button></li>
-                      
+
                       <li><button class="logout-btn" id="logout-btn" onclick="logOutUser();" style="width:auto;">Logout</button></li>
-                      
-                      
-                      
+
+
+
 <!--                      <li><button id="logout-btn" onclick="document.getElementById('userLogin').style.display='block'" style="width:auto;">Logout</button></li>-->
-                      
+
                     </ul>
 				</div>
 			</div>
-			
+
 		</header>
         <section>
 			<div class="row">
@@ -459,10 +459,10 @@ button {
                         <div class="modal-container">
                           <label><b>Name</b></label>
                           <input type="text" placeholder="Enter Your Name" name="name" id="name">
-                          
+
                           <label><b>UserName</b></label>
                           <input type="text" placeholder="Enter User Name" name="userName" id="userName" required>
-                          
+
                           <label><b>Email</b></label>
                           <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
@@ -471,7 +471,7 @@ button {
 
                           <label><b>Repeat Password</b></label>
                           <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-                          
+
                           <div class="clearfix">
                             <button type="button" onclick="document.getElementById('userRegistration').style.display='none'" class="cancelbtn">Cancel</button>
                             <button class="signupbtn" onclick="signUpFunction();">Sign Up</button>
@@ -481,9 +481,9 @@ button {
                     </div>
 				</div>
 			</div>
-			
+
 		</section>
-		
+
 		<section>
 			<div class="row">
 				<div class="col">
@@ -506,7 +506,7 @@ button {
                     </div>
 				</div>
 			</div>
-			
+
 		</section>
 
 		<main>
@@ -514,7 +514,7 @@ button {
                 <div class="container">
                     <div class="row">
                         <div class="col section-title ">
-                            
+
                             <h2>Why<span> Choose Us</span>?</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt expedita ad facilis nemo! Deserunt expedita ad facilis nemo Deserunt expedita ad facilis nemo</p>
                             <div class="section-borders">
@@ -529,62 +529,62 @@ button {
                             <div class="single-info-box">
                                 <h4>Reason 1</h4>
                                 <div class="info-icon">
-                                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>                               
+                                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </div>
                                 <div class="choose-us-info">
                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
                                 </div>
                                 <a href="" class="border-button">Learn more</a>
                             </div>
-                        </div> 
+                        </div>
                         <div class="col col-info-box">
                             <div class="single-info-box">
                                 <h4>Reason 1</h4>
                                 <div class="info-icon">
-                                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>                               
+                                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                 </div>
                                 <div class="choose-us-info">
                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
                                 </div>
                                 <a href="" class="border-button">Learn more</a>
                             </div>
-                        </div> 
-                                       
+                        </div>
+
                         <div class="col col-info-box">
                             <div class="single-info-box">
                                 <h4>Reason 2</h4>
                                 <div class="info-icon">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>                                
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
                                 </div>
                                 <div class="choose-us-info">
                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
                                 </div>
                                 <a href="" class="border-button">Learn more</a>
                             </div>
-                        </div>                    
+                        </div>
                         <div class="col col-info-box">
                             <div class="single-info-box">
                                 <h4>Reason 3</h4>
                                 <div class="info-icon">
-                                    <i class="fa fa-star" aria-hidden="true"></i>                                
+                                    <i class="fa fa-star" aria-hidden="true"></i>
                                 </div>
                                 <div class="choose-us-info">
                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
                                 </div>
                                 <a href="" class="border-button">Learn more</a>
                             </div>
-                        </div>                    
-                                              
+                        </div>
+
 
                     </div>
                 </div>
             </section>
-            
+
             <section class="section-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col section-title ">
-                            
+
                             <h2>Happy<span> Clients</span>?</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt expedita ad facilis nemo! Deserunt expedita ad facilis nemo Deserunt expedita ad facilis nemo</p>
                             <div class="section-borders">
@@ -598,30 +598,30 @@ button {
                         <div class="col single-testimonial">
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima natus iste vitae, soluta eos quam</p>
                              <h3>Sample Name 1 <span>CEO, Sample company 1</span></h3>
-                        </div> 
+                        </div>
                         <div class="col single-testimonial">
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima natus iste vitae, soluta eos quam</p>
                              <h3>Sample Name 1 <span>CEO, Sample company 1</span></h3>
-                        </div> 
+                        </div>
                         <div class="col single-testimonial">
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima natus iste vitae, soluta eos quam</p>
                              <h3>Sample Name 1 <span>CEO, Sample company 1</span></h3>
-                        </div> 
+                        </div>
                         <div class="col single-testimonial">
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima natus iste vitae, soluta eos quam</p>
                              <h3>Sample Name 1 <span>CEO, Sample company 1</span></h3>
-                        </div> 
+                        </div>
                         <div class="col single-testimonial">
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima natus iste vitae, soluta eos quam</p>
                              <h3>Sample Name 1 <span>CEO, Sample company 1</span></h3>
-                        </div> 
+                        </div>
                         <div class="col single-testimonial">
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima natus iste vitae, soluta eos quam</p>
                              <h3>Sample Name 1 <span>CEO, Sample company 1</span></h3>
-                        </div> 
-                         
-                                    
-                                              
+                        </div>
+
+
+
 
                     </div>
                 </div>
@@ -639,9 +639,9 @@ button {
             localStorage.setItem('userName', '');
             localStorage.setItem('logedInStatus', 'NO');
         } else {
-          
+
         }
-       
+
         // Get the modal
         var modal = document.getElementById('userRegistration');
 
@@ -651,9 +651,9 @@ button {
                 modal.style.display = "none";
             }
         }
-        
+
         //Get the login Modal
-        
+
         var loginModal = document.getElementById('userLogin');
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -661,27 +661,27 @@ button {
                 modal.style.display = "none";
             }
         }
-        
+
         function populateStorage(loginUserName) {
             localStorage.setItem('userName', loginUserName);
             localStorage.setItem('logedInStatus', 'YES');
             return true;
         }
-        
+
         function loginFunction(){
-             
+
             var loginUserName    = document.getElementById("login-userName").value;
             var loginPsw         = document.getElementById("login-psw").value;
-            
-            var users = 
+
+            var users =
                 [
                         {name:'Nasimul Huq',userName:"nasim", email:'nasimjibs@gmail.com',psw:"nhyyhn123"},
                         {name:'Masudul Hasan', userName:"masud", email:'sample@gmail.com',psw:"123"}
                 ];
-            
-            
+
+
             for(var i=0; i<= users.length; i++){
-               
+
                if(users[i].userName == loginUserName && users[i].psw == loginPsw ){
                     //sessionStorage.setItem('loginName', JSON.stringify(userName));
                    if(populateStorage(loginUserName)){
@@ -693,14 +693,14 @@ button {
                        document.getElementById('userLogin').style.display='none';
                    }
                } else {
-                   
+
                }
              }
-            
- 
-            
+
+
+
         }
-        
+
         function logOutUser(){
             localStorage.clear();
             localStorage.setItem('logedInStatus', 'NO');
@@ -708,7 +708,7 @@ button {
             document.getElementById('login-btn').style.display='block';
             document.getElementById('logout-btn').style.display='none';
             document.getElementById('login-name-display').style.display='none';
-            
+
         }
 
         function signUpFunction() {
@@ -724,10 +724,11 @@ button {
         }
     </script>
 
+		<script src="javascript/database.js"></script>
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/owl.carousel.min.js"></script>
-    
+
 
 </body>
 </html>
