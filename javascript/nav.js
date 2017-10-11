@@ -30,10 +30,19 @@ function changeContent(currentNavP){
   currentPage = currentPName;
   for(let countPages = 0; countPages < pages.length; countPages++){
     if(pages[countPages] === currentPage){
-      document.getElementById(currentPage).style.display = 'flex';
+      if(currentPage != 'Home'){
+        document.getElementById(currentPage).style.display = 'flex';
+      }else{
+        if(innerWidth <= 769){
+          document.getElementById('Home-mobile').style.display = 'grid';
+        }else{
+          document.getElementById(currentPage).style.display = 'grid';
+        }
+      }
 
     }else{
       document.getElementById(pages[countPages]).style.display = 'none';
+      document.getElementById('Home-mobile').style.display = 'none';
     }
     let tempP = document.getElementById('nav-menu').querySelectorAll('p');
     for(let x = 0; x < tempP.length; x++){

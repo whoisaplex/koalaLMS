@@ -236,7 +236,7 @@ img {
 /*Grades */
 #Grades .main-content{
   width: 90vw;
-}   
+}
 #Grades .small-box{
   border-radius: 3px;
   width: 80vw;
@@ -272,3 +272,142 @@ img {
  }
 }
 /*Grades */
+
+/* Student Home */
+.home-top-nav-bar-container-first{
+  display: grid;
+  grid-column-gap: 10px;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-template-columns: auto;
+}
+.home-top-nav-bar-container-second{
+  background:white;
+  height:50px;
+  background-color: #3b4052;
+  display:grid;
+  grid-template-columns: auto 80px;
+}
+.top-nav-bar-text{
+  align-self:center;
+  justify-self: center;
+}
+.top-nav-bar-text h4{
+  margin: 0px;
+  color:white;
+  font-size:28px;
+   margin-left:80px;
+}
+.top-nav-bar-button{
+  align-self:center;
+}
+.top-nav-bar-button button{
+  margin-right:10px;
+}
+
+
+.home-attendance-timeline-container-grid{
+  display: grid;
+  grid-column-gap: 10px;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-template-columns: 10px auto 10px;
+}
+.home-attendance-timeline-grid{
+  background: white;
+  height:auto;
+  padding:10px;
+  border-radius: 3px;
+  margin-top:10px;
+  display: grid;
+  grid-template-columns: 75px auto 75px auto 75px;
+}
+.home-attendance-box-grid{
+  display: grid;
+  grid-column-gap: 10px;
+  grid-column-start: 2;
+  grid-row-start: 3;
+  grid-template-columns: 10px auto auto auto 10px;
+}
+
+
+
+.attendance-timeline-circle{
+  background: #0080E8;
+  align-self:center;
+  border-radius:50%;
+  height:75px;
+  width:75px;
+  display: grid;
+}
+.attendance-timeline-line{
+  background: #006ABF;
+  height:10px;
+  align-self:center;
+}
+.attendance-timeline-text{
+  color:white;
+  margin:0;
+  align-self:center;
+  text-align:center;
+  font-weight: bold;
+}
+.attendance-box{
+  background:white;
+  border-radius: 0px 0px 3px 3px;
+  margin-bottom:50px;
+  display:grid;
+  padding:10px;
+}
+.attendance-button{
+  border:none;
+  background: #006ABF;
+  border-radius: 3px;
+  color:white;
+  font-weight: bold;
+  cursor:pointer;
+  margin-top:10px;
+  padding:5px 5px;
+  border-bottom:solid 1px white;
+}
+.attendance-button:active{
+  border-bottom:solid 1px blue;
+}
+.attendance-course-text{
+  justify-self:center;
+  margin:0;
+  padding:0;
+}
+.attendance-course-time{
+  position:absolute;
+  margin-left:10px;
+  color:#0080E8;
+  font-weight: bold;
+}
+.attendance-course-checkbox{
+  justify-self:end;
+  width:20px;
+  height:20px;
+}
+@media only screen and (max-width:769px){
+  .Home-mobile-grid{
+    display:grid;
+    grid-template-columns: 10px 75px 5px auto 10px;
+    padding-top:100px;
+  }
+  .attendance-timeline-line{
+    width:10px;
+    justify-self:center;
+    height: 100px;
+    border-radius: 5px;
+  }
+  .attendance-box{
+    margin-bottom: 0px;
+    padding: 8px;
+    padding-top:5px;
+    border-radius:8px;
+  }
+  .attendance-course-checkbox{
+    padding: 2px;
+  }
+}

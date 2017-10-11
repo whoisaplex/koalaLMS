@@ -36,37 +36,121 @@
 
 
 
-        <div class="main-content-g" id="Home" onclick="toggleNavBar(this)" style="">
+    <!-- HOME DESKTOP VIEW CONTENT -->
+    <div class="main-content-g" id="Home" onclick="toggleNavBar(this)">
 
-          <div style="grid-column-start: 1; grid-row-start: 1;"></div>
-          <div class="main-content-g-second" style="grid-column-start: 2; grid-row-start: 1; grid-template-columns: auto;">
-            <div style="background:white; height:50px; background-color: #3b4052; display:grid; grid-template-columns: auto 80px;">
-              <div style="align-self:center; justify-self: center;">
-                  <h4 style="margin: 0px; color:white; font-size:28px; margin-left:80px;">KYH Koalas</h4>
-              </div>
-              <div style="align-self:center;">
-                  <button style="margin-right:10px;" onclick="logOutUser()">Logout</button>
-              </div>
-            </div>
+      <div></div> <!-- NAV Padding -->
+      <div class="home-top-nav-bar-container-first">
+        <div class="home-top-nav-bar-container-second">
+          <div class="top-nav-bar-text">
+              <h4>KYH Koalas</h4>
           </div>
-
-          <div style="grid-column-start: 1; grid-row-start: 2;"></div>
-          <div class="main-content-g-second" style="grid-column-start: 2; grid-row-start: 2; grid-template-columns: 10px auto 10px auto 10px;">
-            <div></div>
-            <div style="background:white; height:300px; border-radius: 3px; margin-top:10px;"></div>
-            <div></div>
-            <div style="background:white; height:300px; border-radius: 3px; margin-top:10px;"></div>
-            <div></div>
-          </div>
-
-          <div style="grid-column-start: 1; grid-row-start: 3;"></div>
-          <div class="main-content-g-second" style="grid-column-start: 2; grid-row-start: 3; grid-template-columns: 10px auto auto 10px;">
-            <div></div>
-            <div style="background:white; height:300px; border-radius: 3px; margin-bottom:50px; margin-top:10px;"></div>
-            <div style="background:white; height:300px; border-radius: 3px; margin-bottom:50px; margin-top:10px;"></div>
-            <div></div>
+          <div class="top-nav-bar-button">
+              <button onclick="logOutUser()">Logout</button>
           </div>
         </div>
+      </div>
+
+      <div></div> <!-- NAV Padding -->
+      <div class="home-attendance-timeline-container-grid">
+        <div></div>
+        <div class="home-attendance-timeline-grid">
+            <div class="attendance-timeline-circle">
+                <p class="attendance-timeline-text">08:00</p>
+            </div>
+            <div class="attendance-timeline-line"></div>
+            <div class="attendance-timeline-circle">
+                <p class="attendance-timeline-text">10:00</p>
+            </div>
+            <div class="attendance-timeline-line"></div>
+            <div class="attendance-timeline-circle">
+                <p class="attendance-timeline-text">13:00</p>
+            </div>
+        </div>
+        <div></div>
+      </div>
+
+      <div></div> <!-- NAV Padding -->
+      <div class="home-attendance-box-grid">
+        <div></div>
+        <div class="attendance-box">
+            <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+            <h3 class="attendance-course-text">Javascript</h3>
+            <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+            <p class="attendance-course-time">08:00</p>
+        </div>
+
+        <div class="attendance-box">
+            <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+            <h3 class="attendance-course-text">HTML</h3>
+            <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+            <p class="attendance-course-time">10:00</p>
+        </div>
+
+        <div class="attendance-box">
+            <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+            <h3 class="attendance-course-text">CSS3</h3>
+            <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+            <p class="attendance-course-time">13:00</p>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+
+    <!-- HOME MOBILE VIEW CONTENT -->
+    <div id="Home-mobile" class="Home-mobile-grid" onclick="toggleNavBar(this)">
+      <div></div>
+      <div class="attendance-timeline-circle">
+          <p class="attendance-timeline-text">08:00</p>
+      </div>
+      <div></div>
+      <div class="attendance-box">
+          <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+          <h3 class="attendance-course-text">Javascript</h3>
+          <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+          <p class="attendance-course-time">08:00</p>
+      </div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-line" style="grid-row-start: 2; grid-column-start: 2;"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-circle">
+          <p class="attendance-timeline-text">10:00</p>
+      </div>
+      <div></div>
+      <div class="attendance-box">
+          <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+          <h3 class="attendance-course-text">HTML</h3>
+          <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+          <p class="attendance-course-time">10:00</p>
+      </div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-line" style="grid-row-start: 4; grid-column-start: 2;"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-circle">
+          <p class="attendance-timeline-text">13:00</p>
+      </div>
+      <div></div>
+      <div class="attendance-box">
+          <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+          <h3 class="attendance-course-text">CSS3</h3>
+          <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+          <p class="attendance-course-time">13:00</p>
+      </div>
+      <div></div>
+  </div>
 
                   <!--HELA SIDANS CONTENT -->
         <section class="main-content" id="Upcoming" onclick="toggleNavBar(this)">
@@ -108,7 +192,7 @@
 
        <section class="main-content" id="Grades" onclick="toggleNavBar(this)">
            <!-- Article är våra textboxar -->
-           
+
            <article class="small-box">
                <h2>Finished Courses</h2>
                <hr>
@@ -119,6 +203,7 @@
 
       <script src="../../javascript/database.js"></script>
       <script src="../../javascript/nav.js"></script>
+      <script src="../../javascript/home.js"></script>
       <script src="../../javascript/upcoming.js"></script>
       <script src="../../javascript/courses.js"></script>
       <script src="../../javascript/login.js"></script>
