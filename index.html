@@ -12,35 +12,22 @@
 <body>
 
 	<div class="wrapper">
-
-		<header>
-			<div class="row">
-			    <div class="col">
-			        <div class="col-logo"><img src="images/logo_koala.png" alt="KoalaLMS" class="header-logo"></div>
-			    </div>
-				<div class="col">
-			        <div class="col-menu">
-			           <ul class="menu-bar">
-                          <li><a href="">Home</a></li>
-                          <li><a href="">News</a></li>
-                          <li><a href="">Contact</a></li>
-                       </ul>
-			        </div>
-			    </div>
-				<div class="col" id="login-name-display"></div>
-				<div class="col">
-			        <div class="col-menu col-login">
-			           <div class="menu-bar">
-                          <button id="register-btn" onclick="document.getElementById('userRegistration').style.display='block'" style="width:auto;">Register</button>
-
-                          <button id="login-btn" onclick="document.getElementById('userLogin').style.display='block'" style="width:auto;">Login</button>
-
-                          <button class="logout-btn" id="logout-btn" onclick="logOutUser();" style="width:auto;">Logout</button>
-
-                       </div>
-			        </div>
-			    </div>
-			</div>
+        <div class="container" >
+            <header>
+            <ul>
+                <li><img src="images/logo_koala.png" alt="KoalaLMS" class="header-logo"></li>
+                <li><button>Home</button></li>
+                <li><button class="menu-nav">News</button></li>
+                <li><button class="menu-nav">Contact</button></li>
+                <li>
+                    
+                </li>
+                <li>
+                   <button id="register-btn" onclick="document.getElementById('userRegistration').style.display='block'" style="width:auto;">Register</button>
+                    <button id="login-btn" onclick="document.getElementById('userLogin').style.display='block'" style="width:auto;">Login</button>
+                    <button class="logout-btn" id="logout-btn" onclick="logOutUser();" style="width:auto;">Logout</button>
+               </li>
+            </ul>
 
 		</header>
         <section>
@@ -104,7 +91,7 @@
 
 		<main>
             <section class="section-padding">
-                <div class="container">
+                <div >
                     <div class="row">
                         <div class="col section-title ">
 
@@ -172,14 +159,11 @@
                     </div>
                 </div>
             </section>
-		</main>
-
-		<!--<footer>
-			<div class="row">
-				<div class="col">footer</div>
-			</div>
-		</footer> -->
-
+		</main>    
+            
+        </div>
+        
+    </div>
     <script type="text/javascript">
 
     </script>

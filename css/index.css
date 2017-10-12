@@ -19,26 +19,20 @@
 	.row {
 		display: flex;
 		flex-flow: column wrap;
+        
 	}
 	.col {
-		flex: 1;
+        flex:1;
 		padding:0px;
 
 	}
 
-    header .col{
+    header{
         background-color: #5bb06c;
+        
     }
 
-    .col.col-logo{
-        flex:1;
-    }
-    .col.col-menu{
-        flex:3;
-    }
-    .col.col-login{
-        flex:2;
-    }
+   
 
 	@media screen and (min-width:768px){
 		.row {flex-flow: row wrap;}
@@ -48,12 +42,14 @@
 		display: flex;
 		flex-flow: column wrap;
 		min-height: 100vh;
+        min-width: 100vw;
 	}
 	main {flex: 1;}
 
     img.header-logo {
-    width: 150px;
+    width: 250px;
     float:inherit;
+    margin-right: 150px;
 }
 
  .col ul{
@@ -214,8 +210,7 @@ a.border-button {
     transition: all 0.3s ease 0s;
 }
 .container{
-    padding-right:15px;
-    padding-left:15px;
+    
     margin-right:auto;
     margin-left:auto;
 
@@ -292,12 +287,13 @@ a.border-button {
 }
 
 
-@media (max-width:768px){.container{width:500px}}
+/*@media (max-width:768px){.container{width:500px}}
 @media (max-width:600px){.container{width:350px}}
 
 @media (min-width:768px){.container{width:750px}}
 @media (min-width:992px){.container{width:970px}}
-@media (min-width:1200px){.container{width:1170px}}
+@media (min-width:1200px){.container{width:1170px}}*/
+
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -313,7 +309,7 @@ button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 15px 0;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -404,3 +400,48 @@ button {
     padding: 22px 20px;
     text-decoration: none;
 }
+
+
+
+
+
+header ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+       
+    /* width: 100%; */
+}
+
+header ul li {
+   
+    flex:1;
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+}
+header ul li button {
+   
+    border-radius: 1000px;
+    height: auto;
+    line-height: 36px !important;
+    margin: 12px 0;
+    padding: 0 16px;
+    top: auto; 
+    background-color: #456d47;
+}
+
+header ul li button:hover{
+    background-color: #98d49a;
+}
+
+@media screen and (min-width: 500px){
+    .row {flex-flow: row wrap;}
+    .col {flex: 1 1 40%;}
+    
+}
+@media screen and (min-width: 800px){
+    .col {flex: 1;}
+}
+
