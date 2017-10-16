@@ -36,20 +36,17 @@
 
 
 
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+    <div class="nav-wrapper-grid" id="nav-wrapper">
+        <div class="nav-grid-space"></div>
+        <div class="top-nav-bar">
+              <h1>KYH Koalas</h1>
+              <button onclick="logOutUser()">Logout</button>
+        </div>
+    </div>
+
     <!-- HOME DESKTOP VIEW CONTENT -->
     <div class="main-content-g" id="Home" onclick="toggleNavBar(this)">
-
-      <div></div> <!-- NAV Padding -->
-      <div class="home-top-nav-bar-container-first">
-        <div class="home-top-nav-bar-container-second">
-          <div class="top-nav-bar-text">
-              <h4>KYH Koalas</h4>
-          </div>
-          <div class="top-nav-bar-button">
-              <button onclick="logOutUser()">Logout</button>
-          </div>
-        </div>
-      </div>
 
       <div></div> <!-- NAV Padding -->
       <div class="home-attendance-timeline-container-grid">
@@ -99,7 +96,7 @@
 
 
     <!-- HOME MOBILE VIEW CONTENT -->
-    <div id="Home-mobile" class="Home-mobile-grid" onclick="toggleNavBar(this)">
+    <div class="Home-mobile-grid" id="Home-mobile" onclick="toggleNavBar(this)">
       <div></div>
       <div class="attendance-timeline-circle">
           <p class="attendance-timeline-text">08:00</p>
@@ -190,8 +187,24 @@
               </article>
           </section>
 
+
+          <div class="grid-main-content-row" id="Grades">
+              <div style=" grid-row: 1 / last-line;"></div>
+              <!-- A BOX IN A NEW ROW -->
+              <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+                    <div></div> <!-- 10px space -->
+                    <!-- A NEW BOX IN THE SAME ROW -->
+                    <div class="grid-box-style">
+                        A
+                    </div>
+                    <!-- A NEW BOX IN THE SAME ROW ENDS -->
+                    <div></div> <!-- 10px space -->
+              </div>
+              <!-- A BOX ENDS -->
+            </div>
+      <!--
        <section class="main-content" id="Grades" onclick="toggleNavBar(this)">
-           <!-- Article är våra textboxar -->
+
 
            <article class="small-box">
                <h2>Finished Courses</h2>
@@ -200,6 +213,7 @@
                </div>
            </article>
        </section>
+     -->
 
       <script src="../../javascript/database.js"></script>
       <script src="../../javascript/nav.js"></script>

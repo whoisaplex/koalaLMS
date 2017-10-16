@@ -1,5 +1,6 @@
 if(innerWidth <= 769){
   document.getElementById('Home').style.display = 'none';
+  document.getElementById('nav-wrapper').style.display = 'none';
 }else{
   document.getElementById('Home-mobile').style.display = 'none';
 }

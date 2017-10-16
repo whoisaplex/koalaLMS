@@ -24,17 +24,17 @@ for(let countPages = 0; countPages < pages.length; countPages++){
 
 
 function changeContent(currentNavP){
-
+  document.getElementById('Home-mobile').style.display = 'none';
   let currentPName = currentNavP.innerHTML;
   currentPName = currentPName.replace(/[\<].*[\>]/, "");
   currentPage = currentPName;
   for(let countPages = 0; countPages < pages.length; countPages++){
     if(pages[countPages] === currentPage){
       if(currentPage != 'Home'){
-        document.getElementById(currentPage).style.display = 'flex';
+        document.getElementById(currentPage).style.display = 'grid';
       }else{
         if(innerWidth <= 769){
-          document.getElementById('Home-mobile').style.display = 'grid';
+          document.getElementById('Home-mobile').style.display = "grid";
         }else{
           document.getElementById(currentPage).style.display = 'grid';
         }
@@ -42,7 +42,7 @@ function changeContent(currentNavP){
 
     }else{
       document.getElementById(pages[countPages]).style.display = 'none';
-      document.getElementById('Home-mobile').style.display = 'none';
+
     }
     let tempP = document.getElementById('nav-menu').querySelectorAll('p');
     for(let x = 0; x < tempP.length; x++){
@@ -54,6 +54,7 @@ function changeContent(currentNavP){
     currentNavP.style.borderRight = 'solid 4px orange';
   }
 }
+
 
 function toggleNavBar(that){
   if(mobileNavActive === true && self.innerWidth <= 769){
