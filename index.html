@@ -14,24 +14,24 @@
 	<div class="wrapper">
         <div class="container" >
             <header>
-            <ul>
-                <li><img src="images/logo_koala.png" alt="KoalaLMS" class="header-logo"></li>
-                <li><button>Home</button></li>
-                <li><button class="menu-nav">News</button></li>
-                <li><button class="menu-nav">Contact</button></li>
-                <li>
-                    
-                </li>
-                <li>
-                   <button id="register-btn" onclick="document.getElementById('userRegistration').style.display='block'" style="width:auto;">Register</button>
-                    <button id="login-btn" onclick="document.getElementById('userLogin').style.display='block'" style="width:auto;">Login</button>
-                    <button class="logout-btn" id="logout-btn" onclick="logOutUser();" style="width:auto;">Logout</button>
-               </li>
-            </ul>
+                <ul>
+                    <li><img src="images/logo_koala.png" alt="KoalaLMS" class="header-logo"></li>
+                    <li><button>Home</button></li>
+                    <li><button class="menu-nav">News</button></li>
+                    <li><button class="menu-nav">Contact</button></li>
+                    <li>
+                        <span id="login-name-display"></span>
+                    </li>
+                    <li>
+                       <button id="register-btn" onclick="document.getElementById('userRegistration').style.display='block'" style="width:auto;">Register</button>
+                        <button id="login-btn" onclick="document.getElementById('userLogin').style.display='block'" style="width:auto;">Login</button>
+                        <button class="logout-btn" id="logout-btn" onclick="logOutUser();" style="width:auto;">Logout</button>
+                   </li>
+                </ul>
 
-		</header>
-        <section>
-			<div class="row">
+            </header>
+            <section>
+			    <div class="row">
 				<div class="col">
 				    <div id="userRegistration" class="modal">
                       <span onclick="document.getElementById('userRegistration').style.display='none'" class="close" title="Close Modal">×</span>
@@ -64,13 +64,14 @@
 
 		</section>
 
-		<section>
+		    <section>
 			<div class="row">
 				<div class="col">
 				    <div id="userLogin" class="modal">
                       <span onclick="document.getElementById('userLogin').style.display='none'" class="close" title="Close Modal">×</span>
                       <div class="Login-modal-content animate" >
                         <div class="modal-container">
+                          <div id="login-error"></div>
                           <label><b>User Name</b></label>
                           <input type="text" placeholder="Enter User Name" name="userName" id="login-userName" >
 
@@ -88,79 +89,74 @@
 			</div>
 
 		</section>
-
-		<main>
             <section class="section-padding">
-                <div >
-                    <div class="row">
-                        <div class="col section-title ">
+            <div >
+                <div class="row">
+                    <div class="col section-title ">
 
-                            <h2>Why<span> Choose Us</span>?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt expedita ad facilis nemo! Deserunt expedita ad facilis nemo Deserunt expedita ad facilis nemo</p>
-                            <div class="section-borders">
-                                <span></span>
-                                <span class="black-border"></span>
-                                <span></span>
-                            </div>
+                        <h2>Why<span> Choose Us</span>?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt expedita ad facilis nemo! Deserunt expedita ad facilis nemo Deserunt expedita ad facilis nemo</p>
+                        <div class="section-borders">
+                            <span></span>
+                            <span class="black-border"></span>
+                            <span></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-info-box">
-                            <div class="single-info-box">
-                                <h4>Reason 1</h4>
-                                <div class="info-icon">
-                                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                </div>
-                                <div class="choose-us-info">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
-                                </div>
-                                <a href="" class="border-button">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="col col-info-box">
-                            <div class="single-info-box">
-                                <h4>Reason 1</h4>
-                                <div class="info-icon">
-                                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                </div>
-                                <div class="choose-us-info">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
-                                </div>
-                                <a href="" class="border-button">Learn more</a>
-                            </div>
-                        </div>
-
-                        <div class="col col-info-box">
-                            <div class="single-info-box">
-                                <h4>Reason 2</h4>
-                                <div class="info-icon">
-                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                </div>
-                                <div class="choose-us-info">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
-                                </div>
-                                <a href="" class="border-button">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="col col-info-box">
-                            <div class="single-info-box">
-                                <h4>Reason 3</h4>
-                                <div class="info-icon">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                </div>
-                                <div class="choose-us-info">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
-                                </div>
-                                <a href="" class="border-button">Learn more</a>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
-            </section>
-		</main>    
-            
+                <div class="row">
+                    <div class="col col-info-box">
+                        <div class="single-info-box">
+                            <h4>Reason 1</h4>
+                            <div class="info-icon">
+                               <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <div class="choose-us-info">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
+                            </div>
+                            <a href="" class="border-button">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="col col-info-box">
+                        <div class="single-info-box">
+                            <h4>Reason 1</h4>
+                            <div class="info-icon">
+                               <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <div class="choose-us-info">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
+                            </div>
+                            <a href="" class="border-button">Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="col col-info-box">
+                        <div class="single-info-box">
+                            <h4>Reason 2</h4>
+                            <div class="info-icon">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="choose-us-info">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
+                            </div>
+                            <a href="" class="border-button">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="col col-info-box">
+                        <div class="single-info-box">
+                            <h4>Reason 3</h4>
+                            <div class="info-icon">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="choose-us-info">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in nobis totam earum, doloremque beatae consectetur tempora deserunt facere eaque.</p>
+                            </div>
+                            <a href="" class="border-button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         </div>
         
     </div>

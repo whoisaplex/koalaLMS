@@ -463,3 +463,26 @@ header ul li button:hover{
     .col {flex: 1;}
 }
 
+#login-error{
+    text-align: center;
+}
+.login-error{
+    padding: 10px 0px 25px 0px;
+    display: inline-block;
+}
+
+/*will go to grid system*/
+
+.info-alert{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.warning-info-alert{
+    color: #f44336;
+    border-color: #f44336;
+}
+
+

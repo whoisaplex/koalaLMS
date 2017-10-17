@@ -28,28 +28,23 @@ function loginFunction(){
 
     var loginUserName    = document.getElementById("login-userName").value;
     var loginPsw         = document.getElementById("login-psw").value;
-
-    /*var users =
-        [
-                {name:'Nasimul Huq',userName:"nasim", email:'nasimjibs@gmail.com',psw:"nhyyhn123"},
-                {name:'Masudul Hasan', userName:"masud", email:'sample@gmail.com',psw:"123"}
-        ];
-*/
-
+   
     for(var i=0; i< users.length; i++){
 
        if(users[i].username === loginUserName && users[i].password === loginPsw ){
             //sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
                 location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/html/Student/Index.html");
-               console.log(sessionStorage);
-                $('#login-name-display').append("Logged is as "+loginUserName);
+               
+               $('#login-name-display').append("Logged is as "+loginUserName);
                document.getElementById('logout-btn').style.display='block';
                document.getElementById('register-btn').style.display='none';
                document.getElementById('login-btn').style.display='none';
                document.getElementById('userLogin').style.display='none';
            }
        } else {
+           
+           document.getElementById('login-error').innerHTML = "<span class='login-error info-alert warning-info-alert'>User Name / Password is not valid</span>";
 
        }
      }
