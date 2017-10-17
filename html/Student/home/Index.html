@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
-        <link rel="stylesheet" href="../../css/style.css"/>
+        <link rel="stylesheet" href="../../../css/style.css"/>
     </head>
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
@@ -16,17 +16,54 @@
         <h4 id="user-Name">Alexander</h4>
       </div>
       <div class="nav-menu" id="nav-menu">
+
       <p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
-      <p onclick="changeContent(this)"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
-      <p onclick="changeContent(this)"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</p>
-      <p onclick="changeContent(this)"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</p>
-      <p onclick="changeContent(this)"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</p>
-      <div>
+      <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p><div>
+
+        <div id="nav-courses" style="display:none">
+          <p onclick="toggleOngoing()" id="nav-ongoing-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-ongoing-courses-arrow"></i>Ongoing Courses</p>
+          <div id="nav-ongoing-courses" style="display:none;" >
+            <p><a href="../courses/javascript.html">Javascript</a></p>
+            <p><a href="../courses/html.html">HTML</a></p>
+            <p><a href="../courses/css3.html">Css3</a></p>
+          </div>
+
+
+          <p onclick="toggleUpcoming()" id="nav-upcoming-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-upcoming-courses-arrow"></i>Upcoming Courses</p>
+          <div id="nav-upcoming-courses" style="display:none">
+            <p ><a href="../courses/swedish.html">Swedish</a></p>
+            <p><a href="../courses/english.html">English</a></p>
+          </div>
+        </div>
+
+      </div>
+      <p onclick="changeContent(this)"><a href="../grades/grades.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</a></p>
+      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+      <p onclick="changeContent(this)"><a href="../upcoming/upcoming.html"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</a></p>
+
+
+      <!--
+      <ul>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Home</a></li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Courses</a>
+          <ul>
+              <li>HTML</li>
+              <li>Javascript</li>
+              <li>CSS3</li>
+          </ul>
+
+        </li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Grades</a></li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Evaluations</a></li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Upcoming</a></li>
+      </ul>
+    -->
+    </div>
     </nav>
 
     <nav class="mobile-nav">
       <div>
-        <img src="../../imgs/mobile-nav-button.png" width="50px;" onclick="toggleNavBar(this)" id="openNav" >
+        <img src="../../../imgs/mobile-nav-button.png" width="50px;" onclick="toggleNavBar(this)" id="openNav" >
       </div>
       <div>
         <h2 id="currentPageHeader"></h2>
@@ -149,27 +186,27 @@
       <div></div>
   </div>
 
-                  <!--HELA SIDANS CONTENT -->
+                  <!--HELA SIDANS CONTENT
         <section class="main-content" id="Upcoming" onclick="toggleNavBar(this)">
-            <!-- Article är våra textboxar -->
+             Article är våra textboxar
             <article class="small-box">
                 <h2>Kommande examinationer</h2>
                 <hr>
-                <!-- denna div är för varje list/kurs -->
+                 denna div är för varje list/kurs
                 <div id="exams">
                 </div>
             </article>
             <article class="small-box">
                 <h2>Kommande uppgifter</h2>
                 <hr>
-                <!-- denna div är för varje list/kurs -->
+
                 <div id="assignments">
                 </div>
             </article>
           </section>
 
           <section class="main-content" id="Courses" onclick="toggleNavBar(this)">
-              <!-- Article är våra textboxar -->
+
               <article class="small-box" id="upcoming-courses">
                   <h2>Upcoming Courses</h2>
                   <hr>
@@ -187,25 +224,27 @@
               </article>
           </section>
 
-
+          <div>
           <div class="grid-main-content-row" id="Grades">
               <div style=" grid-row: 1 / last-line;"></div>
-              <!-- A BOX IN A NEW ROW -->
-              <div class="grid-2-box"> <!-- Change class to fit how many boxes you want -->
-                    <!--<div></div>  10px space -->
-                    <!-- A NEW BOX IN THE SAME ROW -->
-                    <div class="grid-box-style" id="hubba">
+               A BOX IN A NEW ROW
+              <div class="grid-1-box">  Change class to fit how many boxes you want
+                    <div></div>  10px space
+                     A NEW BOX IN THE SAME ROW
+                    <div class="grid-style-box" id="hubba">
                         A
                     </div>
 
-                    
-                    <!-- A NEW BOX IN THE SAME ROW ENDS -->
-                   <!-- <div></div>  10px space -->
 
-              </div>
-              <!-- A BOX ENDS -->
+
+
+
+
+                 </div>
+
             </div>
-      <!--
+          </div>
+
        <section class="main-content" id="Grades" onclick="toggleNavBar(this)">
 
 
@@ -218,12 +257,12 @@
        </section>
      -->
 
-      <script src="../../javascript/database.js"></script>
-      <script src="../../javascript/nav.js"></script>
-      <script src="../../javascript/home.js"></script>
-      <script src="../../javascript/upcoming.js"></script>
-      <script src="../../javascript/courses.js"></script>
-      <script src="../../javascript/login.js"></script>
-      <script src="../../javascript/grades.js"></script>
+      <script src="../../../javascript/database.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/home.js"></script>
+      <script src="../../../javascript/upcoming.js"></script>
+      <script src="../../../javascript/courses.js"></script>
+      <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/grades.js"></script>
     </body>
 </html>
