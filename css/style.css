@@ -76,10 +76,10 @@
   padding-right:10px;
 }
 
-.grid-style-box h2,.grid-style-box h3, .grid-style-box h5{
+.courses-box h2,.courses-box h3, .courses-box h5{
   text-align:center;
 }
-.grid-style-box a{
+.courses-box a{
   text-decoration: none;
   color:grey;
 }
@@ -486,6 +486,9 @@ img {
   width:20px;
   height:20px;
 }
+.news-box h2{
+  text-align: center;
+}
 #attendance-dropdown{
   position:fixed;
   top:0px;
@@ -582,7 +585,7 @@ img {
   .grid-main-content-row{
     grid-template-columns: 0px auto;
   }
-  .grid-style-box{
+  .courses-box{
     margin-top:100px;
   }
   .nav-wrapper-grid{
