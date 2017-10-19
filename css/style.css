@@ -615,3 +615,169 @@ img {
     grid-template-columns: 0px auto;
   }
 }
+
+/*-----------------------EVALUATIONS-------------------*/
+
+.evaluation-overview {
+  height: 10vh;
+  width: 100%;
+  margin-bottom: 6%;
+}
+.evaluation-day, .evaluation-week{
+  background-color: black;
+  height: 55%;
+  width: 12%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  float: left;
+  margin-right: 2%;
+}
+.evaluation-week {
+  width: 95.9%;
+  margin-top: 2%;
+  height: 35%;
+}
+
+.evaluation-overview h4 {
+  color: white;
+  margin: 0;
+  height: 100%;
+  font-size: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#weekly-form-fill {
+  position: absolute;
+  transform: translateY(-65vh);
+  height: 61vh;
+  height: auto;
+  visibility: hidden; 
+  width: 80%;
+  float: right;
+}
+#send-form-fill-week {
+  height: 5vh;
+  width: 6vw;
+  background-color: green;
+  bottom: 1vh;
+  right: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10%;
+  margin-top: 1vh;
+  float: right;
+}
+#send-form-fill-week:hover {
+  background-color: #066D08;
+}
+#course-form-fill {
+  position: absolute;
+  transform: translateY(-65vh);
+  height: 61vh;
+  height: auto;
+  visibility: hidden;
+  width: 90%;
+}
+#send-form-fill-course {
+  height: 5vh;
+  width: 6vw;
+  background-color: green;
+  bottom: 1vh;
+  right: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10%;
+  margin-top: 1vh;
+  float: right;
+}
+#send-form-fill-course:hover {
+  background-color: #066D08;
+}
+.courseEvaluation {
+  width: auto;
+  height: 6vh;
+  background-color: grey;
+  flex: left;
+  flex-direction: column;
+  margin-bottom: 1vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 17px;
+}
+textarea {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  resize: auto;
+  margin-top: 3%;
+}
+.small-box h4 {
+  margin: 0;
+  padding: 0;
+}
+#currentPageHeader {
+  display: none;
+}
+@keyframes slide-down-formFill {
+  from {transform: translateY(-65vh);}
+  to {transform: translateY(0vh);}
+}
+@keyframes slide-up-formFill {
+  from {transform: translateY(0vh);}
+  to {transform: translateY(-65vh);}
+}
+
+
+@media only screen and (max-width:769px){
+  #weekly-form-fill {
+    height: 450px;
+    margin-left: 1vw;
+  }
+  #weekly-form-fill h4 {
+    margin-bottom: 1vh;
+  }
+  #course-form-fill {
+    height: 450px;
+    margin-left: 1vw;
+  }
+  #course-form-fill h4 {
+    margin-bottom: 1vh;
+  }
+  #send-form-fill-week, #send-form-fill-course {
+    width: 15vw;
+  }
+  #small-boxes-title{
+    font-size: 110%;
+  }
+  #my-evaluations {
+    margin-top: 13vh;
+  }
+}
+
+/*-----------------------ONLY TEST DATA-------------------*/
+#week41:hover, .courseEvaluation:hover, #wednesday41:hover {
+  background-color: #6C6B6B;
+}
+#wednesday41, #week41 {
+  background-color: grey;
+}
+#monday41, #tuesday41, #monday40, #tuesday40, #thursday40, #friday40, #tuesday39, #wednesday39, #thursday39, #week40{
+  background-color: green;
+}
+#monday39, #friday39, #week39, #wednesday40{
+  background-color: red;
+}
+      /*-----------------------ONLY TEST DATA-------------------*/
