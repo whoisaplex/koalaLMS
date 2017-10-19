@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+        <link rel="stylesheet" href="../../../css/style.css"/>
+    </head>
+    <body>
+    <nav class="student-navbar" style="position:fixed;" id="www">
+      <div class="nav-user-block">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <p>Welcome,</p>
+        <h4 id="user-Name">Alexander</h4>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+
+      <p onclick="changeContent(this)" style="border-right:3px solid orange;"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
+      <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p><div>
+
+        <div id="nav-courses" style="display:none">
+          <p onclick="toggleOngoing()" id="nav-ongoing-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-ongoing-courses-arrow"></i>Ongoing Courses</p>
+          <div id="nav-ongoing-courses" style="display:none;" >
+            <p><a href="../courses/javascript.html">Javascript</a></p>
+            <p><a href="../courses/html.html">HTML</a></p>
+            <p><a href="../courses/css3.html">Css3</a></p>
+          </div>
+
+
+          <p onclick="toggleUpcoming()" id="nav-upcoming-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-upcoming-courses-arrow"></i>Upcoming Courses</p>
+          <div id="nav-upcoming-courses" style="display:none">
+            <p ><a href="../courses/swedish.html">Swedish</a></p>
+            <p><a href="../courses/english.html">English</a></p>
+          </div>
+        </div>
+
+      </div>
+      <p onclick="changeContent(this)"><a href="../grades/grades.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</a></p>
+      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+      <p onclick="changeContent(this)"><a href="../upcoming/upcoming.html"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</a></p>
+
+
+      <!--
+      <ul>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Home</a></li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Courses</a>
+          <ul>
+              <li>HTML</li>
+              <li>Javascript</li>
+              <li>CSS3</li>
+          </ul>
+
+        </li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Grades</a></li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Evaluations</a></li>
+        <li><a href=""><i class="fa fa-book" aria-hidden="true"></i>Upcoming</a></li>
+      </ul>
+    -->
+    </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <div>
+        <img src="../../../imgs/mobile-nav-button.png" width="50px;" onclick="toggleNavBar(this)" id="openNav" >
+      </div>
+      <div>
+        <h2 id="currentPageHeader"></h2>
+      </div>
+    </nav>
+
+
+
+
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+    <div class="nav-wrapper-grid" id="nav-wrapper">
+        <div class="nav-grid-space"></div>
+        <div class="top-nav-bar">
+              <h1>KYH Koalas</h1>
+              <button onclick="logOutUser()">Logout</button>
+        </div>
+    </div>
+
+    <!-- HOME DESKTOP VIEW CONTENT -->
+    <div class="main-content-g" id="Home" onclick="toggleNavBar(this)">
+
+      <div></div> <!-- NAV Padding -->
+      <div class="home-attendance-timeline-container-grid">
+        <div></div>
+        <div class="home-attendance-timeline-grid">
+            <div class="attendance-timeline-circle">
+                <p class="attendance-timeline-text">08:00</p>
+            </div>
+            <div class="attendance-timeline-line"></div>
+            <div class="attendance-timeline-circle">
+                <p class="attendance-timeline-text">10:00</p>
+            </div>
+            <div class="attendance-timeline-line"></div>
+            <div class="attendance-timeline-circle">
+                <p class="attendance-timeline-text">13:00</p>
+            </div>
+        </div>
+        <div></div>
+      </div>
+
+      <div></div> <!-- NAV Padding -->
+      <div class="home-attendance-box-grid">
+        <div></div>
+        <div class="attendance-box">
+            <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+            <h3 class="attendance-course-text">Javascript</h3>
+            <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+            <p class="attendance-course-time">08:00</p>
+        </div>
+
+        <div class="attendance-box">
+            <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+            <h3 class="attendance-course-text">HTML</h3>
+            <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+            <p class="attendance-course-time">10:00</p>
+        </div>
+
+        <div class="attendance-box">
+            <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+            <h3 class="attendance-course-text">CSS3</h3>
+            <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+            <p class="attendance-course-time">13:00</p>
+        </div>
+        <div></div>
+      </div>
+
+      <div></div> <!-- NAV Padding -->
+      <div class="student-news-grid">
+          <div></div>
+          <div class="grid-style-box news-box">
+            <h2>News</h2>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum ac ex sed condimentum. Quisque ac nisl vitae diam imperdiet iaculis sed et ipsum. Donec et mattis mi. Pellentesque imperdiet tellus mi, sed gravida nisi accumsan vitae. Curabitur viverra a arcu vitae pretium. Quisque sed tempor nunc. Aenean nulla leo, consequat in mauris eu, venenatis auctor libero. Proin quam justo, hendrerit id mi in, fringilla euismod arcu. Etiam at leo nibh. Nam porta, dolor sed laoreet fringilla, dui est rutrum lacus, ac aliquam urna nisi ac magna. Integer a ornare lacus. Etiam sollicitudin sem ut sem pellentesque, et mattis diam dapibus. Sed justo elit, consectetur non dui et, posuere ultrices arcu. Mauris finibus posuere malesuada. Ut a maximus eros.<br><br>
+            Proin interdum justo vel urna facilisis, et malesuada lacus elementum. Nulla non ex pulvinar, scelerisque elit a, gravida est. Proin vitae ipsum erat. Suspendisse eu ante ut sapien dapibus elementum sed sed sapien. Duis iaculis eu augue iaculis cursus. Quisque vulputate urna erat, quis posuere mi sollicitudin id. Sed id risus leo. Proin cursus nisl vel finibus ullamcorper. Duis at justo id nulla rhoncus tempor. Sed magna nulla, ullamcorper quis viverra eu, mollis a ante.</h4>
+          </div>
+          <div></div>
+      </div>
+    </div>
+
+
+    <!-- HOME MOBILE VIEW CONTENT -->
+    <div class="Home-mobile-grid" id="Home-mobile" onclick="toggleNavBar(this)">
+      <div></div>
+      <div class="attendance-timeline-circle">
+          <p class="attendance-timeline-text">08:00</p>
+      </div>
+      <div></div>
+      <div class="attendance-box">
+          <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+          <h3 class="attendance-course-text">Javascript</h3>
+          <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+          <p class="attendance-course-time">08:00</p>
+      </div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-line" style="grid-row-start: 2; grid-column-start: 2;"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-circle">
+          <p class="attendance-timeline-text">10:00</p>
+      </div>
+      <div></div>
+      <div class="attendance-box">
+          <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+          <h3 class="attendance-course-text">HTML</h3>
+          <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+          <p class="attendance-course-time">10:00</p>
+      </div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-line" style="grid-row-start: 4; grid-column-start: 2;"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div class="attendance-timeline-circle">
+          <p class="attendance-timeline-text">13:00</p>
+      </div>
+      <div></div>
+      <div class="attendance-box">
+          <img class="attendance-course-checkbox" src="http://www.sixminutessmarter.com/demofiles/webdev/close.png">
+          <h3 class="attendance-course-text">CSS3</h3>
+          <button class="attendance-button" onclick="changeAttendance(this)">Anmäl närvaro</button>
+          <p class="attendance-course-time">13:00</p>
+      </div>
+      <div></div>
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="dark-overlay" id="attendance-dark-overlay"></div>
+  <!-- Dropdown attendance -->
+  <div id="attendance-dropdown">
+    <div id="attendance-dropdown-grid">
+      <div></div>
+      <div>
+        <div id="attendance-dropdown-error"><h3>Wrong Code</h3></div>
+        <i onclick="closeAttendanceDropdown()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <input type="text" placeholder="Enter your code..." id="attendance-dropdown-input">
+        <button class="attendance-button" onclick="submitCodeAttendance()">Send Code</button>
+      </div>
+    </div>
+  </div>
+
+      <script src="../../../javascript/database.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/home.js"></script>
+      <script src="../../../javascript/upcoming.js"></script>
+      <script src="../../../javascript/courses.js"></script>
+      <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/grades.js"></script>
+    </body>
+</html>
