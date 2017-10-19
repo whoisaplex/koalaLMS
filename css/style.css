@@ -339,7 +339,7 @@ img {
   width: 90vw;
 }
 #Grades #finished-coursess {
-  grid-column-start: 2;
+  grid-column-start: 1;
 }
 #Grades .small-box{
   border-radius: 3px;
