@@ -64,6 +64,39 @@
 
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
 
+        <div class="feedback" id="feedback">
+            <div class="feedback-button" id="lectureFeedback" onclick="inputLectureFeedback()">
+                <div class="smiles">
+                    <div class="eyeLeft"></div>
+                    <div class="eyeRight"></div>
+                    <div class="mouth" id="mouth-lecture"></div>
+                </div>
+            </div>
+            <div class="feedback-button" id="websiteFeedback" onclick="inputWebsiteFeedback()">
+                <div class="smiles">
+                    <div class="eyeLeft"></div>
+                    <div class="eyeRight"></div>
+                    <div class="mouth" id="mouth-website"></div>
+                </div>
+            </div>
+            <div class="feedback-button" id="facilitiesFeedback" onclick="inputFacilitiesFeedback()">
+                <div class="smiles">
+                    <div class="eyeLeft"></div>
+                    <div class="eyeRight"></div>
+                    <div class="mouth" id="mouth-facilities"></div>
+                </div>
+            </div>
+            <div class="open-feedback-text" id="open-feedback-text" onclick="openFeedback()">
+                Dagens utvärdering
+            </div>
+            <!-- <div class="feedback-text">
+                <p id="interactive-feedback-text">
+                    Klicka på en av gubbarna för att utvärdera
+                </p>
+            </div> -->
+        </div>
+
+        <!-- course form sliding down -->
         <article class="small-box" id="course-form-fill">
             
             <!-- name changes depends of whitch course -->
@@ -79,6 +112,7 @@
             </div>
         </article>
 
+        <!-- weekly form sliding down -->
         <article class="small-box" id="weekly-form-fill">
             
             <!-- name changes depends of whitch course -->
@@ -93,6 +127,8 @@
                  Klar
              </div>
         </article>
+
+
       <div style=" grid-row: 1 / last-line;"></div>
       <!-- A BOX IN A NEW ROW -->
       <div class="grid-2-box"> <!-- Change class to fit how many boxes you want -->
@@ -155,6 +191,7 @@
       <script src="../../../javascript/courses.js"></script>
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/smiley.js"></script>
 
     </body>
 </html>
