@@ -750,7 +750,9 @@ textarea {
     margin-top: 13vh;
   }
 }
-
+#course-evaluations {
+  margin-right: 10px;
+}
 /*-----------------------SMILEYS-------------------*/
 .main-content {
   z-index: 1;
@@ -893,3 +895,9 @@ textarea {
   background-color: red;
 }
       /*-----------------------ONLY TEST DATA-------------------*/
+
+@media only screen and (max-width:769px){
+  #course-evaluations {
+      margin-right: 0;
+  }
+}
