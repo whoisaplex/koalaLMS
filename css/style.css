@@ -48,7 +48,7 @@
 }
 .grid-1-box{
   display:grid;
-  grid-template-columns:10px auto 10px;
+  grid-template-columns: auto;
 }
 #hubba {
   grid-column-start: 2;
