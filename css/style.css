@@ -44,7 +44,7 @@
   grid-template-rows: auto;
 }
 .grid-1-box, .grid-2-box, .grid-3-box, .grid-4-box{
-  grid-gap:10px;
+  margin: 0px 10px 0px 10px;
 }
 .grid-1-box{
   display:grid;
@@ -56,8 +56,29 @@
 
 .grid-2-box{
   display:grid;
-  grid-template-columns:10px auto auto 10px;
+  grid-template-columns: auto auto;
 }
+#exams {
+  grid-column-start: 1;
+  margin-right: 10px;
+}
+#exams h3 {
+  text-align: left;
+}
+#assignments h3 {
+  text-align: left;
+}
+@media only screen and (max-width:769px){
+  .grid-2-box {
+    grid-template-columns: auto;
+    margin-top: 100px;
+    }
+  #exams {
+    margin-right:0px;
+  }
+
+}
+
 
 .grid-3-box{
   display:grid;
@@ -282,15 +303,7 @@ img {
 }
 
 /*/ Upcoming /*/
-#exams {
-  grid-column-start: 2;
-}
-#exams h3 {
-  text-align: left;
-}
-#assignments h3 {
-  text-align: left;
-}
+
 
 
 /*COURSES */
