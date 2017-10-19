@@ -79,7 +79,6 @@
 
 }
 
-
 .grid-3-box{
   display:grid;
   grid-template-columns:10px auto auto auto 10px;
@@ -88,7 +87,6 @@
   display:grid;
   grid-template-columns:10px auto auto auto auto 10px;
 }
-
 .grid-style-box{
   background:white;
   border-radius: 4px;
@@ -96,7 +94,6 @@
   padding-left:10px;
   padding-right:10px;
 }
-
 .courses-box h2,.courses-box h3, .courses-box h5{
   text-align:center;
 }
@@ -104,10 +101,6 @@
   text-decoration: none;
   color:grey;
 }
-
-
-
-
 body{
   margin: 0;
   padding: 0;
@@ -121,13 +114,10 @@ body{
   min-width: 200px;
   height: 100%;
   position: absolute;
-
-
 }
 .mobile-nav{
   display:none;
 }
-
 .nav-wrapper{
 margin: 0;
 }
@@ -151,8 +141,6 @@ margin: 0;
   grid-template-columns: auto  auto;
   grid-column-gap: 10px;
 }
-
-
 .small-box{
   width:25vw;
   background: white;
@@ -554,7 +542,6 @@ img {
   border-bottom:none;
 }
 
-
 #attendance-dropdown div div:nth-child(2) div h3{
   padding:0;
   margin:0;
@@ -573,9 +560,6 @@ img {
   opacity:0.7;
   display:none;
 }
-
-
-
 
 @media only screen and (max-width:769px){
   .Home-mobile-grid{
