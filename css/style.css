@@ -58,6 +58,7 @@
   display:grid;
   grid-template-columns:10px auto auto 10px;
 }
+
 .grid-3-box{
   display:grid;
   grid-template-columns:10px auto auto auto 10px;
@@ -281,35 +282,16 @@ img {
 }
 
 /*/ Upcoming /*/
-#Upcoming .small-box {
-  width:38vw;
-  margin-top: 25px;
-  border-radius:3px;
+#exams {
+  grid-column-start: 2;
+}
+#exams h3 {
+  text-align: left;
+}
+#assignments h3 {
+  text-align: left;
+}
 
-}
-#Upcoming .small-box h2 {
-  margin: 5px;
-}
-
-#Upcoming .small-box-li {
-  margin: 5px;
-}
-#Upcoming .small-box-li h4 {
-  margin-bottom: -10px;
-}
-@media only screen and (max-width:1225px){
-#Upcoming .small-box {
-  width: 55vw;
-  }
-}
-@media only screen and (max-width:769px){
-  #Upcoming .small-box {
-    width: 80vw;
-  }
-  #Upcoming .small-box:first-child {
-    margin-top: 100px;
-  }
-}
 
 /*COURSES */
 #Courses .small-box{
