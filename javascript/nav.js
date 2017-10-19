@@ -11,30 +11,68 @@ for(let x = 0; x < users.length; x++){
 document.getElementById('user-Name').innerHTML = users[num].full_name;
 */
 
-let pages = ['Home', 'Courses','Upcoming', 'Grades'];
-for(let countPages = 0; countPages < pages.length; countPages++){
-  if(pages[countPages] === currentPage){
-    document.getElementById(currentPage).style.display = 'grid';
-    document.getElementById('nav-menu').childNodes[1].style.background = '#2e3344';
-    document.getElementById('nav-menu').childNodes[1].style.borderRight = 'solid 4px orange';
+function toggleCourses(){
+  if(document.getElementById('nav-courses').style.display === 'none'){
+    document.getElementById('nav-courses').style.display = 'block';
   }else{
-    document.getElementById(pages[countPages]).style.display = 'none';
+    document.getElementById('nav-courses').style.display = 'none';
+  }
+}
+
+function toggleOngoing(){
+  if(document.getElementById('nav-ongoing-courses').style.display === 'none'){
+    document.getElementById('nav-ongoing-courses').style.display = 'block';
+    document.getElementById('nav-ongoing-courses-arrow').classList = 'fa fa-chevron-down';
+    document.getElementById('nav-ongoing-courses-text').style.background = '#2E3344';
+  }else{
+    document.getElementById('nav-ongoing-courses').style.display = 'none';
+    document.getElementById('nav-ongoing-courses-arrow').classList = 'fa fa-chevron-right';
+    document.getElementById('nav-ongoing-courses-text').style.background = 'none';
+  }
+}
+
+function toggleUpcoming(){
+  if(document.getElementById('nav-upcoming-courses').style.display === 'none'){
+    document.getElementById('nav-upcoming-courses').style.display = 'block';
+    document.getElementById('nav-upcoming-courses-arrow').classList = 'fa fa-chevron-down';
+    document.getElementById('nav-upcoming-courses-text').style.background = '#2E3344';
+  }else{
+    document.getElementById('nav-upcoming-courses').style.display = 'none';
+    document.getElementById('nav-upcoming-courses-arrow').classList = 'fa fa-chevron-right';
+    document.getElementById('nav-upcoming-courses-arrow').style.background = '';
+    document.getElementById('nav-upcoming-courses-text').style.background = 'none';
   }
 }
 
 
-function changeContent(currentNavP){
 
+
+
+let pages = ['Home', 'Courses','Upcoming', 'Grades'];
+for(let countPages = 0; countPages < pages.length; countPages++){
+  if(pages[countPages] === currentPage){
+    //document.getElementById(currentPage).style.display = 'grid';
+    //document.getElementById('nav-menu').childNodes[1].style.background = '#2e3344';
+    //document.getElementById('nav-menu').childNodes[1].style.borderRight = 'solid 4px orange';
+  }else{
+    //document.getElementById(pages[countPages]).style.display = 'none';
+  }
+}
+
+
+
+function changeContent(currentNavP){
+  document.getElementById('Home-mobile').style.display = 'none';
   let currentPName = currentNavP.innerHTML;
   currentPName = currentPName.replace(/[\<].*[\>]/, "");
   currentPage = currentPName;
   for(let countPages = 0; countPages < pages.length; countPages++){
     if(pages[countPages] === currentPage){
       if(currentPage != 'Home'){
-        document.getElementById(currentPage).style.display = 'flex';
+        document.getElementById(currentPage).style.display = 'grid';
       }else{
         if(innerWidth <= 769){
-          document.getElementById('Home-mobile').style.display = 'grid';
+          document.getElementById('Home-mobile').style.display = "grid";
         }else{
           document.getElementById(currentPage).style.display = 'grid';
         }
@@ -42,7 +80,7 @@ function changeContent(currentNavP){
 
     }else{
       document.getElementById(pages[countPages]).style.display = 'none';
-      document.getElementById('Home-mobile').style.display = 'none';
+
     }
     let tempP = document.getElementById('nav-menu').querySelectorAll('p');
     for(let x = 0; x < tempP.length; x++){
@@ -54,6 +92,7 @@ function changeContent(currentNavP){
     currentNavP.style.borderRight = 'solid 4px orange';
   }
 }
+
 
 function toggleNavBar(that){
   if(mobileNavActive === true && self.innerWidth <= 769){

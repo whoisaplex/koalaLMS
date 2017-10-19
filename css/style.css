@@ -1,3 +1,92 @@
+.nav-wrapper-grid{
+  display:grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+}
+.nav-grid-space{
+  grid-row: 1 / last-line;
+}
+.top-nav-bar{
+  display:grid;
+  background:#3b4052;
+  height:50px;
+  grid-template-columns: auto 75px;
+}
+.top-nav-bar h1{
+  margin:0px;
+  padding:0px;
+  justify-self: center;
+  align-self: center;
+  color:white;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-left:75px;
+}
+.top-nav-bar button{
+  margin:0px;
+  padding:0px;
+  height: 25px;
+  align-self: center;
+  margin-right:10px;
+  border:none;
+  border-bottom:solid 1px white;
+  color:white;
+  background: #3b4052;
+  font-weight: bold;
+
+}
+.top-nav-bar button:hover{
+  cursor:pointer;
+  background:#2e3344;
+}
+.grid-main-content-row{
+  display:grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+}
+.grid-1-box, .grid-2-box, .grid-3-box, .grid-4-box{
+  grid-gap:10px;
+}
+.grid-1-box{
+  display:grid;
+  grid-template-columns:10px auto 10px;
+}
+#hubba {
+  grid-column-start: 2;
+}
+
+.grid-2-box{
+  display:grid;
+  grid-template-columns:10px auto auto 10px;
+}
+
+.grid-3-box{
+  display:grid;
+  grid-template-columns:10px auto auto auto 10px;
+}
+.grid-4-box{
+  display:grid;
+  grid-template-columns:10px auto auto auto auto 10px;
+}
+
+.grid-style-box{
+  background:white;
+  border-radius: 4px;
+  margin-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.courses-box h2,.courses-box h3, .courses-box h5{
+  text-align:center;
+}
+.courses-box a{
+  text-decoration: none;
+  color:grey;
+}
+
+
+
+
 body{
   margin: 0;
   padding: 0;
@@ -81,8 +170,25 @@ margin: 0;
  }
  .nav-menu p:hover {
   background-color: #32374a;
+  cursor:pointer;
 
  }
+ .nav-menu  a{
+   color:white;
+   text-decoration: none;
+ }
+ .nav-menu  div div p:hover{
+  cursor:pointer;
+ }
+ .nav-menu  div div div p{
+   padding-left:50px;
+   background:none;
+ }
+ #nav-ongoing-courses, #nav-upcoming-courses{
+   background:#2e3344;
+ }
+
+
 .student-navbar p i {
   width: 25px;
  }
@@ -104,17 +210,18 @@ margin: 0;
 
  }
 
+
   .mobile-nav{
     position:fixed;
-    background-color: #efefef;
+    background-color: #3b4052;
     width:100vw;
     height:75px;
     z-index:2;
     display:grid;
     grid-template-columns: 33% 33% 33%;
     justify-items: center;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 
   .mobile-nav div:first-child{
@@ -175,35 +282,16 @@ img {
 }
 
 /*/ Upcoming /*/
-#Upcoming .small-box {
-  width:38vw;
-  margin-top: 25px;
-  border-radius:3px;
+#exams {
+  grid-column-start: 2;
+}
+#exams h3 {
+  text-align: left;
+}
+#assignments h3 {
+  text-align: left;
+}
 
-}
-#Upcoming .small-box h2 {
-  margin: 5px;
-}
-
-#Upcoming .small-box-li {
-  margin: 5px;
-}
-#Upcoming .small-box-li h4 {
-  margin-bottom: -10px;
-}
-@media only screen and (max-width:1225px){
-#Upcoming .small-box {
-  width: 55vw;
-  }
-}
-@media only screen and (max-width:769px){
-  #Upcoming .small-box {
-    width: 80vw;
-  }
-  #Upcoming .small-box:first-child {
-    margin-top: 100px;
-  }
-}
 
 /*COURSES */
 #Courses .small-box{
@@ -241,7 +329,7 @@ img {
   border-radius: 3px;
   width: 60vw;
 }
-#Grades .small-box h2,h4,p{
+#Grades .small-box h2 #Grades .small-box h4,#Grades .small-box p{
   margin-left:10px;
   color:#424242 ;
 }
@@ -330,6 +418,15 @@ img {
   grid-template-columns: 10px auto auto auto 10px;
 }
 
+.student-news-grid{
+  display:grid;
+  grid-column-gap: 10px;
+  grid-column-start: 2;
+  grid-row-start: 4;
+  grid-template-columns: 10px  auto 10px;
+
+}
+
 
 
 .attendance-timeline-circle{
@@ -389,6 +486,81 @@ img {
   width:20px;
   height:20px;
 }
+.news-box h2{
+  text-align: center;
+}
+#attendance-dropdown{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  display:none;
+}
+#attendance-dropdown-grid{
+  display:grid;
+  grid-template-columns: 200px auto;
+  align-items:center;
+}
+
+#attendance-dropdown div div:nth-child(2){
+  justify-self:center;
+  width:90%;
+  background:rgb(46, 51, 68);
+  display:grid;
+  height:100%;
+}
+
+
+#attendance-dropdown div div:nth-child(2) div{
+  width:100%;
+  height:40px;
+  background:red;
+  display:none;
+}
+#attendance-dropdown div div:nth-child(2) i{
+  color:white;
+  padding:10px;
+  justify-self:right;
+  transition: transform 0.5s;
+}
+#attendance-dropdown div div:nth-child(2) i:hover{
+  transform:rotate(90deg);
+}
+
+#attendance-dropdown div div:nth-child(2) input{
+  margin:10px;
+  height:50px;
+}
+
+#attendance-dropdown div div:nth-child(2) button{
+  margin:10px;
+  height:30px;
+  border-bottom:none;
+}
+
+
+#attendance-dropdown div div:nth-child(2) div h3{
+  padding:0;
+  margin:0;
+  justify-self:center;
+  align-self:center;
+  color:white;
+}
+
+.dark-overlay{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:black;
+  opacity:0.7;
+  display:none;
+}
+
+
+
+
 @media only screen and (max-width:769px){
   .Home-mobile-grid{
     display:grid;
@@ -409,5 +581,21 @@ img {
   }
   .attendance-course-checkbox{
     padding: 2px;
+  }
+  .grid-main-content-row{
+    grid-template-columns: 0px auto;
+  }
+  .courses-box{
+    margin-top:100px;
+  }
+  .nav-wrapper-grid{
+    display:none;
+  }
+  #attendance-dropdown div div:nth-child(2){
+    height:auto;
+    margin-top:75px;
+  }
+  #attendance-dropdown-grid{
+    grid-template-columns: 0px auto;
   }
 }
