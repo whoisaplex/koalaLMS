@@ -21,11 +21,11 @@
       <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
       <div>
 
-        <div id="nav-courses" style="display:block">
+        <div id="nav-courses" style="display:none">
           <p onclick="toggleOngoing()" id="nav-ongoing-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-ongoing-courses-arrow"></i>Ongoing Courses</p>
-          <div id="nav-ongoing-courses" style="display:block;" >
+          <div id="nav-ongoing-courses" style="display:none;" >
             <p><a href="javascript.html">Javascript</a></p>
-            <p style="border-right:3px solid orange;"><a href="">HTML</a></p>
+            <p><a href="">HTML</a></p>
             <p><a href="css3.html">CSS3</a></p>
           </div>
 
@@ -39,7 +39,7 @@
 
       </div>
       <p onclick="changeContent(this)"><a href="../grades/grades.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</a></p>
-      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+      <p style="border-right:3px solid orange; background-color: #2E3344;" onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
       <p onclick="changeContent(this)"><a href="../upcoming/upcoming.html"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</a></p>
     </div>
     </nav>
