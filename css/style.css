@@ -605,7 +605,7 @@ img {
 .evaluation-overview {
   height: 10vh;
   width: 100%;
-  margin-bottom: 6%;
+  margin-bottom: 30px;
 }
 .evaluation-day, .evaluation-week{
   background-color: black;
@@ -620,7 +620,7 @@ img {
 }
 .evaluation-week {
   width: 95.9%;
-  margin-top: 2%;
+  margin-top: 8px;
   height: 35%;
 }
 
