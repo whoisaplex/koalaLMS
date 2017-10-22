@@ -39,8 +39,8 @@
             min-height: 1px;
         }
         .col {
-            padding: 1em;
-            margin: 8px;
+            padding: 10px;
+            margin: 1px;
             background:  white;
             border-radius: 3px;
             box-shadow: 0 1px 1px rgba(0,0,0,.3);
@@ -89,14 +89,193 @@
             .col-sm-11 {width: 91.66667%;}
             .col-sm-12 {width: 100%;}
         }
+        
+         @media screen and (min-width:320px){
+             
+             margin: 15px 10px 0px 0px;
+         
+         }
+        
+        .top-nav{
+            background-color: #0f6ec3;
+        }
+        .logo{
+            width: 130px;
+            padding-top: 5px;
+            margin-right: 20px;
+        }
+        .nav-bar-menu{
+            list-style-type: none;
+            margin: 0;
+            padding: 9px;
+            
+        }
+        .nav-bar-menu li{
+            float: left;
+           
+            
+            /*margin: 0px 10px 0px 0px;*/
+            height: 20px;
+            
+        }
+        .nav-bar-menu li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            text-decoration: none;
+            border: 2px solid #a1a1a1;
+            
+            border-radius: 25px;
+            height: 30px;
+
+        }
+        
+        .nav-bar-menu li a:hover {
+            background-color: #0b5394;
+        }
+        
+       
+        
+        
+        #login-error{
+            text-align: center;
+        }
+        .login-error{
+            padding: 10px 0px 25px 0px;
+            display: inline-block;
+        }
+
+        /*will go to grid system*/
+
+        .info-alert{
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .warning-info-alert{
+            color: #f44336;
+            border-color: #f44336;
+        }
+        
+        
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 15px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+/* Add padding to container elements */
+.modal-container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.Login-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+        
+        
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+.logout-btn{
+    display: none;
+}
+
+#login-name-display{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 20px;
+    text-decoration: none;
+}
+        
     </style>
 </head>
 
 <body>
+
 <div class="grid">
     <div class="row">
 
         <div class="col-wd-12">
+            <div class="col">12 Column Grid System Koala LMS</div>
+        </div> 
+		<div class="col-wd-12">
             <div class="col">12 Column</div>
         </div>
 
@@ -188,5 +367,9 @@
 
     </div>
 </div>
+
+<script src="javascript/login.js"></script>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
 </html>

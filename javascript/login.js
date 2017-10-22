@@ -25,7 +25,7 @@ function populateStorage(loginUserName) {
 }
 
 function loginFunction(){
-
+    
     var loginUserName    = document.getElementById("login-userName").value;
     var loginPsw         = document.getElementById("login-psw").value;
    
@@ -34,8 +34,7 @@ function loginFunction(){
        if(users[i].username === loginUserName && users[i].password === loginPsw ){
             //sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
-                location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/html/Student/Index.html");
-               
+               location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/html/Student/Index.html");
                $('#login-name-display').append("Logged is as "+loginUserName);
                document.getElementById('logout-btn').style.display='block';
                document.getElementById('register-btn').style.display='none';
