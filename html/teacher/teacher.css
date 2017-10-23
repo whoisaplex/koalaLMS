@@ -13,18 +13,21 @@
 }
 
 .teacherAssignmentName{
+  color:#232323;
   margin:0px;
   font-size:17px;
   cursor:pointer;
   align-self: center;
 }
 .teacherAssignmentEdit{
+  color:#006ABF;
   font-size:21px;
   padding:0px;
   margin:0px;
   cursor:pointer;
 }
 .teacherAssignmentTrash{
+  color:#c12424;
   font-size:20px;
   padding:0px;
   margin:0px;
