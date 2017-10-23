@@ -32,7 +32,7 @@ function loginFunction(){
     for(var i=0; i< students.length; i++){
 
        if(students[i].username === loginUserName && students[i].password === loginPsw ){
-            //sessionStorage.setItem('loginName', JSON.stringify(userName));
+            sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
                location.assign("file:///Users/Simon/Documents/GitHub/koalaLMS/html/Student/home/Index.html");
                $('#login-name-display').append("Logged is as "+loginUserName);
@@ -44,9 +44,9 @@ function loginFunction(){
        } else {
            for(let y=0; y< teachers.length; y++){
               if(teachers[y].username === loginUserName && teachers[y].password === loginPsw ){
-                //sessionStorage.setItem('loginName', JSON.stringify(userName));
+                sessionStorage.setItem('loginName', JSON.stringify(userName));
                 if(populateStorage(loginUserName)){
-                 location.assign("file:///Users/Simon/Documents/GitHub/koalaLMS/html/Student/home/Index.html");
+                 location.assign("file:///Users/Simon/Documents/GitHub/koalaLMS/html/teachers/home/Index.html");
                  $('#login-name-display').append("Logged is as "+loginUserName);
                  document.getElementById('logout-btn').style.display='block';
                  document.getElementById('register-btn').style.display='none';
