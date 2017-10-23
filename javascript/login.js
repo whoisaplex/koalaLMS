@@ -1,4 +1,7 @@
 // Get the modal
+let url = document.URL;
+let newUrl = url.replace("/index.html", "/html/Student/home/Index.html");
+console.log(newUrl);
 let modal = document.getElementById('userRegistration');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -34,7 +37,7 @@ function loginFunction(){
        if(students[i].username === loginUserName && students[i].password === loginPsw ){
             sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
-               location.assign("file:///Users/Simon/Documents/GitHub/koalaLMS/html/Student/home/Index.html");
+               location.assign(newUrl);
                $('#login-name-display').append("Logged is as "+loginUserName);
                document.getElementById('logout-btn').style.display='block';
                document.getElementById('register-btn').style.display='none';
