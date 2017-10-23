@@ -2,6 +2,7 @@
 let url = document.URL;
 let studentUrl = url.replace("/index.html", "/html/Student/home/Index.html");
 let teacherUrl = studentUrl.replace("/Student/", "/teachers/");
+let logOutUrl = sessionStorage.getItem('logOutUrl')
 let modal = document.getElementById('userRegistration');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -24,6 +25,7 @@ window.onclick = function(event) {
 function populateStorage(loginUserName) {
     sessionStorage.setItem('userName', loginUserName);
     sessionStorage.setItem('logedInStatus', 'YES');
+    sessionStorage.setItem('logOutUrl', url);
     return true;
 }
 
@@ -69,7 +71,7 @@ function loginFunction(){
 function logOutUser(){
     localStorage.clear();
     localStorage.setItem('logedInStatus', 'NO');
-    location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
+    location.assign(logOutUrl);
     document.getElementById('register-btn').style.display='block';
     document.getElementById('login-btn').style.display='block';
     document.getElementById('logout-btn').style.display='none';
