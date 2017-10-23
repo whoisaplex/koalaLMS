@@ -23,3 +23,20 @@ let users = [{username: 'alexander',
                                         {name: 'C++', average_grade: 'B', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'B', grade2: 'A', grade3: 'A'}]}]}
 
 ];
+
+let teachers = [
+  {username: 'aplex',
+  password: '123',
+  full_name: 'Mr Macnucklemuckle',
+  role: 'teacher',
+  courses: [
+    {name: 'Html',
+    students: [],
+    assignments: [{name: 'HTML 5 assignment', description: 'This is how you should be doing the assignment', files: []}],
+    examinations: [{name: 'HTML 6 Examination', description: 'This is how you should be doing the assignment', files: []}]},
+  {name: 'Css3',
+    students: [],
+    assignments: [{name: 'Css3 assignment', description: 'This is how you should be doing the assignment', files: []}],
+    examinations: []}
+  ]}
+];

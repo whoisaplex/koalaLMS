@@ -44,11 +44,12 @@
   grid-template-rows: auto;
 }
 .grid-1-box, .grid-2-box, .grid-3-box, .grid-4-box{
-  grid-gap:10px;
+  margin-left:10px;
+  margin-right:10px;
 }
 .grid-1-box{
   display:grid;
-  grid-template-columns:10px auto 10px;
+  grid-template-columns: auto;
 }
 #hubba {
   grid-column-start: 2;
@@ -56,16 +57,16 @@
 
 .grid-2-box{
   display:grid;
-  grid-template-columns:10px auto auto 10px;
+  grid-template-columns: 50% 50% ;
 }
 
 .grid-3-box{
   display:grid;
-  grid-template-columns:10px auto auto auto 10px;
+  grid-template-columns:auto auto auto;
 }
 .grid-4-box{
   display:grid;
-  grid-template-columns:10px auto auto auto auto 10px;
+  grid-template-columns:auto auto auto auto;
 }
 
 .grid-style-box{
@@ -208,6 +209,9 @@ margin: 0;
   .nav-menu p {
   background-color: #32374a;
 
+ }
+ .grid-2-box{
+   grid-template-columns: auto;
  }
 
 
@@ -598,4 +602,15 @@ img {
   #attendance-dropdown-grid{
     grid-template-columns: 0px auto;
   }
+}
+
+
+/*Teacher */
+#nav-courses p{
+  padding-left:50px;
+}
+#nav-courses p.teacher-nav-courses{
+  padding-left:50px;
+  border-right:solid 3px orange;
+  background:#2e3344;
 }
