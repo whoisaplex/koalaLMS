@@ -706,7 +706,7 @@ textarea {
   width: 100%;
   overflow: hidden;
   resize: auto;
-  margin-top: 3%;
+  border: 1px solid black;
 }
 .small-box h4 {
   margin: 0;
@@ -844,6 +844,11 @@ textarea {
 .open-feedback-text:hover {
   background-color: #E40A0A;
 }
+#course-form-fill, #weekly-form-fill {
+  width: calc(98% - 200px);
+  left: 208px;
+  top: 50px;
+}
 @keyframes slide-in{
   from {transform: translateX(53px);}
   to{transform: translateX(200px);}
@@ -899,5 +904,19 @@ textarea {
 @media only screen and (max-width:769px){
   #course-evaluations {
       margin-right: 0;
+  }
+  #course-form-fill, #weekly-form-fill {
+    width: calc(100vw - 30px);
+    left: 2px;
+  }
+}
+@media only screen and (max-width:1225px){
+  .main-content{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .small-box{
+    margin:10px auto 10px auto;
+    width: 50vw;
   }
 }
