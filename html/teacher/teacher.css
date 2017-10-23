@@ -20,17 +20,18 @@
   display:grid;
   grid-template-columns: 20px auto 20px;
   grid-column-gap:15px;
-  border-top:solid 1px grey;
-  border-bottom:solid 1px grey;
+  border-top:solid 1px #DBDBDB;
+  border-bottom:solid 1px #DBDBDB;
   padding:5px;
 }
 .teacherAssignmentsBox  div div div{
   display:grid;
   grid-template-columns: 20px auto 20px;
   grid-column-gap:15px;
-  border-top:solid 1px grey;
-  border-bottom:solid 1px grey;
+  border-top:solid 1px #DBDBDB;
+  border-bottom:solid 1px #DBDBDB;
   padding:5px;
+  background:rgba(245,245,245, 0.5);
 }
 
 .teacherAssignmentName{
