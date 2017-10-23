@@ -32,8 +32,11 @@ let teachers = [
   courses: [
     {name: 'Html',
     students: [],
-    assignments: [{name: 'HTML 5 assignment', description: 'This is how you should be doing the assignment', files: []}],
-    examinations: [{name: 'HTML 6 Examination', description: 'This is how you should be doing the assignment', files: []}]},
+    assignments: [{name: 'HTML 5 assignment', description: 'This is how you should be doing the assignment', files: [{studentName: 'Alexander'}, {studentName: 'Masud'}, {studentName: 'Simon'}]},
+                  {name: 'HTML 6 assignment', description: 'This is how you should be doing the assignment', files: [{studentName: 'alexander'}, {studentName: 'Masud'}, {studentName: 'Simon'}]}
+
+    ],
+    examinations: [{name: 'HTML 6 Examination', description: 'This is how you should be doing the assignment', files: [{studentName: 'Oskar'}]}]},
   {name: 'Css3',
     students: [],
     assignments: [{name: 'Css3 assignment', description: 'This is how you should be doing the assignment', files: []}],

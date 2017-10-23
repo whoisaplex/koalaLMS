@@ -59,15 +59,14 @@
                     <div class="teacherAssignmentsBox" id="teacherAssignmentsBox">
 
                     </div>
+
                     <div style="display:grid; ">
                       <button onclick="addAssignment()" class="attendance-button" style="width:97%; justify-self:center;">Add Assignment</button>
                     </div>
                   </div>
                   <div class="grid-style-box">
                     <h2>Examinations</h2>
-                    <div class="teacherAssignmentsBox" id="teacherExaminationsBox">
-
-                    </div>
+                    <div class="teacherAssignmentsBox" id="teacherExaminationsBox"></div>
                     <div style="display:grid; ">
                       <button onclick="addExamination()" class="attendance-button" style="width:97%; justify-self:center;">Add Examination</button>
                     </div>
@@ -117,6 +116,27 @@
           <button class="assignmentDelete" id="delete">Delete</button>
           <button class="assignmentCancel" id="cancel">Cancel</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!--dropdown set grade -->
+  <div id="teacher-setGrade-dropdown">
+    <div id="teacher-setGrade-dropdown-grid">
+      <div></div>
+      <div>
+        <i onclick="closeSetGradeBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <h3 id="teacher-setGrade-text">Setting Grade:</h3>
+        <select>
+          <option >A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+          <option>F</option>
+        </select>
+        <textarea  placeholder="Comment..." id="addExaminationTitle"></textarea>
+        <button id="setGrade" class="teacherSetGrade-button">Set Grade</button>
       </div>
     </div>
   </div>

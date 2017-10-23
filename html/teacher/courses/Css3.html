@@ -79,7 +79,7 @@
   </div>
 
   <div class="dark-overlay" id="teacher-dark-overlay"></div>
-  <!-- Dropdown attendance -->
+  <!-- Dropdown assignments -->
   <div id="teacher-assignment-dropdown">
     <div id="teacher-assignment-dropdown-grid">
       <div></div>
@@ -93,6 +93,7 @@
     </div>
   </div>
 
+  <!-- Dropdown examinations -->
   <div id="teacher-examination-dropdown">
     <div id="teacher-examination-dropdown-grid">
       <div></div>
@@ -102,6 +103,20 @@
         <input type="text" placeholder="Title of Examination" id="addExaminationTitle">
         <input type="text" placeholder="Description of Examination" id="addExaminationDescription">
         <button class="attendance-button" onclick="addExaminationConfirm()">Add Examination</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Dropdown delete Confirm -->
+  <div id="teacher-delete-dropdown">
+    <div id="teacher-delete-dropdown-grid">
+      <div></div>
+      <div style="padding-bottom:10px;">
+        <h2>Are you sure you want to delete this</h2>
+        <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;">
+          <button class="assignmentDelete" id="delete">Delete</button>
+          <button class="assignmentCancel" id="cancel">Cancel</button>
+        </div>
       </div>
     </div>
   </div>
