@@ -76,6 +76,7 @@
   #exams {
     margin-right:0px;
   }
+
   .grid-1-box {
     margin-top:100px;
   }
@@ -588,8 +589,10 @@ img {
   .grid-main-content-row{
     grid-template-columns: 0px auto;
   }
-  .courses-box{
-    margin-top:100px;
+
+
+  .courses-box:first-child {
+    margin-top:0px;
   }
   .nav-wrapper-grid{
     display:none;
