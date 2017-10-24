@@ -48,13 +48,30 @@ let students = [{username: 'alexander',
 ];
 
 
-let teachers = [{username: 'aplex',
-               password: '123',
-               full_name: 'Mr Macnucklemuckle',
-               role: 'teacher',
-               courses: [{name: 'Html',students: [], assignments: [{name: 'HTML 5 assignment', description: 'This is how you should be doing the assignment', files: [{studentName: 'Alexander'}, {studentName: 'Masud'}, {studentName: 'Simon'}]}, {name: 'HTML 6 assignment', description: 'This is how you should be doing the assignment', files: [{studentName: 'alexander'}, {studentName: 'Masud'}, {studentName: 'Simon'}]}],
-               examinations: [{name: 'HTML 6 Examination', description: 'This is how you should be doing the assignment', files: [{studentName: 'Oskar'}]}]},
-               {name: 'Css3', students: [], assignments: [{name: 'Css3 assignment', description: 'This is how you should be doing the assignment', files: []}],
-               examinations: []}
-            ]}
+let teachers = [
+  {username: 'aplex',
+  password: '123',
+  full_name: 'Mr Macnucklemuckle',
+  role: 'teacher',
+  courses: [
+    {name: 'Html',
+    students: [],
+    assignments: [{name: 'HTML 5 assignment', description: 'This is how you should be doing the assignment', files: [{studentName: 'Alexander'}, {studentName: 'Masud'}, {studentName: 'Simon'}]},
+                  {name: 'HTML 6 assignment', description: 'This is how you should be doing the assignment', files: [{studentName: 'alexander'}, {studentName: 'Masud'}, {studentName: 'Simon'}]}
+
+    ],
+    examinations: [{name: 'HTML 6 Examination', description: 'This is how you should be doing the assignment', files: [{studentName: 'Oskar'}]}],
+    evaluations: [{name: 'Html5 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]},
+                  {name: 'Html6 Evaluation', data: [{name: 'Ja du pojk', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]}
+                 ]
+  },
+  {name: 'Css3',
+    students: [],
+    assignments: [{name: 'Css3 assignment', description: 'This is how you should be doing the assignment', files: []}],
+    examinations: [],
+    evaluations: [{name: 'Html7 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]},
+                  {name: 'Html8 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}, {name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}, {name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]}
+                 ]
+  }
+  ]}
 ];
