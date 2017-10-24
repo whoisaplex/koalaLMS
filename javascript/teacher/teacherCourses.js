@@ -52,6 +52,7 @@ function deleteAssignment(currentAssignment){
   document.getElementById('teacher-dark-overlay').style.display = 'block';
   document.getElementById('teacher-delete-dropdown').style.display = 'block';
   document.getElementById('delete').onclick = function(){
+    currentAssignment.parentNode.parentNode.childNodes[1].remove();
     currentAssignment.parentNode.remove();
     document.getElementById('teacher-dark-overlay').style.display = 'none';
     document.getElementById('teacher-delete-dropdown').style.display = 'none';
