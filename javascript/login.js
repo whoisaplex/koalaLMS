@@ -1,20 +1,13 @@
+window.onload = hideLoginOption;
+
 // Get the modal
 let modal = document.getElementById('userRegistration');
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-//Get the login Modal
-
-var loginModal = document.getElementById('userLogin');
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == loginModal) {
-        modal.style.display = "none";
+document.onclick = function(event) {
+   
+    if (event.target.className == "modal") {
+       event.target.style.display = "none";
     }
 }
 
@@ -32,14 +25,8 @@ function loginFunction(){
     for(var i=0; i< users.length; i++){
 
        if(users[i].username === loginUserName && users[i].password === loginPsw ){
-            //sessionStorage.setItem('loginName', JSON.stringify(userName));
-           if(populateStorage(loginUserName)){
+            if(populateStorage(loginUserName)){
                location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/html/Student/Index.html");
-               $('#login-name-display').append("Logged is as "+loginUserName);
-               document.getElementById('logout-btn').style.display='block';
-               document.getElementById('register-btn').style.display='none';
-               document.getElementById('login-btn').style.display='none';
-               document.getElementById('userLogin').style.display='none';
            }
        } else {
            
@@ -47,15 +34,30 @@ function loginFunction(){
 
        }
      }
-
-
-
 }
 
+
+ function hideLoginOption() {
+     console.log(sessionStorage.getItem('logedInStatus'));
+     console.log(sessionStorage.getItem( sessionStorage.getItem('userName')));
+     
+     
+     if( sessionStorage.getItem('logedInStatus') === 'YES'){
+          $('#login-name-display').append("Logged is as "+sessionStorage.getItem('userName'));
+          document.getElementById('logout-btn').style.display='block';
+          document.getElementById('register-btn').style.display='none';
+          document.getElementById('login-btn').style.display='none';
+          document.getElementById('userLogin').style.display='none';   
+     }
+            
+}
+
+       
+
 function logOutUser(){
-    localStorage.clear();
-    localStorage.setItem('logedInStatus', 'NO');
-    location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
+    sessionStorage.clear();
+    sessionStorage.setItem('logedInStatus', 'NO');
+    //location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
     document.getElementById('register-btn').style.display='block';
     document.getElementById('login-btn').style.display='block';
     document.getElementById('logout-btn').style.display='none';
