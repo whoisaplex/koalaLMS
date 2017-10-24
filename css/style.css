@@ -85,11 +85,11 @@
 
 .grid-3-box{
   display:grid;
-  grid-template-columns:10px auto auto auto 10px;
+  grid-template-columns:auto auto auto;
 }
 .grid-4-box{
   display:grid;
-  grid-template-columns:10px auto auto auto auto 10px;
+  grid-template-columns:auto auto auto auto;
 }
 .grid-style-box{
   background:white;
@@ -221,6 +221,9 @@ margin: 0;
   .nav-menu p {
   background-color: #32374a;
 
+ }
+ .grid-2-box{
+   grid-template-columns: auto;
  }
 
 
@@ -644,7 +647,7 @@ img {
   transform: translateY(-65vh);
   height: 61vh;
   height: auto;
-  visibility: hidden; 
+  visibility: hidden;
   width: 80%;
   float: right;
 }
@@ -811,21 +814,21 @@ textarea {
   border-radius: 100%
 }
 #mouth-lecture {
-  transform: translate(6px, 21px) rotateX(180deg); 
+  transform: translate(6px, 21px) rotateX(180deg);
   border-radius: 100%;
 }
 #lectureFeedback{
   background-color: red;
 }
 #mouth-website {
-  transform: translate(6px, 1px) rotateX(0deg); 
+  transform: translate(6px, 1px) rotateX(0deg);
   border-radius: 0;
 }
 #websiteFeedback{
   background-color: yellow;
 }
 #mouth-facilities {
-  transform: translate(6px, 5px) rotateX(0); 
+  transform: translate(6px, 5px) rotateX(0);
   border-radius: 100%;
 }
 #facilitiesFeedback{
