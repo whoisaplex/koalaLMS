@@ -57,7 +57,7 @@
 
 .grid-2-box{
   display:grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
 }
 #exams {
   grid-column-start: 1;
@@ -1100,6 +1100,28 @@ select{
   margin:5px;
   color:#262626;
 }
+.teacherEvaluationsBox{
+  display:grid;
+  grid-template-columns: auto;
+}
+.teacherEvaluations{
+  display:grid;
+  grid-template-columns: 20px auto;
+  padding:7px;
+  border-top: solid 1px grey;
+  border-bottom: solid 1px grey;
+  font-weight: bold;
+}
+.teacherEvaluationsData{
+  display:grid;
+  grid-template-columns:20px auto 20px;
+  background: rgba(245,245,245, 0.5);
+  grid-column-gap: 15px;
+  border-top: solid 1px #DBDBDB;
+  border-bottom: solid 1px #DBDBDB;
+  padding:5px;
+}
+
 
 @media only screen and (max-width:769px){
   #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid{
