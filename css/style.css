@@ -1140,7 +1140,13 @@ select{
   border-bottom: solid 1px #DBDBDB;
   padding:5px;
 }
-
+.teacherEvaluationsName{
+  padding:0px;
+  margin:0px;
+  align-self:center;
+  margin-left:10px;
+  cursor:pointer;
+}
 
 @media only screen and (max-width:769px){
   #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid{

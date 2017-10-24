@@ -6,7 +6,7 @@ for(let x = 0; x < teachers[0].courses.length; x++){
   tempDiv.innerHTML = tempH2;
   document.getElementById('teacherEvaluationsContent').appendChild(tempDiv);
   for(let y = 0; y < teachers[0].courses[x].evaluations.length; y++){
-    let evaluationContent = '<div><div class="teacherEvaluations" onclick="toggleEvaluations(this)"><p class="teacherAssignmentEdit"><i class="fa fa-list-ul"></i></p><p class="teacherAssignmentName">'+teachers[0].courses[x].evaluations[y].name+'</p></div><div style="display:none" id="data'+x+""+y+'"></div></div>';
+    let evaluationContent = '<div><div class="teacherEvaluations" onclick="toggleEvaluations(this)"><p class="teacherAssignmentEdit"><i class="fa fa-list-ul"></i></p><p class="teacherEvaluationsName">'+teachers[0].courses[x].evaluations[y].name+'</p></div><div style="display:none" id="data'+x+""+y+'"></div></div>';
     document.getElementById('teacherEvaluationContainer'+x).innerHTML += evaluationContent;
 
     for(let z = 0; z < teachers[0].courses[x].evaluations[y].data.length; z++){
