@@ -122,6 +122,11 @@ body{
 .mobile-nav{
   display:none;
 }
+.fa-bars {
+  font-size: 40px;
+  color: white;
+  margin-left:17px;
+}
 .nav-wrapper{
 margin: 0;
 }
