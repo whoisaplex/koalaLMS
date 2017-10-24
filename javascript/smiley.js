@@ -23,6 +23,8 @@ function inputLectureFeedback(){
 
     console.log("Daily lecture feedback is: ", daily.lecture);
     let feedbackObjectLecture = document.getElementById("lectureFeedback");
+    let feedbackObjectFacilities = document.getElementById("facilitiesFeedback");
+    let feedbackObjectWebsite = document.getElementById("websiteFeedback");
     let smileyMouth = document.getElementById("mouth-lecture");
 
     if(daily.isClicked < 1){
@@ -37,13 +39,18 @@ function inputLectureFeedback(){
 
     switch (daily.lecture){
         case 1:
-            feedbackObjectLecture.style.animation = "decreaseOpacity 2.0s ease";
-            feedbackObjectLecture.style.opacity = "1";
-            //smileyMouth.style.translateY ="1vh";
+            feedbackObjectLecture.style.backgroundColor = "grey";
+            feedbackObjectFacilities.style.backgroundColor = "grey";
+            feedbackObjectWebsite.style.backgroundColor = "grey";
+            daily.website = 1;
+            daily.facilities = 1;
             break;
         case 2:
-            feedbackObjectLecture.style.animation = "increaseOpacity 2.0s ease";
-            feedbackObjectLecture.style.opacity = "0.7";
+            feedbackObjectLecture.style.backgroundColor = "red";
+            feedbackObjectFacilities.style.backgroundColor = "grey";
+            feedbackObjectWebsite.style.backgroundColor = "grey";
+            daily.website = 1;
+            daily.facilities = 1;
             break;
     }
 }
@@ -56,7 +63,9 @@ function inputWebsiteFeedback(){
     }
 
     console.log("Daily website feedback is: ", daily.website);
-    let feedbackObjectLecture = document.getElementById("websiteFeedback");
+    let feedbackObjectLecture = document.getElementById("lectureFeedback");
+    let feedbackObjectFacilities = document.getElementById("facilitiesFeedback");
+    let feedbackObjectWebsite = document.getElementById("websiteFeedback");
     let smileyMouth = document.getElementById("mouth-website");
 
     if(daily.isClicked < 1){
@@ -71,13 +80,18 @@ function inputWebsiteFeedback(){
 
     switch (daily.website){
         case 1:
-            feedbackObjectLecture.style.animation = "decreaseOpacity 1.0s ease";
-            feedbackObjectLecture.style.opacity = "1";
-            //smileyMouth.style.translateY ="1vh";
+            feedbackObjectLecture.style.backgroundColor = "grey";
+            feedbackObjectFacilities.style.backgroundColor = "grey";
+            feedbackObjectWebsite.style.backgroundColor = "grey";
+            daily.lecture = 1;
+            daily.facilities = 1;
             break;
         case 2:
-            feedbackObjectLecture.style.animation = "increaseOpacity 1.0s ease";
-            feedbackObjectLecture.style.opacity = "0.7";
+            feedbackObjectLecture.style.backgroundColor = "grey";
+            feedbackObjectFacilities.style.backgroundColor = "grey";
+            feedbackObjectWebsite.style.backgroundColor = "yellow";
+            daily.lecture = 1;
+            daily.facilities = 1;
             break;
     }
 }
@@ -89,7 +103,9 @@ function inputFacilitiesFeedback(){
     }
 
     console.log("Daily facilities feedback is: ", daily.facilities);
-    let feedbackObjectLecture = document.getElementById("facilitiesFeedback");
+    let feedbackObjectLecture = document.getElementById("lectureFeedback");
+    let feedbackObjectFacilities = document.getElementById("facilitiesFeedback");
+    let feedbackObjectWebsite = document.getElementById("websiteFeedback");
     let smileyMouth = document.getElementById("mouth-facilities");
 
     if(daily.isClicked < 1){
@@ -104,13 +120,18 @@ function inputFacilitiesFeedback(){
 
     switch (daily.facilities){
         case 1:
-            feedbackObjectLecture.style.animation = "decreaseOpacity 1.0s ease";
-            feedbackObjectLecture.style.opacity = "1";
-            //smileyMouth.style.translateY ="1vh";
+            feedbackObjectLecture.style.backgroundColor = "grey";
+            feedbackObjectFacilities.style.backgroundColor = "grey";
+            feedbackObjectWebsite.style.backgroundColor = "grey";
+            daily.lecture = 1;
+            daily.website = 1;
             break;
         case 2:
-            feedbackObjectLecture.style.animation = "increaseOpacity 1.0s ease";
-            feedbackObjectLecture.style.opacity = "0.7";
+            feedbackObjectLecture.style.backgroundColor = "grey";
+            feedbackObjectFacilities.style.backgroundColor = "green";
+            feedbackObjectWebsite.style.backgroundColor = "grey";
+            daily.lecture = 1;
+            daily.website = 1;
             break;
     }
 }
@@ -120,7 +141,13 @@ function openFeedback(){
     let openFeedbackBox = document.getElementById("open-feedback-text");
 
     feedbackArea.style.animation = "slide-in 2.0s ease-in-out";
-    feedbackArea.style.transform = "translateX(200px)";
+    
+    if(window.innerWidth < 769){
+        feedbackArea.style.transform = "translateX(80px)";
+    }
+    if(window.innerWidth > 768){
+        feedbackArea.style.transform = "translateX(200px)";
+    }
     openFeedbackBox.addEventListener("mouseover", function(){
         openFeedbackBox.style.backgroundColor = "red";
     });

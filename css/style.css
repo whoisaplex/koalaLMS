@@ -708,7 +708,7 @@ img {
 .courseEvaluation {
   width: auto;
   height: 6vh;
-  background-color: grey;
+  background-color: #BEBB13;
   flex: left;
   flex-direction: column;
   margin-bottom: 1vh;
@@ -729,14 +729,27 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  float: left;
 }
-
 .evaluate-scale-circle {
-  height: 30px;
-  width: 30px;
-  border-radius: 20px;
+  height: 27px;
+  width: 33px;
+  border-radius: 30px;
   background-color: orange;
   margin-right: 5%;
+}
+#circle-scale-description {
+  margin-top: 1%;
+  width: 180px;
+  margin: 0;
+}
+.evaluate-scale-circle p {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
 }
 #evaluate-scale-circle-1, #evaluate-scale-circle-2, #evaluate-scale-circle-3, #evaluate-scale-circle-4, #evaluate-scale-circle-5 {
 
@@ -798,7 +811,7 @@ textarea {
 }
 .feedback {
   z-index: 2;
-  transform: translateX(53px);
+  transform: translateX(49px);
   width: 0;
   height: 98%;
   display: grid;
@@ -913,27 +926,19 @@ textarea {
   0% {background-color: yellow;}
   100%{background-color: green;}
 }
-@keyframes increaseOpacity{
-  from { opacity: 1;}
-  to { opacity: 0.7;}
-}
-@keyframes decreaseOpacity{
-  from { opacity: 0.7;}
-  to { opacity: 1;}
-}
 
 /*-----------------------ONLY TEST DATA-------------------*/
 #week41:hover, .courseEvaluation:hover, #wednesday41:hover {
-  background-color: #6C6B6B;
+  background-color: #ADAA10;
 }
 #wednesday41, #week41 {
-  background-color: grey;
+  background-color: #BEBB13;
 }
 #monday41, #tuesday41, #monday40, #tuesday40, #thursday40, #friday40, #tuesday39, #wednesday39, #thursday39, #week40{
   background-color: green;
 }
 #monday39, #friday39, #week39, #wednesday40{
-  background-color: red;
+  background-color: grey;
 }
       /*-----------------------ONLY TEST DATA-------------------*/
 
@@ -944,6 +949,17 @@ textarea {
   #course-form-fill, #weekly-form-fill {
     width: calc(100vw - 30px);
     left: 2px;
+  }
+  .feedback {
+    transform: translateX(-137px);
+  }
+  @keyframes slide-in{
+    from {transform: translateX(-137px);}
+    to{transform: translateX(80px);}
+  }
+  @keyframes slide-out {
+    0% {transform: translateX(80px);}
+    100% {transform: translateX(-270px);}
   }
 }
 @media only screen and (max-width:1225px){

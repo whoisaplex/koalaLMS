@@ -109,7 +109,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-1":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-1") 
-                    circleArray[i].style.backgroundColor = "#F64A23";
+                    circleArray[i].style.backgroundColor = "red";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
@@ -117,7 +117,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-2":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-2") 
-                    circleArray[i].style.backgroundColor = "#FAC102";
+                    circleArray[i].style.backgroundColor = "#D88A08";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
