@@ -129,6 +129,16 @@ h1, h2, h3, h4, h5, h6 {
 .section-title p{
     margin: 10px 0px 10px 0px;
 }
+
+.about-us-info-box{
+     padding: 30px;
+     border-color: #64c3e6;
+     box-shadow: 0 0 50px #64c3e6;
+}
+
+.about-us-info-box p{
+    text-align: center;
+}
 .single-info-box {
    /* border: 1px solid #ddd;*/
     padding: 30px;
@@ -296,12 +306,6 @@ button {
    width: 100%;
 }
 
-
-
-
-
-    
-		
 }
 
 
