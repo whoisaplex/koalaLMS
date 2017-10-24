@@ -28,12 +28,6 @@ function loginFunction(){
     var loginPsw         = document.getElementById("login-psw").value;
    
     for(var i=0; i< students.length; i++){
-
-<<<<<<< HEAD
-       if(users[i].username === loginUserName && users[i].password === loginPsw ){
-            if(populateStorage(loginUserName)){
-               location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/html/Student/Index.html");
-=======
        if(students[i].username === loginUserName && students[i].password === loginPsw ){
             sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
@@ -43,7 +37,7 @@ function loginFunction(){
                document.getElementById('register-btn').style.display='none';
                document.getElementById('login-btn').style.display='none';
                document.getElementById('userLogin').style.display='none';
->>>>>>> d775df09995618b6c423d1232f11ca108da35f17
+
            }
        } else {
            for(let y=0; y< teachers.length; y++){
@@ -64,7 +58,7 @@ function loginFunction(){
 
        }
      }
-<<<<<<< HEAD
+}
 }
 
 
@@ -81,23 +75,21 @@ function loginFunction(){
           document.getElementById('userLogin').style.display='none';   
      }
             
-=======
+
   }
->>>>>>> d775df09995618b6c423d1232f11ca108da35f17
-}
+
+
 
        
 
 function logOutUser(){
-<<<<<<< HEAD
     sessionStorage.clear();
     sessionStorage.setItem('logedInStatus', 'NO');
     //location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
-=======
+
     localStorage.clear();
     localStorage.setItem('logedInStatus', 'NO');
     location.assign(logOutUrl);
->>>>>>> d775df09995618b6c423d1232f11ca108da35f17
     document.getElementById('register-btn').style.display='block';
     document.getElementById('login-btn').style.display='block';
     document.getElementById('logout-btn').style.display='none';
