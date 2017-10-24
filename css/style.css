@@ -725,6 +725,25 @@ textarea {
   resize: auto;
   border: 1px solid black;
 }
+.evaluate-scale {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.evaluate-scale-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  background-color: orange;
+  margin-right: 5%;
+}
+#evaluate-scale-circle-1, #evaluate-scale-circle-2, #evaluate-scale-circle-3, #evaluate-scale-circle-4, #evaluate-scale-circle-5 {
+
+}
+#evaluate-scale-circle-5 {
+  margin-right: 0;
+}
 .small-box h4 {
   margin: 0;
   padding: 0;
