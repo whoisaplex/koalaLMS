@@ -79,8 +79,8 @@ function loginFunction(){
        
 
 function logOutUser(){
-    localStorage.clear();
-    localStorage.setItem('logedInStatus', 'NO');
+    sessionStorage.clear();
+    sessionStorage.setItem('logedInStatus', 'NO');
     location.assign(logOutUrl);
     document.getElementById('register-btn').style.display='block';
     document.getElementById('login-btn').style.display='block';
