@@ -62,11 +62,7 @@ function loginFunction(){
 }
 
 
- function hideLoginOption() {
-     console.log(sessionStorage.getItem('logedInStatus'));
-     console.log(sessionStorage.getItem( sessionStorage.getItem('userName')));
-     
-     
+ function hideLoginOption() {     
      if( sessionStorage.getItem('logedInStatus') === 'YES'){
           $('#login-name-display').append("Logged is as "+sessionStorage.getItem('userName'));
           document.getElementById('logout-btn').style.display='block';
@@ -83,10 +79,6 @@ function loginFunction(){
        
 
 function logOutUser(){
-    sessionStorage.clear();
-    sessionStorage.setItem('logedInStatus', 'NO');
-    //location.assign("file:///C:/Users/Alexander/Documents/Programmerings%20projekt/GruppKoala/koalaLMS/Index.html");
-
     localStorage.clear();
     localStorage.setItem('logedInStatus', 'NO');
     location.assign(logOutUrl);
