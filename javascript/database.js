@@ -72,22 +72,6 @@ let teachers = [
     evaluations: [{name: 'Html7 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]},
                   {name: 'Html8 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}, {name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}, {name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]}
                  ]
-  },
-  {name: 'Css4',
-    students: [],
-    assignments: [{name: 'Css4 assignment', description: 'This is how you should be doing the assignment', files: []}],
-    examinations: [],
-    evaluations: [{name: 'Html9 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]},
-                  {name: 'Html10 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]}
-                 ]
-  },
-  {name: 'Css5',
-    students: [],
-    assignments: [{name: 'Css4 assignment', description: 'This is how you should be doing the assignment', files: []}],
-    examinations: [],
-    evaluations: [{name: 'Html9 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]},
-                  {name: 'Html10 Evaluation', data: [{name: 'Alexander', qustion1: 'Mycket bra', question2: 'väldigt bra', question3: 'Super bra'}]}
-                 ]
   }
   ]}
 ];
