@@ -3,7 +3,7 @@ window.onload = hideLoginOption;
 // Get the modal
 let url = document.URL;
 let studentUrl = url.replace("/index.html", "/html/Student/home/Index.html");
-let teacherUrl = studentUrl.replace("/Student/", "/teachers/");
+let teacherUrl = studentUrl.replace("/Student/", "/teacher/");
 let logOutUrl = sessionStorage.getItem('logOutUrl')
 let modal = document.getElementById('userRegistration');
 
