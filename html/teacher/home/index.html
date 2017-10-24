@@ -17,30 +17,19 @@
       </div>
       <div class="nav-menu" id="nav-menu">
 
-      <p onclick="changeContent(this)"><a href="../home/Index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></p>
+      <p onclick="changeContent(this)" style="border-right:3px solid orange;"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
       <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
       <div>
 
-        <div id="nav-courses" style="display:block">
-          <p onclick="toggleOngoing()" id="nav-ongoing-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-ongoing-courses-arrow"></i>Ongoing Courses</p>
-          <div id="nav-ongoing-courses" style="display:none;" >
-            <p><a href="javascript.html">Javascript</a></p>
-            <p><a href="html.html">HTML</a></p>
-            <p><a href="css3.html">CSS3</a></p>
-          </div>
+        <div id="nav-courses" style="display:none">
 
-
-          <p onclick="toggleUpcoming()" id="nav-upcoming-courses-text"><i class="fa fa-chevron-right" aria-hidden="true" id="nav-upcoming-courses-arrow"></i>Upcoming Courses</p>
-          <div id="nav-upcoming-courses" style="display:block">
-            <p><a href="swedish.html">Swedish</a></p>
-            <p style="border-right:3px solid orange;"><a href="">English</a></p>
-          </div>
         </div>
 
       </div>
       <p onclick="changeContent(this)"><a href="../grades/grades.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Grades</a></p>
       <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
       <p onclick="changeContent(this)"><a href="../upcoming/upcoming.html"><i class="fa fa-calendar" aria-hidden="true"></i>Upcoming</a></p>
+
     </div>
     </nav>
 
@@ -62,30 +51,12 @@
         </div>
     </div>
 
-    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
-        <div style=" grid-row: 1 / last-line;"></div>
-        <!-- A BOX IN A NEW ROW -->
-        <div class="grid-1-box courses-box"> <!-- Change class to fit how many boxes you want -->
-              <!-- A NEW BOX IN THE SAME ROW -->
-              <div class="grid-style-box" id="hubba" >
-
-              </div>
-           </div>
-        <!-- A BOX ENDS -->
-      </div>
-    </div>
-
-
-
-
-
-
-
+    
 
       <script src="../../../javascript/database.js"></script>
-      <script src="../../../javascript/courses.js"></script>
-      <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/teacher/teacher.js"></script>
 
     </body>
 </html>

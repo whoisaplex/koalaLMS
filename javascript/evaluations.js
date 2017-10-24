@@ -67,10 +67,10 @@ function sendGreenButton(){
 let courseEvaluations = document.getElementById("course-evaluations");
 
 //console.log(evaluateCourse.id);
-for(let i=0; i < users[0].all_courses[2].finished.length; i++){
+for(let i=0; i < students[0].all_courses[2].finished.length; i++){
     let newCourseInfo = new Object();
     newCourseInfo.id = "course"+i;
-    newCourseInfo.name = users[0].all_courses[2].finished[i].name;
+    newCourseInfo.name = students[0].all_courses[2].finished[i].name;
     newCourseInfo.isClickable = false;
 
     courses.listCourses += newCourseInfo;
@@ -79,7 +79,7 @@ for(let i=0; i < users[0].all_courses[2].finished.length; i++){
     let evaluateCourse = document.createElement("div");
     evaluateCourse.id = "course"+i;
     evaluateCourse.className = "courseEvaluation";
-    evaluateCourse.innerHTML = users[0].all_courses[2].finished[i].name;
+    evaluateCourse.innerHTML = students[0].all_courses[2].finished[i].name;
     evaluateCourse.addEventListener("click", function () {makeCourseEvaluation(newCourseInfo.isClickable); });
     evaluateCourse.addEventListener("click", function() { finishCourseForm(newCourseInfo); });
     document.getElementById("send-form-fill-course").addEventListener("click", function() { sendGreenButton(newCourseInfo.name); });
@@ -88,4 +88,4 @@ for(let i=0; i < users[0].all_courses[2].finished.length; i++){
     console.log("For loopen");
 }
 //komma åt alla kurser i databasen
-console.log(users[0].all_courses[2].finished.length);
+console.log(students[0].all_courses[2].finished.length);
