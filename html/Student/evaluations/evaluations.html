@@ -97,16 +97,16 @@
         </div>
 
         <!-- course form sliding down -->
-        <article class="small-box" id="course-form-fill">
+        <article class="small-box" id="course-form-fill" onfocus="clearContents(this)">
             
             <!-- name changes depends of whitch course -->
             <h2 id="form-title"></h2><hr>
             <h4>Hur var lektionerna under kursen</h4>
-            <textarea name="course-lecture-feedback"></textarea>
+            <textarea id="course-lecture-feedback"></textarea>
             <h4>Hur fungerade kommunikationen under kursen?</h4>
-            <textarea name ="course-communication-feedback"></textarea>
+            <textarea id="course-communication-feedback"></textarea>
             <h4>Vad var bra/dåligt med kursen?</h4>
-            <textarea name ="course-goodBad-feedback"></textarea>
+            <textarea id="course-goodBad-feedback"></textarea>
             <div class="send-form-fill" id="send-form-fill-course">
                 Klar
             </div>
@@ -118,11 +118,11 @@
             <!-- name changes depends of whitch course -->
             <h2 id="form-title-week"></h2><hr>
             <h4>Hur var lektionerna under kursen</h4>
-            <textarea name="course-lecture-feedback"></textarea>
+            <textarea id="course-lecture-feedback"></textarea>
             <h4>Hur fungerade kommunikationen under kursen?</h4>
-            <textarea name ="course-communication-feedback"></textarea>
+            <textarea id="course-communication-feedback"></textarea>
             <h4>Vad var bra/dåligt med kursen?</h4>
-            <textarea name ="course-goodBad-feedback"></textarea>
+            <textarea id="course-goodBad-feedback"></textarea>
             <div class="send-form-fill" id="send-form-fill-course" onclick="finishWeeklyForm()">
                  Klar
              </div>

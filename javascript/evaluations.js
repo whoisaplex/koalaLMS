@@ -34,6 +34,9 @@ function finishWeeklyForm(){
 }
 function makeCourseEvaluation(isClick){
     if(isClick == false){
+        document.getElementById("course-lecture-feedback").value = "";
+        document.getElementById("course-communication-feedback").value = "";
+        document.getElementById("course-goodBad-feedback").value = "";
         let formFill = document.getElementById("course-form-fill");
         formFill.style.visibility = "visible";
         formFill.style.animation = "slide-down-formFill 2.0s ease";
