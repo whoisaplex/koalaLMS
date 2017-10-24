@@ -46,7 +46,8 @@ let students = [{username: 'alexander',
                                         {name: 'C++', average_grade: 'VG', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'}]}
 
 ];
-let teachers = [{username: 'simon',
+
+/*let teachers = [{username: 'simon',
               password: 'liolios123',
               full_name: 'Simon Liolios',
               role: 'teacher',
@@ -116,7 +117,7 @@ let teachers = [{username: 'simon',
                                         {name: 'C#', average_grade: 'G', assignment1: 'Object oriented programming', assignment2: 'Bit-wise operator', assignment3: 'Simple project', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'G'},
                                         {name: 'C++', average_grade: 'VG', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'}]}
 
-];
+];*/
 
 let teachers = [
   {username: 'aplex',
