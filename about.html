@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koala LMS-About US</title>
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/grid.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<div class="container" >
+        <section class="top-nav">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-sm-2 col-md-12 col-wd-9">
+                       <img class="logo" src="images/logo_koala.png" alt=""> 
+
+                    </div>
+                    <div  class="col-wd-3 mobile-menu" onclick="myMobileMenu(this);">
+                          <span class="bar1"></span>
+                          <span class="bar2"></span>
+                          <span class="bar3"></span>
+                    </div>
+                    
+                    <div id="nav-menu" class="col-sm-10 col-md-12 col-wd-12 nav-menu">
+                        <ul class="row nav-bar-menu">
+                            <li class="col-sm-2 col-md-2 nav-bar-menu-item">
+                               <a class="col" href="index.html">Home</a>
+                            </li>
+                            <li class="col-sm-2  col-md-2 nav-bar-menu-item">
+                               <a class="col" href="about.html">About</a>
+                            </li>
+                            <li class="col-sm-2 col-md-2 nav-bar-menu-item">
+                               <a class="col" href="contact.html">Contact</a>
+                            </li>
+                            <li class="col-sm-2 col-md-2" id="login-name-display">
+
+                            </li>
+                            <li class="col-sm-2 col-md-2 nav-bar-menu-item" id="register-btn">
+                              <a onclick="document.getElementById('userRegistration').style.display='block'">Register</a>
+
+                            </li>
+                            <li class="col-sm-2 col-md-2 nav-bar-menu-item" id="login-btn">
+                               <a onclick="document.getElementById('userLogin').style.display='block'" >Login</a>
+                            </li>
+                            <li class="col-sm-2 col-md-2 nav-bar-menu-item" id="logout-btn" style="display: none;">
+                               <a class="logout-btn" onclick="logOutUser();" >Logout</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+          <div class="grid">
+              <div class="row banner-content">
+                  <div class="col-sm-6">
+                      <h1>Hi! We're Koala LMS</h1>
+                      <h3>Manage and train your team with our easy to use online LMS!</h3>
+
+                       <form action="/" id="request-demo">
+                         <div class="row">
+                             <div class="col-sm-6"><input type="text" class="emailform-email" id="emailform-email"  name="EmailForm[email]" value="" placeholder="Your e-mail address"></div>
+                             <div class="col-sm-6 submit-email" > <a href="">Submit</a></div>
+                          </div>
+
+                        </form>
+
+                  </div>   
+
+                  <div class="col-sm-6">
+                     <div class="col">
+                         <img class="request-demo-img" src="images/request_demo.png" alt="">
+                     </div>
+
+                  </div>
+              </div>
+          </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col">
+                    <div id="userRegistration" class="modal">
+                      <span onclick="document.getElementById('userRegistration').style.display='none'" class="close" title="Close Modal">×</span>
+                      <div class="modal-content animate">
+                        <div class="modal-container">
+                          <label><b>Name</b></label>
+                          <input type="text" placeholder="Enter Your Name" name="name" id="name">
+
+                          <label><b>UserName</b></label>
+                          <input type="text" placeholder="Enter User Name" name="userName" id="userName" required>
+
+                          <label><b>Email</b></label>
+                          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                          <label><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                          <label><b>Repeat Password</b></label>
+                          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+                          <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('userRegistration').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button class="signupbtn" onclick="signUpFunction();">Sign Up</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="row">
+                <div class="col">
+                    <div id="userLogin" class="modal">
+                      <span onclick="document.getElementById('userLogin').style.display='none'" class="close" title="Close Modal">×</span>
+                      <div class="Login-modal-content animate" >
+                        <div class="modal-container">
+                          <div id="login-error"></div>
+                          <label><b>User Name</b></label>
+                          <input type="text" placeholder="Enter User Name" name="userName" id="login-userName" >
+
+                          <label><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" id="login-psw" >
+
+                          <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('userLogin').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button class="signupbtn" onclick="loginFunction();">Login</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding">
+            <div class="grid" >
+                <div class="row">
+                    <div class="col-sm-12 section-title ">
+                        <div class="col">
+                            <h2>About <span>Koala LMS</span></h2>
+                        <p>Online learning management system
+Looking for an easy and effective web based LMS without the hassle that goes with big clunky systems? We have the solution for you! Create online e-learning courses that are fun and effective with our simple online learning management system. You have your first users learning online in no time!</p>
+                            <div class="section-borders">
+                                <span></span>
+                                <span class="black-border"></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <div class="col">
+                            <div class="about-us-info-box">
+                                <h4>Responsive Web application</h4>
+                                <div class="info-icon">
+                                   <i class="fa fa-mobile" aria-hidden="true"></i>
+                                   <i class="fa fa-tablet" aria-hidden="true"></i>
+                                   <i class="fa fa-laptop" aria-hidden="true"></i>
+                                   <i class="fa fa-desktop" aria-hidden="true"></i>
+                                </div>
+                                <div class="choose-us-info">
+                                   <p>We uses 12 columns grid system to make our web application responsive</p>
+                                </div>
+                                <a href="grid.html#sample-grids" class="border-button">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+           <div class="copy-right">
+                Made with <i class="fa fa-heart" aria-hidden="true" ></i> by KYH-Koala
+            </div> 
+        </footer>
+
+        </div>
+    
+    <script type="text/javascript">
+        
+        function myMobileMenu(x) {
+            x.classList.toggle("change");
+             var x = document.getElementById("nav-menu");
+             if(x.className === "col-sm-10 col-md-12 col-wd-12 nav-menu"){
+                 x.className = "col-sm-10 col-md-12 col-wd-12 show-menu";
+             } else {
+                x.className = "col-sm-10 col-md-12 col-wd-12 nav-menu";   
+             }
+        }
+    </script>
+
+    <script src="javascript/database.js"></script>
+    <script src="javascript/login.js"></script>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/owl.carousel.min.js"></script>
+
+
+</body>
+</html>
