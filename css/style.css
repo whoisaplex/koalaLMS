@@ -136,6 +136,45 @@
   }
 }
 
+.home-turnAssignment-box{
+  display:grid;
+  grid-template-columns: auto;
+}
+.home-turnAssignment-box h4, .home-turnAssignment-box h2, .home-turnAssignment-box input{
+  padding:5px;
+  margin: 0px;
+  align-self: center;
+}
+
+.home-Assignment-box{
+  display:grid;
+  grid-template-columns: 75px auto 75px;
+}
+
+.home-Assignment-box p{
+  font-size:50px;
+  color:#006ABF;
+  padding:5px;
+  margin:0px;
+}
+.home-Assignment-box-content h4, .home-Assignment-box-content p{
+  padding:5px;
+  margin:0px;
+  color:black;
+
+}
+.home-Assignment-box-content p{
+  font-size:15px;
+}
+.home-Assignment-box button{
+  background: #006ABF;
+  border:none;
+  border-radius: 3px;
+  color:white;
+  padding:5px;
+  align-self:center;
+  cursor:pointer;
+}
 
 body{
   margin: 0;

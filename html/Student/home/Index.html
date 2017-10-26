@@ -124,6 +124,28 @@
       </div>
 
       <div class="grid-1-box">
+        <div class="grid-style-box">
+          <div class="home-turnAssignment-box">
+            <h2>HTML 5 Assigment</h2>
+            <h4>2017/11/03</h4>
+            <lable class="file-container">
+              <input type="file" onchange="uploadFile(this)"></input>
+            </lable>
+          </div>
+          <hr>
+          <div class="home-Assignment-box" id="assignment-box" style="display:none;">
+            <p><i class="fa fa-file-text-o"></i></p>
+            <div class="home-Assignment-box-content">
+              <h4 id="file-name">Javascript assignment.js</h4>
+              <p id="file-size">Size: 187 Bytes</p>
+            </div>
+            <button onclick="submitassignment(this)">Submit</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid-1-box">
           <div class="grid-style-box news-box">
             <h2>News</h2>
             <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum ac ex sed condimentum. Quisque ac nisl vitae diam imperdiet iaculis sed et ipsum. Donec et mattis mi. Pellentesque imperdiet tellus mi, sed gravida nisi accumsan vitae. Curabitur viverra a arcu vitae pretium. Quisque sed tempor nunc. Aenean nulla leo, consequat in mauris eu, venenatis auctor libero. Proin quam justo, hendrerit id mi in, fringilla euismod arcu. Etiam at leo nibh. Nam porta, dolor sed laoreet fringilla, dui est rutrum lacus, ac aliquam urna nisi ac magna. Integer a ornare lacus. Etiam sollicitudin sem ut sem pellentesque, et mattis diam dapibus. Sed justo elit, consectetur non dui et, posuere ultrices arcu. Mauris finibus posuere malesuada. Ut a maximus eros.<br><br>
@@ -202,76 +224,6 @@
     </div>
   </div>
 
-                  <!--HELA SIDANS CONTENT
-        <section class="main-content" id="Upcoming" onclick="toggleNavBar(this)">
-             Article är våra textboxar
-            <article class="small-box">
-                <h2>Kommande examinationer</h2>
-                <hr>
-                 denna div är för varje list/kurs
-                <div id="exams">
-                </div>
-            </article>
-            <article class="small-box">
-                <h2>Kommande uppgifter</h2>
-                <hr>
-
-                <div id="assignments">
-                </div>
-            </article>
-          </section>
-
-          <section class="main-content" id="Courses" onclick="toggleNavBar(this)">
-
-              <article class="small-box" id="upcoming-courses">
-                  <h2>Upcoming Courses</h2>
-                  <hr>
-
-              </article>
-              <article class="small-box" id="ongoing-courses">
-                  <h2>Ongoing Courses</h2>
-                  <hr>
-
-              </article>
-              <article class="small-box" id="finished-courses">
-                  <h2>Finished Courses</h2>
-                  <hr>
-
-              </article>
-          </section>
-
-          <div>
-          <div class="grid-main-content-row" id="Grades">
-              <div style=" grid-row: 1 / last-line;"></div>
-               A BOX IN A NEW ROW
-              <div class="grid-1-box">  Change class to fit how many boxes you want
-                    <div></div>  10px space
-                     A NEW BOX IN THE SAME ROW
-                    <div class="grid-style-box" id="hubba">
-                        A
-                    </div>
-
-
-
-
-
-
-                 </div>
-
-            </div>
-          </div>
-
-       <section class="main-content" id="Grades" onclick="toggleNavBar(this)">
-
-
-           <article class="small-box">
-               <h2>Finished Courses</h2>
-               <hr>
-                <div id="finished-coursess">
-               </div>
-           </article>
-       </section>
-     -->
 
       <script src="../../../javascript/database.js"></script>
       <script src="../../../javascript/nav.js"></script>
