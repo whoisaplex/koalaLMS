@@ -424,7 +424,9 @@ img {
 }
 
 @media only screen and (max-width:769px){
-
+#Grades #finished-coursess .grid-style-box:nth-last-child(2) {
+    margin-bottom: 0px;
+}
 }
 /*Grades */
 
