@@ -1173,9 +1173,11 @@ textarea {
 }
 #teacherCourseName{
   text-align:center;
+  padding:10px;
 }
 #teacherEvaluationsText{
   text-align:center;
+  padding:10px;
 }
 .assignmentDelete{
   color:white;
