@@ -101,13 +101,42 @@
   padding-left:10px;
   padding-right:10px;
 }
-.courses-box h2,.courses-box h3, .courses-box h5{
+.courses-box-grid{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.courses-box h1, .courses-box h2,.courses-box h3, .courses-box h4 .courses-box h5{
+  padding:0px;
+  margin:0px;
+}
+.course-box-courseText{
+  padding:10px;
   text-align:center;
+}
+.course-box-courseTeacher{
+  padding:5px;
+  text-align:center;
+}
+.courses-box h5{
+  text-align:center;
+}
+.courses-box-first{
+  padding:10px;
+}
+.courses-box-second{
+  padding:10px;
 }
 .courses-box a{
   text-decoration: none;
   color:grey;
 }
+@media only screen and (max-width:769px){
+  .courses-box-grid{
+      grid-template-columns: 100%;
+  }
+}
+
+
 body{
   margin: 0;
   padding: 0;
