@@ -20,7 +20,8 @@ let students = [{username: 'alexander',
 
               all_finished_courses:  [{name: 'Java', average_grade: 'VG', assignment1: 'For loop', assignment2: 'While loop', assignment3: 'If-else condition', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'},
                                         {name: 'C#', average_grade: 'G', assignment1: 'Object oriented programming', assignment2: 'Bit-wise operator', assignment3: 'Simple project', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'G'},
-                                        {name: 'C++', average_grade: 'VG', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'}]},
+                                        {name: 'C++', average_grade: 'VG', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'},
+										{name: 'Javascript', average_grade: 'VG', assignment1: 'Finished a small project', assignment2: 'Finished HTML5 & CSS3', assignment3: 'Made a project using Javascript', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'}]},
               {username: 'masud',
               password: 'masud123',
               full_name: 'Masud',
@@ -43,7 +44,8 @@ let students = [{username: 'alexander',
 
               all_finished_courses:  [{name: 'Java', average_grade: 'VG', assignment1: 'For loop', assignment2: 'While loop', assignment3: 'If-else condition', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'},
                                         {name: 'C#', average_grade: 'G', assignment1: 'Object oriented programming', assignment2: 'Bit-wise operator', assignment3: 'Simple project', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'G'},
-                                        {name: 'C++', average_grade: 'VG', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'}]}
+                                        {name: 'C++', average_grade: 'VG', assignment1: 'Finished loop', assignment2: 'Finished conditional expression', assignment3: 'Made a project using C++', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'},
+                                        {name: 'Javascript', average_grade: 'VG', assignment1: 'Finished a small project', assignment2: 'Finished HTML5 & CSS3', assignment3: 'Made a project using Javascript', tempo: '100%', grade1: 'VG', grade2: 'VG', grade3: 'VG'}]}
 
 ];
 
