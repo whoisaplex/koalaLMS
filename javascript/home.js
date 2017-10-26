@@ -40,3 +40,15 @@ function closeAttendanceDropdown(){
   document.getElementById('attendance-dark-overlay').style.display = 'none';
   document.getElementById('attendance-dropdown-error').style.display = 'none';
 }
+
+function uploadFile(currentAssignment){
+  document.getElementById('assignment-box').style.display = 'grid';
+  let x = currentAssignment;
+  document.getElementById('file-name').innerHTML = x.files[0].name;
+  document.getElementById('file-size').innerHTML = "Size: " + x.files[0].size + " Bytes";
+
+}
+
+function submitassignment(current){
+  current.parentElement.parentElement.remove();
+}

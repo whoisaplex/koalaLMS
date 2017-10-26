@@ -101,13 +101,81 @@
   padding-left:10px;
   padding-right:10px;
 }
-.courses-box h2,.courses-box h3, .courses-box h5{
+.courses-box-grid{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.courses-box h1, .courses-box h2,.courses-box h3, .courses-box h4 .courses-box h5{
+  padding:0px;
+  margin:0px;
+}
+.course-box-courseText{
+  padding:10px;
   text-align:center;
+}
+.course-box-courseTeacher{
+  padding:5px;
+  text-align:center;
+}
+.courses-box h5{
+  text-align:center;
+}
+.courses-box-first{
+  padding:10px;
+}
+.courses-box-second{
+  padding:10px;
 }
 .courses-box a{
   text-decoration: none;
   color:grey;
 }
+@media only screen and (max-width:769px){
+  .courses-box-grid{
+      grid-template-columns: 100%;
+  }
+}
+
+.home-turnAssignment-box{
+  display:grid;
+  grid-template-columns: auto;
+}
+.home-turnAssignment-box h4, .home-turnAssignment-box h2, .home-turnAssignment-box input{
+  padding:5px;
+  margin: 0px;
+  align-self: center;
+}
+
+.home-Assignment-box{
+  display:grid;
+  grid-template-columns: 75px auto 75px;
+}
+
+.home-Assignment-box p{
+  font-size:50px;
+  color:#006ABF;
+  padding:5px;
+  margin:0px;
+}
+.home-Assignment-box-content h4, .home-Assignment-box-content p{
+  padding:5px;
+  margin:0px;
+  color:black;
+
+}
+.home-Assignment-box-content p{
+  font-size:15px;
+}
+.home-Assignment-box button{
+  background: #006ABF;
+  border:none;
+  border-radius: 3px;
+  color:white;
+  padding:5px;
+  align-self:center;
+  cursor:pointer;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -1076,6 +1144,14 @@ textarea {
 #teacher-delete-dropdown div div:nth-child(2) h2{
   text-align:center;
   color:white;
+}
+#teacherCourseName{
+  text-align:center;
+  padding:10px;
+}
+#teacherEvaluationsText{
+  text-align:center;
+  padding:10px;
 }
 .assignmentDelete{
   color:white;
