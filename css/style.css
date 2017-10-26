@@ -417,6 +417,12 @@ img {
 #Grades #finished-coursess .grid-style-box:nth-last-child(2){
   margin-bottom:15px;
 }
+#Grades #finished-coursess h2,h3{
+	text-align: center;
+	margin-top: 10px;
+	line-height: 2;
+}
+
 @media only screen and (max-width:769px){
 
 }
