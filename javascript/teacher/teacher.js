@@ -24,9 +24,10 @@ function teacherAddCode(current){
     parent.children[2].style.border = 'solid 1px #ce2323';
   }else{
     code = parent.children[2].value;
-    document.getElementById('code-holder').style.display = 'block';
+    parent.children[1].style.display = 'block';
     parent.children[2].remove();
     parent.children[2].remove();
+    parent.children[2].style.display = 'grid';
     parent.children[1].innerHTML = 'Code: ' + code;
   }
 }

@@ -1249,7 +1249,15 @@ select{
 }
 .teacher-attendence-home{
   display:grid;
+  background: rgba(249,249,249, 0.4);
+  border-top:solid 1px #efefef;
+  border-bottom:solid 1px #efefef;
+  margin: 10px 0px;
 }
+.teacher-attendence-home input, .teacher-attendence-home button{
+  margin: 5px 15px;
+}
+
 .teacher-attendence-home h2:first-of-type{
   text-align:center;
   padding: 5px 0px;
@@ -1265,15 +1273,21 @@ select{
   text-align:center;
   padding: 5px 0px;
 }
-#code-holder{
+#code-holder, #code-holderr{
   display:none;
 }
 .teacher-home-students{
   display:grid;
   grid-template-columns: 20px auto;
   background:rgba(245,245,245, 0.5);
-  border-top:solid 1px #c6c6c6;
   border-bottom: solid 1px #c6c6c6;
+}
+.teacher-home-students:first-of-type{
+  display:grid;
+  grid-template-columns: 20px auto;
+  background:rgba(245,245,245, 0.5);
+  border-bottom: solid 1px #c6c6c6;
+  border-top:solid 1px #c6c6c6;
 }
 .teacher-home-students p{
   margin:0px;
@@ -1281,7 +1295,7 @@ select{
   color:#232323;
 }
 .teacher-home-students i{
-  color:blue;
+  color:#006ABF;
 }
 
 

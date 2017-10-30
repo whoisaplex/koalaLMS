@@ -2,6 +2,7 @@ let pathCourses = window.location.pathname;
 let pageCourses = path.split("/").pop();
 pageCourses = pageCourses.replace(/[.].*/, "");
 document.getElementById('teacherCourseName').innerHTML = pageCourses;
+
 for(let x = 0; x < teachers.length; x++){
   for(let z = 0; z < teachers[x].courses.length; z++){
     if(teachers[x].courses[z].name === pageCourses){
@@ -24,7 +25,16 @@ for(let x = 0; x < teachers.length; x++){
     }
   }
 }
-
+const pTag = document.getElementsByTagName('p');
+for(let i = 0; i < pTag.length; i++){
+  if(pTag[i].innerHTML.replace(/[\<].*[\>]/, "") === pageCourses){
+    pTag[i].style.background = '#32374a';
+    pTag[i].style.borderRight = 'solid 3px orange';
+    pTag[i].parentNode.parentNode.parentNode.children[0].style.display = 'block';
+  }else{
+    //console.log(pTag[i].innerHTML);
+  }
+}
 
 function editAssignment(currentAssignment){
   currentAssignment.parentNode.childNodes[0].innerHTML = 'Yeeeo';
