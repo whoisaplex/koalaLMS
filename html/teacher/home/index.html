@@ -26,7 +26,7 @@
         </div>
 
       </div>
-      
+
       <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
 
 
@@ -50,6 +50,31 @@
               <button onclick="logOutUser()">Logout</button>
         </div>
     </div>
+
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+        <div style=" grid-row: 1 / last-line;"></div>
+        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+              <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+                <h2 id="teacherCourseName">Daily Lessons</h2>
+                <h4 style="text-align:center;padding:0px; margin:0px;" id="date">30-10-2017</h4>
+                <hr>
+                <div class="grid-2-box" style="grid-gap:5px;">
+                  <div class="teacher-attendence-home">
+                    <h2>Javascript</h2>
+                    <input type="text" placeholder="Code..."/>
+                    <button class="attendance-button" onclick="teacherAddCode(this)">Add code</button>
+                  </div>
+                  <div class="teacher-attendence-home">
+                    <h2>Html</h2>
+                    <input type="text" placeholder="Code...">
+                    <button class="attendance-button" onclick="teacherAddCode(this)">Add code</button>
+                  </div>
+                </div>
+
+
+      </div>
+    </div>
+  </div>
 
 
 

@@ -1247,6 +1247,20 @@ select{
   margin-left:10px;
   cursor:pointer;
 }
+.teacher-attendence-home{
+  display:grid;
+}
+.teacher-attendence-home h2{
+  text-align:center;
+  padding: 5px 0px;
+}
+.teacher-attendence-home h4{
+  height:20px;
+  margin:0px;
+  text-align:center;
+  padding: 5px 0px;
+}
+
 
 @media only screen and (max-width:769px){
   #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid{
