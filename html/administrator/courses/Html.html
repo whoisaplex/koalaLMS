@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+        <link rel="stylesheet" href="../../../css/style.css"/>
+    </head>
+    <body>
+    <nav class="student-navbar" style="position:fixed;" id="www">
+      <div class="nav-user-block">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <p>Welcome,</p>
+        <h4 id="user-Name">Alexander</h4>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p></a>
+        <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+        <div>
+          <div id="nav-courses" style="display:none">
+          </div>
+        </div>
+
+        <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+
+      </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <div>
+        <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
+      </div>
+      <div>
+        <h2 id="currentPageHeader"></h2>
+      </div>
+    </nav>
+
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+    <div class="nav-wrapper-grid" id="nav-wrapper">
+        <div class="nav-grid-space"></div>
+        <div class="top-nav-bar">
+              <h1>KYH Koalas</h1>
+              <button onclick="logOutUser()">Logout</button>
+        </div>
+    </div>
+
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+        <div style=" grid-row: 1 / last-line;"></div>
+        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+              <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+                <h2 id="teacherCourseName">Pappanomaly</h2>
+                <hr>
+
+                <div class="courses-box-grid">
+                  <div class="courses-box-first">
+                    <h2>Kurspoäng</h2>
+                    <p>30 Poäng</p>
+                    <h2>Mål</h2>
+                    <ul>
+                      <li>HTML 5</li>
+                      <li>Responsiv Design</li>
+                      <li>Grundläggande SEO</li>
+                      <li>Tillgänglighetsanpassing</li>
+                      <li>Olika css-ramverk</li>
+                    </ul>
+                  </div>
+                  <div class="courses-box-second">
+                    <h2>Innehåll</h2>
+                    <p>Syftet med kursen är att den studerande ska få kunskap och färdigheter i hur man utvecklar webblösningar i HTML 5 och CSS3, både fristående och i publiceringssystem. Kursen belyser även den senaste  tekniken och ramverken inom HTML5/CSS3</p>
+                  </div>
+                </div>
+
+
+
+
+                <div class="grid-2-box">
+                  <div class="grid-style-box">
+                    <h2>Assignments</h2>
+                    <div class="teacherAssignmentsBox" id="teacherAssignmentsBox">
+
+                    </div>
+
+                    <div style="display:grid; ">
+                      <button onclick="addAssignment()" class="attendance-button" style="width:97%; justify-self:center;">Add Assignment</button>
+                    </div>
+                  </div>
+                  <div class="grid-style-box">
+                    <h2>Examinations</h2>
+                    <div class="teacherAssignmentsBox" id="teacherExaminationsBox"></div>
+                    <div style="display:grid; ">
+                      <button onclick="addExamination()" class="attendance-button" style="width:97%; justify-self:center;">Add Examination</button>
+                    </div>
+                  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-overlay" id="teacher-dark-overlay"></div>
+  <!-- Dropdown assignments -->
+  <div id="teacher-assignment-dropdown">
+    <div id="teacher-assignment-dropdown-grid">
+      <div></div>
+      <div>
+        <div id="assignment-dropdown-error"><h3>An Assignment can't be created without a title</h3></div>
+        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
+        <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
+        <button class="attendance-button" onclick="addAssignmentConfirm()">Add Assignment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown examinations -->
+  <div id="teacher-examination-dropdown">
+    <div id="teacher-examination-dropdown-grid">
+      <div></div>
+      <div>
+        <div id="examination-dropdown-error"><h3>An Examination can't be created without a title</h3></div>
+        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <input type="text" placeholder="Title of Examination" id="addExaminationTitle">
+        <input type="text" placeholder="Description of Examination" id="addExaminationDescription">
+        <button class="attendance-button" onclick="addExaminationConfirm()">Add Examination</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Dropdown delete Confirm -->
+  <div id="teacher-delete-dropdown">
+    <div id="teacher-delete-dropdown-grid">
+      <div></div>
+      <div style="padding-bottom:10px;">
+        <h2>Are you sure you want to delete this</h2>
+        <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;">
+          <button class="assignmentDelete" id="delete">Delete</button>
+          <button class="assignmentCancel" id="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--dropdown set grade -->
+  <div id="teacher-setGrade-dropdown">
+    <div id="teacher-setGrade-dropdown-grid">
+      <div></div>
+      <div>
+        <i onclick="closeSetGradeBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <h3 id="teacher-setGrade-text">Setting Grade:</h3>
+        <select>
+          <option >VG</option>
+          <option>G</option>
+          <option>IG</option>
+        </select>
+        <textarea  placeholder="Comment..." id="addGradeTitle"></textarea>
+        <button id="setGrade" class="teacherSetGrade-button">Set Grade</button>
+      </div>
+    </div>
+  </div>
+
+
+      <script src="../../../javascript/database.js"></script>
+      <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/teacher/teacher.js"></script>
+      <script src="../../../javascript/teacher/teacherCourses.js"></script>
+
+    </body>
+</html>

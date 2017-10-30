@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+        <link rel="stylesheet" href="../../../css/style.css"/>
+    </head>
+    <body>
+    <nav class="student-navbar" style="position:fixed;" id="www">
+      <div class="nav-user-block">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <p>Welcome,</p>
+        <h4 id="user-Name">Alexander</h4>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+
+      <p onclick="changeContent(this)" style="border-right:3px solid orange;"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
+      <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+      <div>
+
+        <div id="nav-courses" style="display:none">
+
+        </div>
+
+      </div>
+      
+      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+
+
+    </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <div>
+        <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
+      </div>
+      <div>
+        <h2 id="currentPageHeader"></h2>
+      </div>
+    </nav>
+
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+    <div class="nav-wrapper-grid" id="nav-wrapper">
+        <div class="nav-grid-space"></div>
+        <div class="top-nav-bar">
+              <h1>KYH Koalas</h1>
+              <button onclick="logOutUser()">Logout</button>
+        </div>
+    </div>
+
+
+
+      <script src="../../../javascript/database.js"></script>
+      <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/teacher/teacher.js"></script>
+
+    </body>
+</html>
