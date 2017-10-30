@@ -1250,6 +1250,11 @@ select{
 .teacher-attendence-home{
   display:grid;
 }
+.teacher-attendence-home h2:first-of-type{
+  text-align:center;
+  padding: 5px 0px;
+  margin:0px;
+}
 .teacher-attendence-home h2{
   text-align:center;
   padding: 5px 0px;
@@ -1260,7 +1265,9 @@ select{
   text-align:center;
   padding: 5px 0px;
 }
-
+#code-holder{
+  display:none;
+}
 .teacher-home-students{
   display:grid;
   grid-template-columns: 20px auto;

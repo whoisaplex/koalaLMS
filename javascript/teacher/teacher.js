@@ -1,6 +1,6 @@
 const dater = new Date();
 const month = (Number(dater.getMonth()) + 1);
-document.getElementById('date').innerHTML = dater.getFullYear() + '/'+month+'/'+ dater.getDate();
+//document.getElementById('date').innerHTML = dater.getFullYear() + '/'+month+'/'+ dater.getDate();
 let path = window.location.pathname;
 let page = path.split("/").pop();
 page = page.replace(/[.].*/, "");
@@ -20,12 +20,13 @@ function teacherAddCode(current){
   let code;
   const parent = current.parentNode;
 
-  if(current.parentNode.childNodes[3].value === ''){
-    current.parentNode.childNodes[3].style.border = 'solid 1px #ce2323';
+  if(parent.children[2].value === ''){
+    parent.children[2].style.border = 'solid 1px #ce2323';
   }else{
-    code = current.parentNode.childNodes[3].value;
-    current.parentNode.childNodes[3].remove();
-    current.parentNode.childNodes[4].remove();
-    parent.innerHTML += '<h4>Code: '+code+'</h4>'
+    code = parent.children[2].value;
+    document.getElementById('code-holder').style.display = 'block';
+    parent.children[2].remove();
+    parent.children[2].remove();
+    parent.children[1].innerHTML = 'Code: ' + code;
   }
 }
