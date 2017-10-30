@@ -109,7 +109,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-1":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-1") 
-                    circleArray[i].style.backgroundColor = "red";
+                    circleArray[i].style.backgroundColor = "#FF0C00";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
@@ -117,7 +117,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-2":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-2") 
-                    circleArray[i].style.backgroundColor = "#D88A08";
+                    circleArray[i].style.backgroundColor = "#E8700C";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
@@ -125,7 +125,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-3":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-3") 
-                    circleArray[i].style.backgroundColor = "yellow";
+                    circleArray[i].style.backgroundColor = "#FFC700";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
@@ -133,7 +133,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-4":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-4") 
-                    circleArray[i].style.backgroundColor = "#A3F91A";
+                    circleArray[i].style.backgroundColor = "#B6E800";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
@@ -141,7 +141,7 @@ function evaluateCircle(circle){
         case "evaluate-scale-circle-5":
             for (let i=0; i < circleArray.length; i++){
                 if(circleArray[i].id == "evaluate-scale-circle-5") 
-                    circleArray[i].style.backgroundColor = "#21F500";
+                    circleArray[i].style.backgroundColor = "#11FF37";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }

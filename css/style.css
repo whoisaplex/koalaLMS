@@ -712,7 +712,7 @@ img {
 #send-form-fill-week {
   height: 5vh;
   width: 6vw;
-  background-color: green;
+  background-color: #006ABF;
   bottom: 1vh;
   right: 1vw;
   text-align: center;
@@ -726,7 +726,7 @@ img {
   float: right;
 }
 #send-form-fill-week:hover {
-  background-color: #066D08;
+  background-color: #0071CC;
 }
 #course-form-fill {
   position: absolute;
@@ -739,7 +739,7 @@ img {
 #send-form-fill-course {
   height: 5vh;
   width: 6vw;
-  background-color: green;
+  background-color: #006ABF;
   bottom: 1vh;
   right: 1vw;
   text-align: center;
@@ -753,7 +753,7 @@ img {
   float: right;
 }
 #send-form-fill-course:hover {
-  background-color: #066D08;
+  background-color: #0071CC;
 }
 .courseEvaluation {
   width: auto;
@@ -779,7 +779,6 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  float: left;
 }
 .evaluate-scale-circle {
   height: 27px;
@@ -801,9 +800,6 @@ textarea {
   font-weight: 700;
   text-align: center;
 }
-#evaluate-scale-circle-1, #evaluate-scale-circle-2, #evaluate-scale-circle-3, #evaluate-scale-circle-4, #evaluate-scale-circle-5 {
-
-}
 #evaluate-scale-circle-5 {
   margin-right: 0;
 }
@@ -813,6 +809,20 @@ textarea {
 }
 #currentPageHeader {
   display: none;
+}
+#form-description-title {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.form-description{
+  width: 50px;
+  text-align: center;
+}
+#form-description-left {
+  margin-right: 8px;
+}
+#form-description-right {
+  margin-left: 8px;
 }
 @keyframes slide-down-formFill {
   from {transform: translateY(-65vh);}
@@ -838,6 +848,18 @@ textarea {
   }
   #course-form-fill h4 {
     margin-bottom: 1vh;
+    margin-top: -2px;
+  }
+  #form-description-title {
+    text-align: center;
+  }
+  #form-description-left {
+    margin-right: 4px;
+    text-align: center;
+  }
+  #form-description-right {
+    margin-left: 4px;
+    text-align: center;
   }
   #send-form-fill-week, #send-form-fill-course {
     width: 15vw;
@@ -938,7 +960,7 @@ textarea {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 2vw;
+  border-radius: 10px;
 }
 .open-feedback-text:hover {
   background-color: #E40A0A;
@@ -947,6 +969,10 @@ textarea {
   width: calc(98% - 200px);
   left: 208px;
   top: 50px;
+}
+.form-description {
+  font-size: 13px;
+  margin-top: 10px;
 }
 @keyframes slide-in{
   from {transform: translateX(53px);}
