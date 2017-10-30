@@ -1261,6 +1261,24 @@ select{
   padding: 5px 0px;
 }
 
+.teacher-home-students{
+  display:grid;
+  grid-template-columns: 20px auto;
+  background:rgba(245,245,245, 0.5);
+  border-top:solid 1px #c6c6c6;
+  border-bottom: solid 1px #c6c6c6;
+}
+.teacher-home-students p{
+  margin:0px;
+  padding:3px;
+  color:#232323;
+}
+.teacher-home-students i{
+  color:blue;
+}
+
+
+
 
 @media only screen and (max-width:769px){
   #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid{
