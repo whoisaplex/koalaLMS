@@ -83,3 +83,12 @@ let teachers = [
   }
   ]}
 ];
+
+let admins = [
+  {
+    username:'citizen4',
+    password:'nsa',
+    full_name:'Edward Snowden',
+    role: 'sysadmin'
+  }
+];
