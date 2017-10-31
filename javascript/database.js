@@ -86,8 +86,8 @@ let teachers = [
 
 let admins = [
   {
-    username:'citizen4',
-    password:'nsa',
+    username:'admin',
+    password:'123',
     full_name:'Edward Snowden',
     role: 'sysadmin'
   }
