@@ -86,7 +86,7 @@
 
 .grid-3-box{
   display:grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:33.3% auto auto;
   grid-column-start: 2;
   grid-gap:10px;
 }
@@ -1087,21 +1087,21 @@ textarea {
   background:rgba(245,245,245, 0.5);
 }
 
-.teacherAssignmentName{
+.teacherAssignmentName, .adminAccountName{
   color:#232323;
   margin:0px;
   font-size:17px;
   cursor:pointer;
   align-self: center;
 }
-.teacherAssignmentEdit{
+.teacherAssignmentEdit, .adminAccountEdit{
   color:#006ABF;
   font-size:21px;
   padding:0px;
   margin:0px;
   cursor:pointer;
 }
-.teacherAssignmentTrash{
+.teacherAssignmentTrash, .adminAccountDelete{
   color:#c12424;
   font-size:20px;
   padding:0px;
@@ -1307,3 +1307,43 @@ select{
     margin-top:75px;
   }
 }
+
+/** ADMIN **/
+.radiowrapper {
+  text-align: center;
+}
+[type=radio] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.field-wrapper {
+  margin-top: 20px;
+}
+.field-wrapper-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+label {
+  width: 25%;
+  display: inline-block;
+  text-align: left;
+}
+form {
+  font-size: 20px;
+}
+.list div {
+  display: grid; 
+}
+.list div div:first-child {
+    display: grid;
+    grid-template-columns: auto 20px 20px;
+    grid-column-gap: 15px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    padding: 5px;
+}
+
+
+
+
