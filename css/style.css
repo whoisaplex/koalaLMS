@@ -592,7 +592,7 @@ img {
   justify-self:right;
   transition: transform 0.5s;
 }
-#attendance-dropdown div div:nth-child(2) i:hover{
+closeIconStyle:hover{
   transform:rotate(90deg);
 }
 
@@ -1124,7 +1124,7 @@ textarea {
   align-items:center;
 }
 
-#teacher-assignment-dropdown div div:nth-child(2), #teacher-examination-dropdown div div:nth-child(2), #teacher-delete-dropdown div div:nth-child(2), #teacher-setGrade-dropdown div div:nth-child(2){
+.center-content{
   justify-self:center;
   width:90%;
   background:rgb(46, 51, 68);
@@ -1133,19 +1133,19 @@ textarea {
 }
 
 
-#teacher-assignment-dropdown div div:nth-child(2) div, #teacher-examination-dropdown div div:nth-child(2) div{
+#assignment-dropdown-error, #teacher-examination-dropdown div div:nth-child(2) div:first-of-type{
   width:100%;
   height:40px;
   background:red;
   display:none;
 }
-#teacher-assignment-dropdown div div:nth-child(2) i, #teacher-examination-dropdown div div:nth-child(2) i,  #teacher-setGrade-dropdown div div:nth-child(2) i{
+.closeIconStyle{
   color:white;
   padding:10px;
   justify-self:right;
   transition: transform 0.5s;
 }
-#teacher-assignment-dropdown div div:nth-child(2) i:hover, #teacher-examination-dropdown div div:nth-child(2) i:hover{
+.closeIconStyle:hover{
   transform:rotate(90deg);
 }
 
@@ -1193,6 +1193,7 @@ textarea {
   border:none;
   border-radius: 3px;
   cursor:pointer;
+  margin-left:5px;
 }
 .assignmentCancel{
   color:white;
@@ -1200,6 +1201,7 @@ textarea {
   border:none;
   border-radius: 3px;
   cursor:pointer;
+  margin-right:16px;
 }
 .teacherSetGrade-button{
   color:white;
@@ -1297,8 +1299,86 @@ select{
 .teacher-home-students i{
   color:#006ABF;
 }
+.somethingelse{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.TeacherAssignmentSingleBox{
+  align-self: center;
+  background:#006ABF;
+  padding:5px;
+  cursor:pointer;
+}
 
+.TeacherAssignmentSingleBox h2{
+  text-align:center;
+  padding:0px;
+  margin:0px;
+  color:white;
+}
+#deselected{
+  background: #202430;
+}
+#deselected h2{
+  color:grey;
+}
+.teacherButtonAdd{
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+  background:#19b034;
+  border:none;
+  border-radius:3px;
+  cursor:pointer;
+}
+.teacherStudentGroup{
+  display:grid;
+  grid-template-columns: auto 20px;
+  padding:1px;
+  color: white;
+  margin: 2px 10px;
+  background: #353b4f73;
+  padding-left: 10px;
+}
+.trashColor{
+  color:#ff1d1d;
+  cursor:pointer;
+}
+.teacherGroupStudent{
+  background: #353b4f73;
+  padding:10px 5px;
+  align-self:center;
+  color:white;
+  cursor:pointer;
+  margin:0px;
+}
 
+.teacherGroupStudent i {
+  float:right;
+  padding:0px 3px;
+  color:#006ABF;
+  cursor:pointer;
+}
+.groupsStyling{
+  padding:0px;
+  border-left:solid 2px #006ABF;
+  height:40px;
+  overflow:hidden;
+  overflow-y:scroll;
+}
+
+.groupsStyling li{
+  background: #353b4f73;
+  list-style: none;
+  padding:3px 5px;
+  margin:0px;
+  color:white;
+  cursor:pointer;
+}
+
+.groupsStyling li:hover{
+  background: #21243173;
+}
 
 
 @media only screen and (max-width:769px){
@@ -1346,4 +1426,12 @@ form {
 
 
 
+
+
+.no-evaluations-found{
+    padding: 7px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    font-weight: bold;
+}
 

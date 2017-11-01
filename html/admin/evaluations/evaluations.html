@@ -45,12 +45,27 @@
               <button onclick="logOutUser()">Logout</button>
         </div>
     </div>
+    
+      <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+        <div style=" grid-row: 1 / last-line;"></div>
+        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+              <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+                <h2 id="teacherEvaluationsText"> Evaluations List</h2>
+                <hr>
+                <div class="grid-2-box" id="evaluationsList">
 
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
         <div style=" grid-row: 1 / last-line;"></div>
         <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
               <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-                <h2 id="teacherEvaluationsText">Evaluations</h2>
+                <h2 id="teacherEvaluationsText">Sent Evaluations</h2>
                 <hr>
                 <div class="grid-2-box" id="teacherEvaluationsContent">
 
@@ -59,6 +74,7 @@
       </div>
     </div>
   </div>
+  
 
   <div class="dark-overlay" id="teacher-dark-overlay"></div>
   <!-- Dropdown assignments -->
@@ -81,7 +97,49 @@
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/teacher/teacher.js"></script>
       <script src="../../../javascript/teacher/TeacherEvaluations.js"></script>
+    
+      <script>
+        for(let i=0; i<courses.length; i++){
+            let tempDiv = document.createElement('div');
+                tempDiv.className = "grid-style-box";
+                tempDiv.id = "TeacherEvaluationsCourse"+i;
+          
+            let tempH2 = '<h2>'+courses[i].course_title+'</h2><div class="teacherEvaluationsBox" id="teacherEvaluationContainer'+i+'"></div>';
+                tempDiv.innerHTML = tempH2;
+                document.getElementById('evaluationsList').appendChild(tempDiv);
+            
+            let noOfEvaluation = 0;
+            
+            
+            for(let y = 0; y < evaluations.length; y++){
+            
+                if(courses[i].course_id == evaluations[y].course_id){
+                    noOfEvaluation++;
+                    let evaluationContent = '<div><div class="teacherEvaluations" onclick="toggleEvaluations(this)"><p class="teacherAssignmentEdit"><i class="fa fa-list-ul"></i></p><p class="teacherEvaluationsName">'+evaluations[y].evaluation_title+'</p></div><div style="display:none" id="data'+i+""+y+'"></div></div>';
+                    document.getElementById('teacherEvaluationContainer'+i).innerHTML += evaluationContent;
 
+                    /*for(let z = 0; z < teachers[0].courses[x].evaluations[y].data.length; z++){
+                        let dataContent = '<div class="teacherEvaluationsData"><p class="teacherAssignmentEdit"><i class="fa fa-user-circle-o"></i></p><p class="teacherAssignmentName">'+teachers[0].courses[x].evaluations[y].data[z].name+'</p><p class="teacherAssignmentEdit" onclick="editStudentAssignment(this)"><i class="fa fa-file-text"></i></p></div>';
+                        document.getElementById('data'+x+""+y).innerHTML += dataContent;
+                    }*/    
+                }/* else {
+                    let noEvaluationFound = '<div><div class="teacherEvaluations">No evaluation found. Create a new One!</div></div>';
+                     document.getElementById('teacherEvaluationContainer'+i).innerHTML += noEvaluationFound;
+                    
+                }*/
+                
+               
+            }
+            
+             if(noOfEvaluation === 0){
+                    let noEvaluationFound = '<div><div class="no-evaluations-found" style="grid-template-columns: 0px">No evaluation found. Create a new One!</div></div>';
+                     document.getElementById('teacherEvaluationContainer'+i).innerHTML += noEvaluationFound;
+                    
+                }
+                
+        }
+          
+      </script>
 
     </body>
 </html>

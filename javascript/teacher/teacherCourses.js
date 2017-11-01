@@ -2,6 +2,18 @@ let pathCourses = window.location.pathname;
 let pageCourses = path.split("/").pop();
 pageCourses = pageCourses.replace(/[.].*/, "");
 document.getElementById('teacherCourseName').innerHTML = pageCourses;
+document.getElementById('teacherAddGroup').addEventListener('keypress', function(e){
+  let key = e.which || e.keyCode;
+  if(key === 13){
+    let divTemp = document.createElement('div');
+    divTemp.className = 'teacherStudentGroup';
+    divTemp.innerHTML = '<p>'+this.value+'</p><p  onclick="removeGroup(this)"><i class="fa fa-trash-o trashColor" aria-hidden="true"></i></p>';
+    document.getElementById('groupHolder').append(divTemp);
+    this.value = '';
+    this.style.display = 'none';
+    document.getElementById('teacherButtonAdd').style.display = 'block';
+  }
+});
 
 for(let x = 0; x < teachers.length; x++){
   for(let z = 0; z < teachers[x].courses.length; z++){
@@ -114,4 +126,51 @@ function addExaminationConfirm(){
   }else{
     document.getElementById('examination-dropdown-error').style.display = 'grid';
   }
+}
+
+function toggleGroupAssignment(current){
+  if(current.id === ''){
+
+  }else{
+    if(current.children[0].innerHTML === 'Individual Assignment'){
+      //Hide group
+      document.getElementById('groupShow').style.display = 'none';
+      for(let i = 0; i < current.parentNode.children.length; i++){
+        console.log(current.parentNode.children[i].id = 'deselected');
+      }
+    }else{
+      //show groups
+      document.getElementById('groupShow').style.display = 'grid';
+      for(let i = 0; i < current.parentNode.children.length; i++){
+        console.log(current.parentNode.children[i].id = 'deselected');
+      }
+    }
+      current.id = '';
+  }
+}
+
+function addGroup(current){
+  current.style.display = 'none';
+  document.getElementById('teacherAddGroup').style.display = 'block';
+  document.getElementById('teacherAddGroup').autofocus = true;
+
+}
+
+function removeGroup(current){
+  current.parentNode.remove();
+}
+
+function openGroups(current){
+  if(current.parentNode.children[1].style.display === 'block'){
+      current.parentNode.children[1].style.display = 'none';
+  }else{
+      current.parentNode.children[1].style.display = 'block';
+      for(let x = 0; x < document.getElementById('groupHolder').children.length; x++){
+        current.parentNode.children[1].innerHTML += '<li onclick="assignStudentGroup(this)">'+document.getElementById('groupHolder').children[x].children[0].innerHTML+'</li>';
+      }
+    }
+}
+
+function assignStudentGroup(current){
+  current.parentNode.parentNode.remove();
 }
