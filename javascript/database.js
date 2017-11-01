@@ -92,3 +92,31 @@ let admins = [
     role: 'sysadmin'
   }
 ];
+
+let courses = [
+    {
+        course_id:1, course_title:"HTML", description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorum fugit rem ipsum sit placeat modi suscipit nobis laboriosam, qui eum, accusamus dolor"
+    },
+    {
+        course_id:2, course_title:"CSS", description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorum fugit rem ipsum sit placeat modi suscipit nobis laboriosam, qui eum, accusamus dolor"
+    },
+    
+    {
+        course_id:3, course_title:"CSS3", description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorum fugit rem ipsum sit placeat modi suscipit nobis laboriosam, qui eum, accusamus dolor"
+    }
+    
+];
+
+let evaluations = [{evaluation_id:1, course_id:1, evaluation_title:"HTML Evaluation 1"},{evaluation_id:2, course_id:1,              evaluation_title:"HTML Evaluation 2"}, {evaluation_id:3, course_id:2, evaluation_title:"CSS Evaluation 1"}];
+
+let evaluationQuestions = [
+    {question_id : 1, evaluation_id:1, question:"Hur var lektionerna under kursen?" },
+    {question_id : 2, evaluation_id:1, question:"Hur fungerade kommunikationen under kursen?" },
+    {question_id : 3, evaluation_id:1, question:"Vad var bra/dåligt med kursen?" }
+];
+
+let EvaluationAnswers = [
+    {answer_id:1, user_id:1, question_id:1, answer:"bla bla"},
+    {answer_id:2, user_id:1, question_id:2, answer:"hello hello"},
+    {answer_id:3, user_id:1, question_id:3, answer:"mew mew mew"}
+];

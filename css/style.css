@@ -1387,3 +1387,10 @@ select{
     margin-top:75px;
   }
 }
+
+.no-evaluations-found{
+    padding: 7px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    font-weight: bold;
+}
