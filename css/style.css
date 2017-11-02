@@ -1111,7 +1111,7 @@ textarea {
 #addGradeTitle{
   width:auto;
 }
-#teacher-assignment-dropdown, #teacher-examination-dropdown, #teacher-delete-dropdown, #teacher-setGrade-dropdown{
+#teacher-assignment-dropdown, #teacher-examination-dropdown, #teacher-delete-dropdown, #teacher-setGrade-dropdown, #admin-edit-dropdown{
   position:fixed;
   top:0px;
   left:0px;
@@ -1175,7 +1175,7 @@ textarea {
 }
 
 
-#teacher-delete-dropdown div div:nth-child(2) h2{
+#teacher-delete-dropdown div div:nth-child(2) h2, #admin-edit-dropdown div div:nth-child(2) h2{
   text-align:center;
   color:white;
 }
@@ -1388,7 +1388,7 @@ select{
   }
 }
 
-/** ADMIN **/
+/** ADMIN ACCOUNT **/
 .radiowrapper {
   text-align: center;
 }
@@ -1412,6 +1412,13 @@ label {
 form {
   font-size: 20px;
 }
+#editform {
+  color: white;
+  text-align: center;
+}
+#editform {
+  
+}
 .list div {
   display: grid; 
 }
@@ -1422,6 +1429,13 @@ form {
     border-top: solid 1px grey;
     border-bottom: solid 1px grey;
     padding: 5px;
+}
+.admin-center-content{
+  justify-self:center;
+  width:40%;
+  background:rgb(46, 51, 68);
+  display:grid;
+  height:100%;
 }
 
 
