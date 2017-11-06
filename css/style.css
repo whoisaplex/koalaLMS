@@ -429,6 +429,20 @@ img {
 }
 }
 /*Grades */
+/*AddCourse in admin*/
+#addcourse h3{
+  text-align:left;
+}
+#addcourse button#effect{
+  margin-left: 10px;
+}
+#addcourse li{ 
+  list-style: none;
+}
+#addcourse li.list button{
+  margin-left: 50px;
+}
+/*AdCourse in admin*/
 
 /* Student Home */
 .home-top-nav-bar-container-first{
