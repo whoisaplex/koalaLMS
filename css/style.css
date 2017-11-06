@@ -615,6 +615,11 @@ closeIconStyle:hover{
   color:white;
 }
 
+/*Admin Evaluation overlay */
+/*Admin evaluation overlay*/
+
+
+
 .dark-overlay{
   position:fixed;
   top:0px;
@@ -1449,3 +1454,20 @@ form {
     font-weight: bold;
 }
 
+.evaluation-list-course-title-box{
+    display: grid;grid-template-columns: auto 140px;
+}
+.evaluation-list-course-title{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.evaluation-title-box{
+   display: grid;grid-template-columns: 15px auto 30px 30px; 
+}
+
+
+.evaluation-title{
+    font-size: 20px;
+    cursor: pointer;
+}
