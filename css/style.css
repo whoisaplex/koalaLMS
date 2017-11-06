@@ -417,7 +417,7 @@ img {
 #Grades #finished-coursess .grid-style-box:nth-last-child(2){
   margin-bottom:15px;
 }
-#Grades #finished-coursess h2,h3{
+#Grades #finished-coursess h2,#Grades #finished-coursess h3{
 	text-align: center;
 	margin-top: 10px;
 	line-height: 2;
@@ -1422,10 +1422,10 @@ form {
   text-align: center;
 }
 #editform {
-  
+
 }
 .list div {
-  display: grid; 
+  display: grid;
 }
 .list div div:first-child {
     display: grid;
@@ -1463,11 +1463,86 @@ form {
 }
 
 .evaluation-title-box{
-   display: grid;grid-template-columns: 15px auto 30px 30px; 
+   display: grid;grid-template-columns: 15px auto 30px 30px;
 }
 
 
 .evaluation-title{
     font-size: 20px;
     cursor: pointer;
+}
+
+
+/* ADMIN CLASSES */
+.adminClassStudents:first-of-type, .adminClass:first-of-type{
+  display:grid;
+  grid-template-columns: 20px auto 25px;
+  background:#f6f6f6;
+  border-top:#e5e5e5 solid 2px;
+
+}
+.adminClassStudents:last-of-type, .adminClass:last-of-type{
+  display:grid;
+  grid-template-columns: 20px auto 25px;
+  background:#f6f6f6;
+  border-bottom:#e5e5e5 solid 2px;
+
+}
+
+.adminClassStudents, .adminClass{
+  display:grid;
+  grid-template-columns: 20px auto 25px;
+  background:#f6f6f6;
+  border-top:#e5e5e5 solid 2px;
+}
+.adminClassStudents{
+  padding:10px
+}
+.adminClass{
+  padding:15px;
+}
+
+.adminClassStudents p, .adminClass p{
+  align-self:center;
+  margin:0px;
+  color:#006ABF;
+}
+.adminClassStudents h3, .adminClass h3{
+  margin:0px;
+  color:#1a1a1a;
+}
+.adminClassStudents button{
+  color:white;
+  background:#44b144;
+  border:none;
+  border-radius:3px;
+  cursor:pointer;
+  font-weight: bold;
+}
+
+.grid-style-box select{
+  margin:0px;
+  width:100%;
+  margin-bottom:5px;
+}
+.ClassCreator{
+  display:grid;
+  grid-template-columns: 100%;
+}
+.ClassCreator button{
+  border:none;
+  border-radius: 3px;
+  color:white;
+  font-weight: bold;
+  padding:12px;
+  background: #44b144;
+  margin: 5px 0px;
+  width:100%;
+  cursor:pointer;
+}
+.ClassCreator input{
+  padding:10px;
+  font-weight: bold;
+  margin-bottom:5px;
+
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+        <link rel="stylesheet" href="../../../css/style.css"/>
+    </head>
+    <body>
+    <nav class="student-navbar" style="position:fixed;" id="www">
+      <div class="nav-user-block">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <p>Welcome,</p>
+        <h4 id="user-Name">Alexander</h4>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p></a>
+        <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+        <div>
+          <div id="nav-courses" style="display:none">
+          </div>
+        </div>
+
+        <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+
+      </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <div>
+        <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
+      </div>
+      <div>
+        <h2 id="currentPageHeader"></h2>
+      </div>
+    </nav>
+
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+    <div class="nav-wrapper-grid" id="nav-wrapper">
+        <div class="nav-grid-space"></div>
+        <div class="top-nav-bar">
+              <h1>KYH Koalas</h1>
+              <button onclick="logOutUser()">Logout</button>
+        </div>
+    </div>
+
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+      <div style=" grid-row: 1 / last-line;"></div>
+      <div class="grid-2-box">
+        <div class="grid-style-box">
+          <h2>Classes</h2>
+          <hr>
+          <div class="ClassCreator">
+            <input type="text" id="createClassInput" placeholder="Classname" style="display:none;"/>
+            <button onclick="addClass(this)" id="createClassButton">Create Class</button>
+          </div>
+          <div>
+            <div class="adminClass"><p><i class="fa fa-users" aria-hidden="true"></i></p><h3>FE17</h3></div>
+          </div>
+        </div>
+        <div class="grid-style-box">
+          <h2>Students</h2>
+          <hr>
+          <select id="classSelector">
+            <option>FE17</option>
+          </select>
+          <div>
+            <div class="adminClassStudents"><p><i class="fa fa-user-circle-o" aria-hidden="true"></i></p><h3>Alexander</h3><button onclick="addStudentClass(this)">+</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+      <script src="../../../javascript/database.js"></script>
+      <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/admin/adminClass.js"></script>
+
+    </body>
+</html>
