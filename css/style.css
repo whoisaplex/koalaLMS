@@ -301,6 +301,9 @@ margin: 0;
  .grid-2-box{
    grid-template-columns: auto;
  }
+ .grid-3-box{
+   grid-template-columns: auto;
+ }
 
 
   .mobile-nav{
@@ -436,7 +439,7 @@ img {
 #addcourse button#effect{
   margin-left: 10px;
 }
-#addcourse li{ 
+#addcourse li{
   list-style: none;
 }
 #addcourse li.list button{
