@@ -11,21 +11,23 @@
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
-        <img src="http://2.bp.blogspot.com/-0nYk-P3dbTA/U3ZQ4gvnPRI/AAAAAAAAAA0/PysUD0oOCmo/s1600/Koala-Bear-With-Baby2.jpg">
+        <img src="http://2.bp.blogspot.com/-0nYk-P3dbTA/U3ZQ4gvnPRI/AAAAAAAAAA0/PysUD0oOCmo/s1600/Koala-Bear-With-
+        Baby2.jpg">
         <p>Welcome,</p>
         <h4 id="user-Name">Admin</h4>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p></a>
+        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" 
+          aria-hidden="true"></i>Home</p></a>
         <p onclick="toggleCourses()"> <i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+        
         <div>
-          <div id="nav-courses" style="display:block">
-              <p onclick="changeContent(this)"><a href="../courses/addCourses.html"></a> <i class="fa fa-book" aria-hidden="true"></i>addCourses</p>
+          <div id="nav-courses" style="display:none">
           </div>
         </div>
-
-        <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
-
+        <p onclick="toggleCourses()"><a href="../courses/addCourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>addCourses</a></p>
+        <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o"
+        aria-hidden="true"></i>Evaluations</a></p>
       </div>
     </nav>
 
@@ -51,95 +53,62 @@
       <div style=" grid-row: 1 / last-line;"></div>
         <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
           <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-            <h2 id="teacherCourseName">Pappanomaly</h2>
+            <h2 id="teacherCourseName"></h2>
               <hr>
               <div class="grid-2-box">
                 <div class="grid-style-box">
-                  <h2>Add some courses</h2>
-                  <!-- start from here -->
-                    <form class="teacherAssignmentsBox" id="addCourses">
-                      <label>Course Name</label>
-                      <!-- input -->
-                      <input type="text" class="form-control" id="courseName" placeholder="Course Name" maxlength="15" autofocus>
-                      <input type="submit" class="attendance-button" style="width:59%; justify-self:center;" value="Add Courses">
-                      <!-- <button  id="submitCourseName" class="attendance-button" style="width:50%; justify-self:center;">Add Courses</button> -->
-                    </form>
-                    <!-- <div style="display:grid; "></div> -->
-                   
-                   <!-- Add courses -->
-                    <h3> Course Name: </h3>
-                    <div id="courses" style="display:grid; ">
-                     <!-- li content add here -->
-                    </div>
-                </div>
-                  
-                  <div class="grid-style-box">
-                    <h2>Teachers</h2>
-                    <select class="" id="">
-                    <option value="1"> Simon</option>
-                    <option value="2"> Alexander</option>
-                    <option value="3"> Nasim</option>
-                    <option value="4"> Oskar</option>
-                  </select>
-                  <div class="teacherAssignmentsBox" id="teacherExaminationsBox"></div>
+                  <h2>Courses</h2>
+                  <div class="teacherAssignmentsBox" id="teacherAssignmentsBox">
+                    
+                                 
+                  </div>
                   <div style="display:grid; ">
-                    <button onclick="addExamination()" class="attendance-button" style="width:50%;">Add teacher's courses</button>
+                    <button onclick="addAssignment()" class="attendance-button" 
+                    style="width:97%; justify-self:center;"><i class="fa fa-plus-square" aria-hidden="true" style="margin-right:10px;"></i>Add Course</button>
                   </div>
-                  </div>
-                  
-                   
-                  
-          </div>
-        </div>
-      </div>
-    </div>
+                </div>
+                <div class="grid-style-box">
+                  <h2>Teachers</h2>
+                  <div class="teacherAssignmentsBox" id="teacherExaminationsBox">
 
-                <!-- <div class="grid-2-box">
-                  <div class="grid-style-box">
-                    <h2>New Courses</h2>
-                      <div class="teacherAssignmentsBox" id="teacherAssignmentsBox">
 
-                      </div>
-                      <div style="display:grid; ">
-                      <button onclick="addAssignment()" class="attendance-button" style="width:97%; justify-self:center;">Add Assignment</button>
-                      </div>
                   </div>
-                  <div class="grid-style-box">
-                    <h2>Examinations</h2>
-                    <div class="teacherAssignmentsBox" id="teacherExaminationsBox"></div>
-                    <div style="display:grid; ">
-                      <button onclick="addExamination()" class="attendance-button" style="width:97%; justify-self:center;">Add Examination</button>
-                    </div>
+                  <div style="display:grid; ">
+                    <button onclick="addExamination()" class="attendance-button" 
+                    style="width:97%;"><i class="fa fa-plus-square" aria-hidden="true" style="margin-right:10px;"></i>Add teacher</button>
                   </div>
-
-          </div>  
- -->     
+                </div>
+            </div>
+         </div>
+       </div>
+     </div>
 
   <div class="dark-overlay" id="teacher-dark-overlay"></div>
-  <!-- Dropdown assignments -->
+  <!-- Dropdown course -->
   <div id="teacher-assignment-dropdown">
     <div id="teacher-assignment-dropdown-grid">
       <div></div>
       <div>
-        <div id="assignment-dropdown-error"><h3>An Assignment can't be created without a title</h3></div>
-        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
-        <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
-        <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
-        <button class="attendance-button" onclick="addAssignmentConfirm()">Add Assignment</button>
+        <div id="assignment-dropdown-error"><h3>Need title of the course</h3></div>
+        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true" 
+        id="attendance-dropdown-close-icon"></i>
+        <input type="text" placeholder="Title of Course" id="addAssignmentTitle" autofocus >
+        <button class="attendance-button" onclick="addAssignmentConfirm()">Add Course</button>
       </div>
     </div>
   </div>
 
-  <!-- Dropdown examinations -->
+  <!-- Dropdown teacher -->
   <div id="teacher-examination-dropdown">
     <div id="teacher-examination-dropdown-grid">
       <div></div>
       <div>
-        <div id="examination-dropdown-error"><h3>Must write one course</h3></div>
-        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
-        <input type="text" placeholder="Course Name" id="addExaminationTitle">
-        <input type="text" placeholder="Assign to a teacher" id="addExaminationDescription">
-        <button class="attendance-button" onclick="addExaminationConfirm()">Add Course</button>
+        <div id="examination-dropdown-error"><h3>Course name is needed</h3></div>
+        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x" aria-hidden="true" 
+        id="attendance-dropdown-close-icon"></i>
+        <input type="text" placeholder="Teacher's Name" id="addExaminationTitle">
+       <!--  <input type="text" placeholder="Assign to a teacher" id="addExaminationDescription"> -->
+        <button class="attendance-button" onclick="addExaminationConfirm()">Add teacher</button>
       </div>
     </div>
   </div>
@@ -158,31 +127,11 @@
     </div>
   </div>
 
-  <!--dropdown set grade -->
-  <div id="teacher-setGrade-dropdown">
-    <div id="teacher-setGrade-dropdown-grid">
-      <div></div>
-      <div>
-        <i onclick="closeSetGradeBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
-        <h3 id="teacher-setGrade-text">Setting Grade:</h3>
-        <select>
-          <option >VG</option>
-          <option>G</option>
-          <option>IG</option>
-        </select>
-        <textarea  placeholder="Comment..." id="addGradeTitle"></textarea>
-        <button id="setGrade" class="teacherSetGrade-button">Set Grade</button>
-      </div>
-    </div>
-  </div>
-
-
       <script src="../../../javascript/database.js"></script>
       <script src="../../../javascript/login.js"></script>
       <script src="../../../javascript/nav.js"></script>
-      <script src="../../../javascript/teacher/teacher.js"></script>
-      <script src="../../../javascript/teacher/teacherCourses.js"></script>
-      <script src="../../../javascript/admin/addCourses.js"></script>
+	  <script src="../../../javascript/teacher/teacher.js"></script>
+      <script src="../../../javascript/teacher/teacherCourses.js"></script> 
 
     </body>
 </html>
