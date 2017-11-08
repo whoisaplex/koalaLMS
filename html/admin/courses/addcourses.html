@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-        <script src="https://use.fontawesome.com/f832093fcd.js"></script> 
+        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
     </head>
     <body>
@@ -17,17 +17,17 @@
         <h4 id="user-Name">Admin</h4>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" 
+        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home"
           aria-hidden="true"></i>Home</p></a>
         <p onclick="toggleCourses()"> <i class="fa fa-book" aria-hidden="true"></i>Courses</p>
-        
+
         <div>
           <div id="nav-courses" style="display:none">
           </div>
         </div>
-        <p onclick="toggleCourses()"><a href="../courses/addCourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>addCourses</a></p>
-        <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o"
-        aria-hidden="true"></i>Evaluations</a></p>
+        <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i></i>Add Courses</a></p>
+        <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+        <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
       </div>
     </nav>
 
@@ -59,11 +59,11 @@
                 <div class="grid-style-box">
                   <h2>Courses</h2>
                   <div class="teacherAssignmentsBox" id="teacherAssignmentsBox">
-                    
-                                 
+
+
                   </div>
                   <div style="display:grid; ">
-                    <button onclick="addAssignment()" class="attendance-button" 
+                    <button onclick="addAssignment()" class="attendance-button"
                     style="width:97%; justify-self:center;"><i class="fa fa-plus-square" aria-hidden="true" style="margin-right:10px;"></i>Add Course</button>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
 
                   </div>
                   <div style="display:grid; ">
-                    <button onclick="addExamination()" class="attendance-button" 
+                    <button onclick="addExamination()" class="attendance-button"
                     style="width:97%;"><i class="fa fa-plus-square" aria-hidden="true" style="margin-right:10px;"></i>Add teacher</button>
                   </div>
                 </div>
@@ -90,7 +90,7 @@
       <div></div>
       <div>
         <div id="assignment-dropdown-error"><h3>Need title of the course</h3></div>
-        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true" 
+        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true"
         id="attendance-dropdown-close-icon"></i>
         <input type="text" placeholder="Title of Course" id="addAssignmentTitle" autofocus >
         <button class="attendance-button" onclick="addAssignmentConfirm()">Add Course</button>
@@ -104,7 +104,7 @@
       <div></div>
       <div>
         <div id="examination-dropdown-error"><h3>Course name is needed</h3></div>
-        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x" aria-hidden="true" 
+        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x" aria-hidden="true"
         id="attendance-dropdown-close-icon"></i>
         <input type="text" placeholder="Teacher's Name" id="addExaminationTitle">
        <!--  <input type="text" placeholder="Assign to a teacher" id="addExaminationDescription"> -->
@@ -131,7 +131,7 @@
       <script src="../../../javascript/login.js"></script>
       <script src="../../../javascript/nav.js"></script>
 	  <script src="../../../javascript/teacher/teacher.js"></script>
-      <script src="../../../javascript/teacher/teacherCourses.js"></script> 
+      <script src="../../../javascript/teacher/teacherCourses.js"></script>
 
     </body>
 </html>
