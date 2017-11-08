@@ -1588,3 +1588,12 @@ form {
   border-color: #AFAFAC;
   width: 100%;
 }
+.titleNews {
+  display: inline;
+  margin-left: 3px;
+}
+@keyframes validationFeedback {
+  0%{background-color: white}
+  10%{background-color: red}
+  100%{background-color: white}
+}
