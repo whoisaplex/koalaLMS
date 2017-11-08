@@ -12,7 +12,7 @@ document.getElementById('createClassInput').addEventListener('keypress', functio
     }else{
       this.style.display = 'none';
       document.getElementById('createClassButton').style.display = 'block';
-      document.getElementById('classHolder').innerHTML += '<div class="adminClass"><p><i class="fa fa-users" aria-hidden="true"></i></p><h3>'+this.value+'</h3></div>';
+      document.getElementById('classHolder').innerHTML += '<div class="adminClass"><p><i class="fa fa-book" aria-hidden="true"></i></p><h3>'+this.value+'</h3></div>';
       updateClass();
     }
   }
