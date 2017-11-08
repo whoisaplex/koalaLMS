@@ -51,12 +51,52 @@
         </div>
     </div>
 
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+      <div style=" grid-row: 1 / last-line;"></div>
+      <!-- A BOX IN A NEW ROW -->
+      <div class="grid-2-box"> <!-- Change class to fit how many boxes you want -->
+            <!-- A NEW BOX IN THE SAME ROW -->
+            <div class="grid-style-box" id="exams">
+              <h2>Current News</h2>
+              <hr>
+              <div class="news-box" onclick="editNews(this)"> <i class="fa fa-wrench" aria-hidden="true"></i>
+                updating website 24/7
+              </div>
+              <div clas="edit-news-box">
 
+              </div>
+              <div class="news-box"> <i class="fa fa-wrench" aria-hidden="true"></i>
+                teachers are always sick
+              </div>
+              <div clas="edit-news-box">
+                
+              </div>
+              <div class="news-box"> <i class="fa fa-wrench" aria-hidden="true"></i>
+                Become member student union
+              </div>
+              <div clas="edit-news-box">
+                
+              </div>
+
+            </div>
+            <div class="grid-style-box" id="assignments">
+              <h2>Add News</h2>
+              <hr>
+              <input class="news-input" type="text" id="news-title-input" placeholder="News Title">
+              <input class="news-input" type="text" id="news-author-input" placeholder="Author Name">
+              <input class="news-input" type="submit" id="news-submit-input" placeholder="Submit" onclick="addNews()">
+              <textarea id="news-text-input" placeholder="Text Body"></textarea>
+              
+            </div>
+      </div>
+      <!-- A BOX ENDS -->
+    </div>
 
       <script src="../../../javascript/database.js"></script>
       <script src="../../../javascript/login.js"></script>
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/teacher/teacher.js"></script>
+      <script src="../../../javascript/admin/addnews.js"></script>
 
     </body>
 </html>
