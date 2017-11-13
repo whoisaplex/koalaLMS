@@ -7,6 +7,8 @@ document.getElementById('teacherAddGroup').addEventListener('keypress', function
   if(key === 13){
     let divTemp = document.createElement('div');
     divTemp.className = 'teacherStudentGroup';
+    divTemp.setAttribute("ondrop", "drop(event)");
+    divTemp.setAttribute("ondragover", "allowDrop(event)");
     divTemp.innerHTML = '<p>'+this.value+'</p><p  onclick="removeGroup(this)"><i class="fa fa-trash-o trashColor" aria-hidden="true"></i></p>';
     document.getElementById('groupHolder').append(divTemp);
     this.value = '';
@@ -128,6 +130,22 @@ function addExaminationConfirm(){
   }
 }
 
+function drag(ev){
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+function allowDrop(ev) {
+    ev.preventDefault();
+    console.log('hello');
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    /*Add student to group */
+    document.getElementById(data).remove();
+}
+
+
 function toggleGroupAssignment(current){
   if(current.id === ''){
 
@@ -169,8 +187,4 @@ function openGroups(current){
         current.parentNode.children[1].innerHTML += '<li onclick="assignStudentGroup(this)">'+document.getElementById('groupHolder').children[x].children[0].innerHTML+'</li>';
       }
     }
-}
-
-function assignStudentGroup(current){
-  current.parentNode.parentNode.remove();
 }
