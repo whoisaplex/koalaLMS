@@ -112,7 +112,7 @@ let evaluations = [{evaluation_id:1, course_id:1, evaluation_title:"HTML Evaluat
 let evaluationQuestions = [
     {question_id : 1, evaluation_id:1, question:"Hur var lektionerna under kursen?" },
     {question_id : 2, evaluation_id:1, question:"Hur fungerade kommunikationen under kursen?" },
-    {question_id : 3, evaluation_id:1, question:"Vad var bra/dåligt med kursen?" }
+    {question_id : 3, evaluation_id:2, question:"Vad var bra/dåligt med kursen?" }
 ];
 
 let EvaluationAnswers = [

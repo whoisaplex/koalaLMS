@@ -33,10 +33,10 @@ input{
     border: 1px solid #1c97f3;
     width: 80%;
     height: 30px;
- margin-bottom:20px;
+    margin-bottom:20px;
 }
 
-.delete{
+.delete, .delete-eval{
     background-color: #fd1200;
     border: none;
     color: white;
@@ -90,26 +90,26 @@ input{
         </div>
     </div>
 
-      <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
         <div style=" grid-row: 1 / last-line;"></div>
         <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
-              <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-                <h2 id="teacherEvaluationsText"> Evaluations List</h2>
-                <hr>
-                <div class="grid-2-box" id="evaluationsList">
+          <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+            <h2 class="teacherEvaluationsText"> Evaluations List</h2>
+            <hr>
+            <div class="grid-2-box" id="evaluationsList">
 
 
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-  </div>
 
 
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
         <div style=" grid-row: 1 / last-line;"></div>
         <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
               <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-                <h2 id="teacherEvaluationsText">Sent Evaluations</h2>
+                <h2 class="teacherEvaluationsText">Sent Evaluations</h2>
                 <hr>
                 <div class="grid-2-box" id="teacherEvaluationsContent">
 
@@ -118,47 +118,37 @@ input{
       </div>
     </div>
   </div>
-  <div class="dark-overlay" id="add-evaluation-to-course">
-      <div class="grid-main-content-row">
-        <div style=" grid-row: 1 / last-line;"></div>
-        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
-            <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-                <h2 id="teacherEvaluationsText">Add Evaluation </h2>
-              <label class="evaluation-title" for="title">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
-
-                <div class="container1">
+  
+<div class="dark-overlay" id="teacher-dark-overlay"></div>
+    
+<div id="admin-evaluation-dropdown">
+    <div id="admin-evaluation-dropdown-grid">
+      <div></div>
+      <div class="center-content ">
+        <div class="evaluation-div">
+          <i onclick="closeEvaluationOverlay()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+           <div id="evaluation-dropdown-error"></div>
+            
+                <h2><span id="add-edit-title"></span>Evaluation </h2>
+             
+                <label class="evaluation-title evaluation-title-in-lytbox" for="title">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
+                
+                <input type="hidden" name="evaluation-for-course" id="evaluation-for-course" value="">
+                <input type="hidden" name="evaluation-to-edit" id="evaluation-to-edit" value="">
+                <button class="attendance-button" id="add-evaluation-question-btn" >Add question to evaluation  &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                <div class="input-field-container">
                 </div>
-                <button class="attendance-button">Add question to evaluation  &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
 
-            </div>
+                 <button class="attendance-button" id="add-evaluation" ><span id="add-edit-button"></span> Evaluation</button>
         </div>
+         
       </div>
     </div>
+  </div>
+    
   <script>
-        $(document).ready(function() {
-    var max_fields      = 20;
-    var wrapper         = $(".container1");
-    var add_button      = $(".attendance-button");
-
-    var x = 1;
-    $(add_button).click(function(e){
-        e.preventDefault();
-        if(x < max_fields){
-
-            $(wrapper).append('<div><input type="text" name="question_'+x+'"/><a href="#" class="delete">Delete</a></div>'); //add input box
-              x++;
-        }
-  else
-  {
-  alert('You Reached the limits')
-  }
-    });
-
-    $(wrapper).on("click",".delete", function(e){
-        e.preventDefault(); $(this).parent('div').remove(); x--;
-    })
-});
-
+      
+   
  </script>
 
 
@@ -178,108 +168,42 @@ input{
     </div>
   </div>
 
-            <!-- Dark overlay
-      <div class="dark-overlay" id="attendance-dark-overlay"></div>
-
-      <div id="attendance-dropdown">
-        <div id="attendance-dropdown-grid">
-          <div></div>
-          <div>
-            <div id="attendance-dropdown-error"><h3>Wrong Code</h3></div>
-            <i onclick="closeAttendanceDropdown()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
-            <input type="text" placeholder="Enter your code..." id="attendance-dropdown-input">
-            <button class="attendance-button" onclick="submitCodeAttendance()">Send Code</button>
-          </div>
-        </div>
-      </div>-->
 
       <script src="../../../javascript/database.js"></script>
       <script src="../../../javascript/login.js"></script>
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/teacher/teacher.js"></script>
       <script src="../../../javascript/teacher/TeacherEvaluations.js"></script>
+      <script src="../../../javascript/admin/adminEvaluation.js"></script>
 
       <script>
 
-        for(let i=0; i<courses.length; i++){
-
-            let tempDiv = document.createElement('div');
-                tempDiv.className = "grid-style-box";
-                tempDiv.id = "TeacherEvaluationsCourse"+i;
-
-            let courseTitle = '<div class="evaluation-list-course-title-box"><p class="evaluation-list-course-title">'+courses[i].course_title+'</p><p><button class="attendance-button" onclick="addNewEvaluation('+courses[i].course_id
-+');" >Add Evaluation</button></p></div><div class="teacherEvaluationsBox" id="teacherEvaluationContainer'+i+'"></div>';
-
-
-                tempDiv.innerHTML = courseTitle;
-                document.getElementById('evaluationsList').appendChild(tempDiv);
-
-            let noOfEvaluation = 0;
-
-
-            for(let y = 0; y < evaluations.length; y++){
-
-                if(courses[i].course_id == evaluations[y].course_id){
-                    console.log(evaluations[y]);
-                    noOfEvaluation++;
-                    let evaluationContent = '<div class="evaluation-title-box teacherEvaluations"><div><i class="fa fa-caret-right" aria-hidden="true"></i></div><div class="evaluation-title" onclick="viewOrEditEvalutation('+evaluations[y].evaluation_id+');">'+evaluations[y].evaluation_title+'</div><div><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div><div><i class="fa fa-trash-o" aria-hidden="true"></i></div></div>';
-
-                    let content = '';
-                    document.getElementById('teacherEvaluationContainer'+i).innerHTML += evaluationContent;
-
-
-                }
-
-
-            }
-
-             if(noOfEvaluation === 0){
-                    let noEvaluationFound = '<div><div class="no-evaluations-found" style="grid-template-columns: 0px">No evaluation found. Create a new One!</div></div>';
-                     document.getElementById('teacherEvaluationContainer'+i).innerHTML += noEvaluationFound;
-
-                }
-
+       
+        function addNewEvaluation(courseId){
+            document.getElementById('teacher-dark-overlay').style.display = 'block';
+            document.getElementById('admin-evaluation-dropdown').style.display = 'block';
+            $('.evaluation-div').find('input:text').val('');
+            $('*[class^="delete"]').parent('div').remove();
+            document.getElementById("evaluation-for-course").value = courseId;
+            document.getElementById('add-edit-title').innerHTML += "Add ";
+            
+            document.getElementById('add-edit-button').innerHTML += "Add";
+            
+           
         }
 
-        function viewOrEditEvalutation(id){
-            document.getElementById('admin-view-edit-evaluation-overlay').style.display = 'block';
-            let evaluationHTML = '<h1>This is test</h1>';
-            //document.getElementById('teacher-examination-dropdown').style.display = 'block';
-            document.getElementById('evaluation-container').innerHTML += evaluationHTML;
+         
+        function closeEvaluationOverlay(){
+            
+            $("#add-edit-title").contents().remove();
+            $("#add-edit-button").contents().remove();
+            document.getElementById('teacher-dark-overlay').style.display = 'none';
+            document.getElementById('admin-evaluation-dropdown').style.display = 'none';
+            document.getElementById('evaluation-dropdown-error').style.display = 'none';
+            
         }
-
-        function addNewEvaluation(id){
-
-            alert(id);
-
-          if(document.getElementById('add-evaluation-to-course').style.display === 'none' || document.getElementById('add-evaluation-to-course').style.display === ''){
-            document.getElementById('add-evaluation-to-course').style.display = 'block';
-            //document.getElementById('evaluation-dark-overlay').style.display = 'block';
-
-          }else{
-            document.getElementById('add-evaluation-to-course').style.display = 'none';
-          }
-        }
-
-        function closeEvaluationDropdown(){
-          document.getElementById('evaluation-dropdown-input').value = '';
-          document.getElementById('evaluation-dropdown').style.display = 'none';
-          document.getElementById('evaluation-dark-overlay').style.display = 'none';
-          document.getElementById('evaluation-dropdown-error').style.display = 'none';
-        }
-
-        function submitEvaluation(){
-
-
-
-          let codeInput = document.getElementById('evaluation-dropdown-input').value;
-          if(codeInput != ''){
-
-          }else{
-            document.getElementById('evaluation-dropdown-error').style.display = 'grid';
-          }
-        }
-
+        
+       
 
       </script>
 
