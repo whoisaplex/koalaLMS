@@ -22,7 +22,7 @@ for(let i=0; i<courses.length; i++){
 
             noOfEvaluation++;
             let evaluationContent = 
-                '<div id="evaluation-title-box-'+evaluations[y].evaluation_id+'" class="evaluation-title-box teacherEvaluations"><div><i class="fa fa-caret-right" aria-hidden="true"></i></div><div id="evaluation-title-'+evaluations[y].evaluation_id+'" class="evaluation-title">'+evaluations[y].evaluation_title+'</div><div onclick="editEvaluation('+evaluations[y].evaluation_id+');"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div><div onclick="deleteEvaluation('+evaluations[y].evaluation_id+','+evaluations[y].course_id+');"><i class="fa fa-trash-o" aria-hidden="true"></i></div></div>';
+                '<div id="evaluation-title-box-'+evaluations[y].evaluation_id+'" class="evaluation-title-box teacherEvaluations"><div><i class="fa fa-caret-right" aria-hidden="true"></i></div><div id="evaluation-title-'+evaluations[y].evaluation_id+'" class="evaluation-title">'+evaluations[y].evaluation_title+'</div><div onclick="editEvaluation('+evaluations[y].evaluation_id+','+evaluations[y].course_id+');"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div><div onclick="deleteEvaluation('+evaluations[y].evaluation_id+','+evaluations[y].course_id+');"><i class="fa fa-trash-o" aria-hidden="true"></i></div></div>';
 
             let content = '';
             document.getElementById('teacherEvaluationContainer'+i).innerHTML += evaluationContent;
@@ -78,23 +78,26 @@ for(let i=0; i<courses.length; i++){
         let clearToAdd = checkInputFieldsAndAdd(x);
         if(clearToAdd === 1){
             //Adding new evaluaion object in evaluation  array of objects
-            let newEvaluationId = parseInt(evaluations.length+1);
-            let newCourseId = parseInt(document.getElementById("evaluation-for-course").value);
+            let newEvaluationId = filterInt(evaluations.length+1);
+            let evaluationToEdit = filterInt(document.getElementById('evaluation-to-edit').value);
+            
+            // newCourseId = 0;
+            let newCourseId = filterInt(document.getElementById("evaluation-for-course").value);
+           
             let evaluationTitle = $("#evaluation-title").val();
-            let evaluationDivNumber = newCourseId-1;
+            let evaluationDivNumber = filterInt(newCourseId-1);
             
             let newEvaluationObject = {evaluation_id:newEvaluationId, course_id:newCourseId, evaluation_title:evaluationTitle};
-            evaluations.push(newEvaluationObject);
-            addQuestionToEvaluationObject(x,newEvaluationId);
-            let  evaluationToEdit = document.getElementById('evaluation-to-edit').value;
-            if(evaluationToEdit != ""){
-                  //document.getElementById('evaluation-title-box-'+evaluationToEdit).remove();
-                //$("#evaluation-title-'+evaluationToEdit+'").contents.remove();
-               /* $('#evaluation-title-'+evaluationToEdit).contents.remove;
-                document.getElementById('#evaluation-title-'+evaluationToEdit).innerHTML += evaluationTitle;*/
-                //$('.evaluation-title').contents.remove();
+            
+            
+            if(evaluationToEdit>0){
+                $('#evaluation-title-'+evaluationToEdit).html(evaluationTitle);
+                //editTitleinObject(evaluationToEdit,evaluationTitle)
                  
             } else {
+               //add evaluation here
+                evaluations.push(newEvaluationObject);
+                addQuestionToEvaluationObject(x,newEvaluationId);
                 addEvaluationToDiv(newEvaluationId, evaluationTitle,evaluationDivNumber, newCourseId);    
             } 
              
@@ -115,7 +118,7 @@ for(let i=0; i<courses.length; i++){
     
 });
 
-function editEvaluation(evaluationId){
+function editEvaluation(evaluationId, courseId){
     document.getElementById('teacher-dark-overlay').style.display = 'block';
     document.getElementById('admin-evaluation-dropdown').style.display = 'block';
     //$('.evaluation-div').find('input:text').val('');
@@ -139,6 +142,8 @@ function editEvaluation(evaluationId){
     }
     
     document.getElementById('evaluation-to-edit').value = evaluationId;
+    document.getElementById('evaluation-for-course').value = courseId;
+    
     
 }
 
@@ -168,9 +173,11 @@ function getEvaluationTitle(evaluationId){
    
   function addEvaluationToDiv(newEvaluationId, evaluationTitle, divNumber, courseId){
 
+      /*if(document.getElementById("evaluation-to-edit").value != ""){
+          
+      }*/
 
-
-      let newEvaluationToHTML = '<div id="evaluation-title-box-'+newEvaluationId+'" class="evaluation-title-box teacherEvaluations"><div><i class="fa fa-caret-right" aria-hidden="true"></i></div><div class="evaluation-title">'+evaluationTitle+'</div><div onclick="editEvaluation('+newEvaluationId+');"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div><div onclick="deleteEvaluation('+newEvaluationId+','+courseId+');"><i class="fa fa-trash-o" aria-hidden="true"></i></div></div>';
+      let newEvaluationToHTML = '<div id="evaluation-title-box-'+newEvaluationId+'" class="evaluation-title-box teacherEvaluations"><div><i class="fa fa-caret-right" aria-hidden="true"></i></div><div class="evaluation-title">'+evaluationTitle+'</div><div onclick="editEvaluation('+newEvaluationId+','+courseId+');"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div><div onclick="deleteEvaluation('+newEvaluationId+','+courseId+');"><i class="fa fa-trash-o" aria-hidden="true"></i></div></div>';
 
       document.getElementById('teacherEvaluationContainer'+divNumber).innerHTML += newEvaluationToHTML;
 
@@ -182,6 +189,7 @@ function getEvaluationTitle(evaluationId){
 
 
   function deleteEvaluation( evaluationId, courseId){
+      
       let evaluationContainerDivNumber = courseId-1;
       let index = evaluationId-1;
       if(evaluations.splice(index)){ // delete evaluation
@@ -223,7 +231,7 @@ function getEvaluationTitle(evaluationId){
   }
 
   function checkInputFieldsAndAdd(totalQuestions){
-    //alert(totalQuestion);
+    
     let questionIsEmpty = 0;
     for(let i=1; i<=totalQuestions; i++){
         if($('#question_'+i).val() === ""){
@@ -241,4 +249,9 @@ function getEvaluationTitle(evaluationId){
 
 }
 
+let filterInt = function(value) {
+  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
+    return Number(value);
+  return NaN;
+}
 
