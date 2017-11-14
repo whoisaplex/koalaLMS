@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Teacher - CSS3</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
@@ -11,7 +12,7 @@
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
-        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="Profile Picture">
         <p>Welcome,</p>
         <h4 id="user-Name">Alexander</h4>
       </div>
@@ -110,7 +111,7 @@
         <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
         <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
         <div class="somethingelse">
-          <div onclick="toggleGroupAssignment(this)" class="TeacherAssignmentSingleBox" id=""><h2>Individual Assignment</h2></div>
+          <div onclick="toggleGroupAssignment(this)" class="TeacherAssignmentSingleBox"><h2>Individual Assignment</h2></div>
           <div onclick="toggleGroupAssignment(this)" class="TeacherAssignmentSingleBox" id="deselected"><h2>Group Assignment</h2></div>
         </div>
         <div class="somethingelse" id="groupShow" style="display:none;">
@@ -143,7 +144,7 @@
       <div></div>
       <div class="center-content">
         <div id="examination-dropdown-error"><h3>An Examination can't be created without a title</h3></div>
-        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <i onclick="closeExaminationBox()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true"></i>
         <input type="text" placeholder="Title of Examination" id="addExaminationTitle">
         <input type="text" placeholder="Description of Examination" id="addExaminationDescription">
         <button class="attendance-button" onclick="addExaminationConfirm()">Add Examination</button>
@@ -170,7 +171,7 @@
     <div id="teacher-setGrade-dropdown-grid">
       <div></div>
       <div class="center-content">
-        <i onclick="closeSetGradeBox()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <i onclick="closeSetGradeBox()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true"></i>
         <h3 id="teacher-setGrade-text">Setting Grade:</h3>
         <select>
           <option >VG</option>
