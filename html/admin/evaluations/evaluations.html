@@ -9,44 +9,6 @@
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
-        <style>
-            
-
-            #admin-evaluation-overlay.add_form_field
-            {
-                background-color: #1c97f3;
-                border: none;
-                color: white;
-                padding: 8px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-             border:1px solid #186dad;
-            }
-
-            #admin-evaluation-overlay input{
-                border: 1px solid #1c97f3;
-                width: 80%;
-                height: 30px;
-                margin-bottom:20px;
-            }
-
-            .delete, .delete-eval{
-                background-color: #fd1200;
-                border: none;
-                color: white;
-                padding: 5px 15px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 14px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
-        </style>
     </head>
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
@@ -129,7 +91,7 @@
            <div id="evaluation-dropdown-error"></div>
 
                 <h2><span id="add-edit-title"></span>Evaluation </h2>
-
+                <form action="" id="evaluation-form">
                 <label class="evaluation-title evaluation-title-in-lytbox">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
 
                 <input type="hidden" name="evaluation-for-course" id="evaluation-for-course" value="">
@@ -137,8 +99,10 @@
                 <button class="attendance-button" id="add-evaluation-question-btn" >Add question to evaluation  &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
                 <div class="input-field-container">
                 </div>
+                
 
-                 <button class="attendance-button" id="add-evaluation" ><span id="add-edit-button"></span> Evaluation</button>
+                <button class="attendance-button" id="add-evaluation" ><span id="add-edit-button"></span> Evaluation</button>
+                </form>
         </div>
 
       </div>

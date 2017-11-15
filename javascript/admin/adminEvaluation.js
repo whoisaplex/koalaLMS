@@ -56,7 +56,7 @@ for(let i=0; i<courses.length; i++){
         e.preventDefault();
         if(x < maxInputField){
              x++;
-            $(wrapper).append('<div><label class="evaluation-title evaluation-title-in-lytbox" for="title"></label><input type="text" id="question_'+x+'" name="question_'+x+'"/><a href="#" class="delete">Delete</a></div>'); 
+            $(wrapper).append('<div><label class="evaluation-title evaluation-title-in-lytbox" for="title"></label><input type="text" id="question_'+x+'" name="question_'+x+'"/><a href="#" class="delete-evaluation">Delete</a></div>'); 
              
         } else {
           alert('You Reached the limits of questions');
@@ -65,7 +65,7 @@ for(let i=0; i<courses.length; i++){
        
    
 
-    $(wrapper).on("click",".delete", function(e){
+    $(wrapper).on("click",".delete-evaluation", function(e){
         e.preventDefault(); $(this).parent('div').remove(); x--;
     }); 
     
@@ -122,7 +122,7 @@ function editEvaluation(evaluationId, courseId){
     document.getElementById('admin-evaluation-overlay').style.display = 'block';
     document.getElementById('admin-evaluation-dropdown').style.display = 'block';
     //$('.evaluation-div').find('input:text').val('');
-    //$('*[class^="delete"]').parent('div').remove();
+    //$('*[class^="delete-evaluation"]').parent('div').remove();
     //document.getElementById("evaluation-for-course").value = courseId;
      $(".input-field-container").contents().remove();
    
@@ -137,7 +137,7 @@ function editEvaluation(evaluationId, courseId){
         for(let y=0; y<evaluationQuestions.length; y++){
             let questionNumber = y+1;
             let questionText = evaluationQuestions[y].question;
-            $(".input-field-container").append('<div><label class="evaluation-title evaluation-title-in-lytbox" for="title"></label><input type="text" id="question_'+questionNumber+'" name="question_'+questionNumber+'" value="'+questionText+'"/><a href="#" class="delete">Delete</a></div>'); 
+            $(".input-field-container").append('<div><label class="evaluation-title evaluation-title-in-lytbox" for="title"></label><input type="text" id="question_'+questionNumber+'" name="question_'+questionNumber+'" value="'+questionText+'"/><a href="#" class="delete-evaluation">Delete</a></div>'); 
         }    
     }
     
@@ -254,7 +254,7 @@ function getEvaluationTitle(evaluationId){
         document.getElementById('admin-evaluation-overlay').style.display = 'block';
         document.getElementById('admin-evaluation-dropdown').style.display = 'block';
         $('.evaluation-div').find('input:text').val('');
-        $('*[class^="delete"]').parent('div').remove();
+        $('*[class^="delete-evaluation"]').parent('div').remove();
         document.getElementById("evaluation-for-course").value = courseId;
         document.getElementById('add-edit-title').innerHTML += "Add ";
 

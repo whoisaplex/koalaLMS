@@ -1512,6 +1512,25 @@ form {
     overflow-y: scroll;
 }
 
+#evaluation-form input{
+    border: 1px solid #1c97f3;
+    width: 80%;
+    height: 30px;
+    margin-bottom:20px;
+}
+
+.delete-evaluation {
+    background-color: #fd1200;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 
 
 /* ADMIN CLASSES */
