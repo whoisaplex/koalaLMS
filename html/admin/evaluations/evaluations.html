@@ -4,56 +4,54 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin>Evaluations</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
         <style>
-            .container1 input[type=text] {
-padding:5px 0px;
-margin:5px 5px 5px 0px;
-}
+            
 
-.add_form_field
-{
-    background-color: #1c97f3;
-    border: none;
-    color: white;
-    padding: 8px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
- border:1px solid #186dad;
-}
+            #admin-evaluation-overlay.add_form_field
+            {
+                background-color: #1c97f3;
+                border: none;
+                color: white;
+                padding: 8px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+             border:1px solid #186dad;
+            }
 
-input{
-    border: 1px solid #1c97f3;
-    width: 80%;
-    height: 30px;
-    margin-bottom:20px;
-}
+            #admin-evaluation-overlay input{
+                border: 1px solid #1c97f3;
+                width: 80%;
+                height: 30px;
+                margin-bottom:20px;
+            }
 
-.delete, .delete-eval{
-    background-color: #fd1200;
-    border: none;
-    color: white;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+            .delete, .delete-eval{
+                background-color: #fd1200;
+                border: none;
+                color: white;
+                padding: 5px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
-        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="Profile Picture">
         <p>Welcome,</p>
         <h4 id="user-Name">Alexander</h4>
       </div>
@@ -65,7 +63,7 @@ input{
           </div>
         </div>
 
-        <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i></i>Add Courses</a></p>
+        <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
         <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
         <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
         <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
@@ -120,7 +118,7 @@ input{
     </div>
   </div>
 
-<div class="dark-overlay" id="teacher-dark-overlay"></div>
+<div class="dark-overlay" id="admin-evaluation-overlay"></div>
 
 <div id="admin-evaluation-dropdown">
     <div id="admin-evaluation-dropdown-grid">
@@ -132,7 +130,7 @@ input{
 
                 <h2><span id="add-edit-title"></span>Evaluation </h2>
 
-                <label class="evaluation-title evaluation-title-in-lytbox" for="title">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
+                <label class="evaluation-title evaluation-title-in-lytbox">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
 
                 <input type="hidden" name="evaluation-for-course" id="evaluation-for-course" value="">
                 <input type="hidden" name="evaluation-to-edit" id="evaluation-to-edit" value="">
@@ -161,7 +159,7 @@ input{
       <div></div>
       <div>
         <div id="assignment-dropdown-error"><h3>An Assignment can't be created without a title</h3></div>
-        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true"></i>
         <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
         <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
         <button class="attendance-button" onclick="addAssignmentConfirm()">Add Assignment</button>
@@ -177,36 +175,7 @@ input{
       <script src="../../../javascript/teacher/TeacherEvaluations.js"></script>
       <script src="../../../javascript/admin/adminEvaluation.js"></script>
 
-      <script>
-
-
-        function addNewEvaluation(courseId){
-            document.getElementById('teacher-dark-overlay').style.display = 'block';
-            document.getElementById('admin-evaluation-dropdown').style.display = 'block';
-            $('.evaluation-div').find('input:text').val('');
-            $('*[class^="delete"]').parent('div').remove();
-            document.getElementById("evaluation-for-course").value = courseId;
-            document.getElementById('add-edit-title').innerHTML += "Add ";
-
-            document.getElementById('add-edit-button').innerHTML += "Add";
-
-
-        }
-
-
-        function closeEvaluationOverlay(){
-
-            $("#add-edit-title").contents().remove();
-            $("#add-edit-button").contents().remove();
-            document.getElementById('teacher-dark-overlay').style.display = 'none';
-            document.getElementById('admin-evaluation-dropdown').style.display = 'none';
-            document.getElementById('evaluation-dropdown-error').style.display = 'none';
-
-        }
-
-
-
-      </script>
+      
 
     </body>
 </html>

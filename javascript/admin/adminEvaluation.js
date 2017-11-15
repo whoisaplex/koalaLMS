@@ -119,7 +119,7 @@ for(let i=0; i<courses.length; i++){
 });
 
 function editEvaluation(evaluationId, courseId){
-    document.getElementById('teacher-dark-overlay').style.display = 'block';
+    document.getElementById('admin-evaluation-overlay').style.display = 'block';
     document.getElementById('admin-evaluation-dropdown').style.display = 'block';
     //$('.evaluation-div').find('input:text').val('');
     //$('*[class^="delete"]').parent('div').remove();
@@ -247,7 +247,33 @@ function getEvaluationTitle(evaluationId){
         return 1;
     }
 
-}
+  }
+
+  
+    function addNewEvaluation(courseId){
+        document.getElementById('admin-evaluation-overlay').style.display = 'block';
+        document.getElementById('admin-evaluation-dropdown').style.display = 'block';
+        $('.evaluation-div').find('input:text').val('');
+        $('*[class^="delete"]').parent('div').remove();
+        document.getElementById("evaluation-for-course").value = courseId;
+        document.getElementById('add-edit-title').innerHTML += "Add ";
+
+        document.getElementById('add-edit-button').innerHTML += "Add";
+
+
+    }
+
+
+    function closeEvaluationOverlay(){
+
+        $("#add-edit-title").contents().remove();
+        $("#add-edit-button").contents().remove();
+        document.getElementById('admin-evaluation-overlay').style.display = 'none';
+        document.getElementById('admin-evaluation-dropdown').style.display = 'none';
+        document.getElementById('evaluation-dropdown-error').style.display = 'none';
+
+    }
+
 
 let filterInt = function(value) {
   if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
