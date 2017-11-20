@@ -6,14 +6,14 @@ for(let x = 0; x < students.length; x++){
 	firstName = document.getElementById('account-first-name').value;
 	lastName  = document.getElementById('account-last-name').value;
 	fullName  = firstName + " " + lastName;
-	let p = document.createElement("p");
-	let d = document.createElement("div");
-	let div = document.createElement("div");
-	let info = document.createElement("p");
-	let remove = document.createElement("p");
-	let addInfoIcon = document.createElement("i");
+	const p = document.createElement("p");
+	const d = document.createElement("div");
+	const div = document.createElement("div");
+	const info = document.createElement("p");
+	const remove = document.createElement("p");
+	const addInfoIcon = document.createElement("i");
 	addInfoIcon.setAttribute('class', 'fa fa-pencil-square-o')
-	let addRemoveIcon = document.createElement("i");
+	const addRemoveIcon = document.createElement("i");
 	addRemoveIcon.setAttribute('class', 'fa fa-trash-o')
 	let first = document.getElementById('studentbox').appendChild(d).appendChild(div).appendChild(p);
 	first.setAttribute('class','adminAccountName')
@@ -29,6 +29,7 @@ for(let x = 0; x < students.length; x++){
 	document.getElementById('account-first-name').value = "";
 	document.getElementById('account-last-name').value = "";
 }
+//add existing teachers
 for(let x = 0; x < teachers.length; x++){
 	userName  = document.getElementById('account-username').value;
 	email     = document.getElementById('account-email').value;
@@ -36,14 +37,14 @@ for(let x = 0; x < teachers.length; x++){
 	firstName = document.getElementById('account-first-name').value;
 	lastName  = document.getElementById('account-last-name').value;
 	fullName  = firstName + " " + lastName;
-	let p = document.createElement("p");
-	let d = document.createElement("div");
-	let div = document.createElement("div");
-	let info = document.createElement("p");
-	let remove = document.createElement("p");
-	let addInfoIcon = document.createElement("i");
+	const p = document.createElement("p");
+	const d = document.createElement("div");
+	const div = document.createElement("div");
+	const info = document.createElement("p");
+	const remove = document.createElement("p");
+	const addInfoIcon = document.createElement("i");
 	addInfoIcon.setAttribute('class', 'fa fa-pencil-square-o')
-	let addRemoveIcon = document.createElement("i");
+	const addRemoveIcon = document.createElement("i");
 	addRemoveIcon.setAttribute('class', 'fa fa-trash-o')
 	firstName = document.getElementById('account-first-name').value;
 	lastName  = document.getElementById('account-last-name').value;
@@ -73,16 +74,17 @@ passWord  = document.getElementById('account-password').value;
 firstName = document.getElementById('account-first-name').value;
 lastName  = document.getElementById('account-last-name').value;
 fullName  = firstName + " " + lastName;
-let p = document.createElement("p");
-let d = document.createElement("div");
-let div = document.createElement("div");
+const p = document.createElement("p");
+const d = document.createElement("div");
+const div = document.createElement("div");
 div.setAttribute('class','store-data')
-let info = document.createElement("p");
-let remove = document.createElement("p");
-let addInfoIcon = document.createElement("i");
+const info = document.createElement("p");
+const remove = document.createElement("p");
+const addInfoIcon = document.createElement("i");
 addInfoIcon.setAttribute('class', 'fa fa-pencil-square-o')
-let addRemoveIcon = document.createElement("i");
+const addRemoveIcon = document.createElement("i");
 addRemoveIcon.setAttribute('class', 'fa fa-trash-o')
+// add new teacher
 if(document.getElementsByName('privilege')[1].checked && firstName != "" && lastName != ""){
 	 	let first = document.getElementById('teacherbox').appendChild(d).appendChild(div).appendChild(p);
 		first.setAttribute('class','adminAccountName')
@@ -107,6 +109,7 @@ if(document.getElementsByName('privilege')[1].checked && firstName != "" && last
 		document.getElementById('account-email').value = "";
 		document.getElementById('account-password').value = "";
 	}
+	//add new student
 	else if(document.getElementsByName('privilege')[2].checked && firstName != "" && lastName != ""){
 	 	let first = document.getElementById('studentbox').appendChild(d).appendChild(div).appendChild(p);
 		first.setAttribute('class','adminAccountName')
@@ -174,7 +177,6 @@ function editAccount(currentAccount, firstName, lastName){
 		document.getElementById('admin-edit-dropdown').style.display = 'none';
 	}
 	document.getElementById('canceledit').onclick = function(){
-		console.log('hej');
 		document.getElementById('teacher-dark-overlay').style.display = 'none';
 		document.getElementById('admin-edit-dropdown').style.display = 'none';
 	}
