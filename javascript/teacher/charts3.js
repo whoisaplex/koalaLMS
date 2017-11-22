@@ -1,5 +1,4 @@
-window.onload = function () {
-    let ctx3 = document.getElementById("chart3");
+ let ctx3 = document.getElementById("chart3");
     var myDailyChart = new Chart(ctx3, {
     type: 'bar',
     data: {
@@ -25,4 +24,3 @@ window.onload = function () {
     }
 }
     });
-}

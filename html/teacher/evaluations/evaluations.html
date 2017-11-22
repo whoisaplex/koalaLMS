@@ -50,23 +50,27 @@
 
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
         <div style=" grid-row: 1 / last-line;"></div>
+        <div class="grid-1-box">
+        <div class="grid-style-box">
         <div class="grid-2-box">
-          <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-            <div style="position: relative;">
+          <div class="grid-style-box" style="padding-bottom:10px;">
+            <div>
               <h2 style="text-align: center;">Course evaluation avarage</h2>
-              <canvas id="chart2"></canvas>
+              <canvas id="chart2" style="width: 40vw; "></canvas>
             </div>
 
           </div>
-          <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+          <div class="grid-style-box" style="padding-bottom:10px;">
             <h2 style="text-align: center;">Daily Happiness</h2>
-            <div style="position: relative;">
+            <div>
               <canvas id="chart3"></canvas>
             </div>
             
           </div>
 
         </div>
+      </div>
+    </div>
         <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
               <div class="grid-style-box courses-box" style="padding-bottom:10px;">
                 <h2 id="teacherEvaluationsText">Evaluations</h2>
