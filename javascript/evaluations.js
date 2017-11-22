@@ -4,7 +4,7 @@ let allEvaluations = [];
 let weekly = {
     isDone: false
 };
-let courses = {
+let coursess = {
     listCourses: []
 };
 
@@ -27,12 +27,12 @@ function finishWeeklyForm(){
     if(weekly.isDone == false){
         let formFill = document.getElementById("weekly-form-fill");
         let week41 = document.getElementById("week41");
-        
+
         week41.style.backgroundColor = "green";
         formFill.style.animation = "slide-up-formFill 1.0s ease";
         formFill.style.transform = "translateY(-65vh)";
         setTimeout(function x() { formFill.style.visibility = "hidden";} ,1000);
-        
+
         weekly.isDone = true;
     }
 }
@@ -85,7 +85,7 @@ for(let i=0; i < students[0].all_courses[2].finished.length; i++){
     newCourseInfo.name = students[0].all_courses[2].finished[i].name;
     newCourseInfo.isClickable = false;
 
-    courses.listCourses += newCourseInfo;
+    coursess.listCourses += newCourseInfo;
 
     console.log(newCourseInfo);
     let evaluateCourse = document.createElement("div");
@@ -108,40 +108,40 @@ function evaluateCircle(circle){
     switch(circle.id){
         case "evaluate-scale-circle-1":
             for (let i=0; i < circleArray.length; i++){
-                if(circleArray[i].id == "evaluate-scale-circle-1") 
-                    circleArray[i].style.backgroundColor = "red";
+                if(circleArray[i].id == "evaluate-scale-circle-1")
+                    circleArray[i].style.backgroundColor = "#FF0C00";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
             break;
         case "evaluate-scale-circle-2":
             for (let i=0; i < circleArray.length; i++){
-                if(circleArray[i].id == "evaluate-scale-circle-2") 
-                    circleArray[i].style.backgroundColor = "#D88A08";
+                if(circleArray[i].id == "evaluate-scale-circle-2")
+                    circleArray[i].style.backgroundColor = "#E8700C";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
             break;
         case "evaluate-scale-circle-3":
             for (let i=0; i < circleArray.length; i++){
-                if(circleArray[i].id == "evaluate-scale-circle-3") 
-                    circleArray[i].style.backgroundColor = "yellow";
+                if(circleArray[i].id == "evaluate-scale-circle-3")
+                    circleArray[i].style.backgroundColor = "#FFC700";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
             break;
         case "evaluate-scale-circle-4":
             for (let i=0; i < circleArray.length; i++){
-                if(circleArray[i].id == "evaluate-scale-circle-4") 
-                    circleArray[i].style.backgroundColor = "#A3F91A";
+                if(circleArray[i].id == "evaluate-scale-circle-4")
+                    circleArray[i].style.backgroundColor = "#B6E800";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }
             break;
         case "evaluate-scale-circle-5":
             for (let i=0; i < circleArray.length; i++){
-                if(circleArray[i].id == "evaluate-scale-circle-5") 
-                    circleArray[i].style.backgroundColor = "#21F500";
+                if(circleArray[i].id == "evaluate-scale-circle-5")
+                    circleArray[i].style.backgroundColor = "#11FF37";
                 else
                     circleArray[i].style.backgroundColor = "grey";
             }

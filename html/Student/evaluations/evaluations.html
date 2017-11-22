@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student - Evaluaions</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
@@ -11,7 +12,7 @@
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
-        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="Profile Picture">
         <p>Welcome,</p>
         <h4 id="user-Name">Alexander</h4>
       </div>
@@ -98,7 +99,7 @@
 
         <!-- course form sliding down -->
         <article class="small-box" id="course-form-fill" onfocus="clearContents(this)">
-            
+
             <!-- name changes depends of whitch course -->
             <h2 id="form-title"></h2><hr>
             <h4>Hur var lektionerna under kursen</h4>
@@ -107,13 +108,15 @@
             <textarea id="course-communication-feedback"></textarea>
             <h4>Vad var bra/dåligt med kursen?</h4>
             <textarea id="course-goodBad-feedback"></textarea>
-            <h4>Ange din allmänna upplvelse ("1": väldigt dåligt, "5": väldigt bra)</h4>
+            <h4 id="form-description-title">Ange din allmänna upplvelse</h4>
             <div class="evaluate-scale">
+                <h4 class="form-description" id="form-description-left">väldigt dåligt</h4>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-1" onclick="evaluateCircle(this)" title="Väldigt dåligt"><p>1</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-2" onclick="evaluateCircle(this)" title="Dåligt"><p>2</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-3" onclick="evaluateCircle(this)" title="Okej"><p>3</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-4" onclick="evaluateCircle(this)" title="Bra"><p>4</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-5" onclick="evaluateCircle(this)" title="Väldigt bra"><p>5</p></div>
+                <h4 class="form-description" id="form-description-right">väldigt bra</h4>
             </div>
             <div class="send-form-fill" id="send-form-fill-course">
                 Klar
@@ -122,22 +125,24 @@
 
         <!-- weekly form sliding down -->
         <article class="small-box" id="weekly-form-fill">
-            
+
             <!-- name changes depends of whitch course -->
             <h2 id="form-title-week"></h2><hr>
             <h4>Hur var lektionerna under kursen</h4>
-            <textarea id="course-lecture-feedback"></textarea>
+            <textarea></textarea>
             <h4>Hur fungerade kommunikationen under kursen?</h4>
-            <textarea id="course-communication-feedback"></textarea>
+            <textarea></textarea>
             <h4>Vad var bra/dåligt med kursen?</h4>
-            <textarea id="course-goodBad-feedback"></textarea>
-            <h4>Ange din allmänna upplvelse ("1": väldigt dåligt, "5": väldigt bra)</h4>
+            <textarea></textarea>
+            <h4>Ange din allmänna upplvelse</h4>
             <div class="evaluate-scale">
-                <div class="evaluate-scale-circle" id="evaluate-scale-circle-1" onclick="evaluateCircle(this)" title="Väldigt dåligt"><p>1</p></div>
-                <div class="evaluate-scale-circle" id="evaluate-scale-circle-2" onclick="evaluateCircle(this)" title="Dåligt"><p>2</p></div>
-                <div class="evaluate-scale-circle" id="evaluate-scale-circle-3" onclick="evaluateCircle(this)" title="Okej"><p>3</p></div>
-                <div class="evaluate-scale-circle" id="evaluate-scale-circle-4" onclick="evaluateCircle(this)" title="Bra"><p>4</p></div>
-                <div class="evaluate-scale-circle" id="evaluate-scale-circle-5" onclick="evaluateCircle(this)" title="Väldigt bra"><p>5</p></div>
+                    <h4 class="form-description">väldigt dåligt</h4>
+                    <div class="evaluate-scale-circle"  onclick="evaluateCircle(this)" title="Väldigt dåligt"><p>1</p></div>
+                    <div class="evaluate-scale-circle"  onclick="evaluateCircle(this)" title="Dåligt"><p>2</p></div>
+                    <div class="evaluate-scale-circle"  onclick="evaluateCircle(this)" title="Okej"><p>3</p></div>
+                    <div class="evaluate-scale-circle"  onclick="evaluateCircle(this)" title="Bra"><p>4</p></div>
+                    <div class="evaluate-scale-circle"  onclick="evaluateCircle(this)" title="Väldigt bra"><p>5</p></div>
+                    <h4 class="form-description" >väldigt bra</h4>
             </div>
             <div class="send-form-fill" id="send-form-fill-course" onclick="finishWeeklyForm()">
                 Klar
@@ -155,7 +160,7 @@
             </div>
             <div class="grid-style-box" id="my-evaluations">
                 <!-- possible to make for loop making these divs-->
-                <h2 id="small-boxes-title">My Evaluations</h2>
+                <h2 >My Evaluations</h2>
                 <hr>
             <div>
                 <div class="evaluation-overview" id="v41">
@@ -193,7 +198,7 @@
       </div>
       <!-- A BOX ENDS -->
     </div>
-    </div>
+    
 
 
 

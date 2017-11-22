@@ -38,6 +38,7 @@
         float: left;
         /*margin: 0px 10px 0px 0px;*/
         height: 20px;
+        cursor:pointer;
             
     }
         
@@ -138,6 +139,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-us-info-box p{
     text-align: center;
+}
+
+.about-us-info-box h3{
+    margin: 10px 10px;
 }
 .single-info-box {
    /* border: 1px solid #ddd;*/
@@ -479,4 +484,32 @@ footer{
     border-color: #f44336;
 }
 
+/*About us page*/
+
+.broser-support-div{
+        padding: 10px 0px 10px 0px;
+    }
+    
+    .broser-support-div .row{
+         text-align: right;
+    }
+    
+    .chart{
+            
+           padding: 10px;
+            margin: 2px;
+            background:  white;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #64c3e6;
+            text-align: center;
+    }
+    .logo-cell{
+        padding:8px;
+    }
+    .logo-cell img{
+        float: left;
+    }
+    .logo-cell span{
+       vertical-align: middle;
+    }
 

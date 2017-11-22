@@ -69,24 +69,11 @@
 #assignments h3 {
   text-align: left;
 }
-@media only screen and (max-width:769px){
-  .grid-2-box {
-    grid-template-columns: auto;
-    margin-top: 100px;
-    }
-  #exams {
-    margin-right:0px;
-  }
 
-  .grid-1-box {
-    margin-top:100px;
-  }
-
-}
 
 .grid-3-box{
   display:grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:33.3% auto auto;
   grid-column-start: 2;
   grid-gap:10px;
 }
@@ -101,13 +88,76 @@
   padding-left:10px;
   padding-right:10px;
 }
-.courses-box h2,.courses-box h3, .courses-box h5{
+.courses-box-grid{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.courses-box h1, .courses-box h2,.courses-box h3, .courses-box h4 .courses-box h5{
+  padding:0px;
+  margin:0px;
+}
+.course-box-courseText{
+  padding:10px;
   text-align:center;
+}
+.course-box-courseTeacher{
+  padding:5px;
+  text-align:center;
+}
+.courses-box h5{
+  text-align:center;
+}
+.courses-box-first{
+  padding:10px;
+}
+.courses-box-second{
+  padding:10px;
 }
 .courses-box a{
   text-decoration: none;
   color:grey;
 }
+
+.home-turnAssignment-box{
+  display:grid;
+  grid-template-columns: auto;
+}
+.home-turnAssignment-box h4, .home-turnAssignment-box h2, .home-turnAssignment-box input{
+  padding:5px;
+  margin: 0px;
+  align-self: center;
+}
+
+.home-Assignment-box{
+  display:grid;
+  grid-template-columns: 75px auto 75px;
+}
+
+.home-Assignment-box p{
+  font-size:50px;
+  color:#006ABF;
+  padding:5px;
+  margin:0px;
+}
+.home-Assignment-box-content h4, .home-Assignment-box-content p{
+  padding:5px;
+  margin:0px;
+  color:black;
+
+}
+.home-Assignment-box-content p{
+  font-size:15px;
+}
+.home-Assignment-box button{
+  background: #006ABF;
+  border:none;
+  border-radius: 3px;
+  color:white;
+  padding:5px;
+  align-self:center;
+  cursor:pointer;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -217,83 +267,6 @@ margin: 0;
   margin-left:65px;
 }
 
-@media only screen and (max-width:769px){
-  .student-navbar{
-    position: fixed;
-    background-color:#32374a;
-    width: 50vw;
-    min-width: 0px;
-    transform: translateX(-51vw);
-    z-index: 3;
-  }
-  .nav-menu p {
-  background-color: #32374a;
-
- }
- .grid-2-box{
-   grid-template-columns: auto;
- }
-
-
-  .mobile-nav{
-    position:fixed;
-    background-color: #3b4052;
-    width:100vw;
-    height:75px;
-    z-index:2;
-    display:grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-items: center;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-
-  .mobile-nav div:first-child{
-    justify-self:start;
-  }
-
-
-img {
-  width: 75px;
-  float: left;
-}
-.mobile-nav h2 {
-  float: left;
-}
-
-
-  .main-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100vw;
-    transform: translateX(0vw);
-  }
-  .small-box{
-    background: white;
-    border:solid 1px #dedede;
-    width: 80vw;
-    margin: auto;
-    margin-top:6vh;
-    padding-left:10px;
-    padding-right:10px;
-  }
-
-  .small-box h2{
-
-    font-family: Arial;
-  }
-  .small-box hr{
-    width:99%;
-  }
-  .small-box h4{
-    margin-bottom:-5px;
-  }
-  .main-content .small-box:last-child{
-    margin-bottom:6vh;
-  }
-}
-
 @media only screen and (max-width:1225px){
   .main-content{
     justify-content: center;
@@ -323,62 +296,40 @@ img {
 
 }
 
-@media only screen and (max-width:769px){
-  #Courses .small-box{
-    width:80vw;
-  }
-  #Courses .small-box:first-child{
-    margin-top:100px;
-  }
-  #Courses .small-box p{
-    margin-top:10px;
-  }
-  #Courses .small-box div:last-child h4{
-    padding-bottom:20px;
-  }
-}
 /*Grades */
-#Grades .main-content{
-  width: 90vw;
-}
+
 #Grades #finished-coursess {
   grid-column-start: 2;
+  grid-gap: 10px;
 }
-#Grades .small-box{
-  border-radius: 3px;
-  width: 60vw;
+#Grades #finished-coursess .grid-style-box:nth-last-child(1){
+  margin-bottom:15px;
 }
-#Grades .small-box h2 #Grades .small-box h4,#Grades .small-box p{
-  margin-left:10px;
-  color:#424242 ;
+#Grades #finished-coursess .grid-style-box:nth-last-child(2){
+  margin-bottom:15px;
 }
-#Grades .small-box p{
-  margin-top:-10px;
-}
-#Grades .small-box div{
-  float:left;
-  margin-left:17px;
-}
-#Grades article div h4{
-  margin-left:30px;
-}
-#Grades article h2{
-  text-align:center;
-}
-@media only screen and (max-width:769px){
-#Grades .small-box{
-  width:80vw;
-}
-#Grades .small-box p{
-  margin-top:10px;
+#Grades #finished-coursess h2,#Grades #finished-coursess h3{
+	text-align: center;
+	margin-top: 10px;
+	line-height: 2;
 }
 
-#Grades .small-box div:last-child h4{
-  padding-bottom:20px;
-  margin-left:17px;
- }
-}
+
 /*Grades */
+/*AddCourse in admin*/
+#addcourse h3{
+  text-align:left;
+}
+#addcourse button#effect{
+  margin-left: 10px;
+}
+#addcourse li{
+  list-style: none;
+}
+#addcourse li.list button{
+  margin-left: 50px;
+}
+/*AdCourse in admin*/
 
 /* Student Home */
 .home-top-nav-bar-container-first{
@@ -542,7 +493,7 @@ img {
   justify-self:right;
   transition: transform 0.5s;
 }
-#attendance-dropdown div div:nth-child(2) i:hover{
+closeIconStyle:hover{
   transform:rotate(90deg);
 }
 
@@ -565,6 +516,11 @@ img {
   color:white;
 }
 
+/*Admin Evaluation overlay */
+/*Admin evaluation overlay*/
+
+
+
 .dark-overlay{
   position:fixed;
   top:0px;
@@ -576,46 +532,7 @@ img {
   display:none;
 }
 
-@media only screen and (max-width:769px){
-  .Home-mobile-grid{
-    display:grid;
-    grid-template-columns: 10px 75px 5px auto 10px;
-    padding-top:100px;
-  }
-  .attendance-timeline-line{
-    width:10px;
-    justify-self:center;
-    height: 100px;
-    border-radius: 5px;
-  }
-  .attendance-box{
-    margin-bottom: 0px;
-    padding: 8px;
-    padding-top:5px;
-    border-radius:8px;
-  }
-  .attendance-course-checkbox{
-    padding: 2px;
-  }
-  .grid-main-content-row{
-    grid-template-columns: 0px auto;
-  }
 
-
-  .courses-box:first-child {
-    margin-top:0px;
-  }
-  .nav-wrapper-grid{
-    display:none;
-  }
-  #attendance-dropdown div div:nth-child(2){
-    height:auto;
-    margin-top:75px;
-  }
-  #attendance-dropdown-grid{
-    grid-template-columns: 0px auto;
-  }
-}
 
 /*-----------------------EVALUATIONS-------------------*/
 
@@ -662,7 +579,7 @@ img {
 #send-form-fill-week {
   height: 5vh;
   width: 6vw;
-  background-color: green;
+  background-color: #006ABF;
   bottom: 1vh;
   right: 1vw;
   text-align: center;
@@ -676,7 +593,7 @@ img {
   float: right;
 }
 #send-form-fill-week:hover {
-  background-color: #066D08;
+  background-color: #0071CC;
 }
 #course-form-fill {
   position: absolute;
@@ -689,7 +606,7 @@ img {
 #send-form-fill-course {
   height: 5vh;
   width: 6vw;
-  background-color: green;
+  background-color: #006ABF;
   bottom: 1vh;
   right: 1vw;
   text-align: center;
@@ -703,7 +620,7 @@ img {
   float: right;
 }
 #send-form-fill-course:hover {
-  background-color: #066D08;
+  background-color: #0071CC;
 }
 .courseEvaluation {
   width: auto;
@@ -729,7 +646,6 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  float: left;
 }
 .evaluate-scale-circle {
   height: 27px;
@@ -751,9 +667,6 @@ textarea {
   font-weight: 700;
   text-align: center;
 }
-#evaluate-scale-circle-1, #evaluate-scale-circle-2, #evaluate-scale-circle-3, #evaluate-scale-circle-4, #evaluate-scale-circle-5 {
-
-}
 #evaluate-scale-circle-5 {
   margin-right: 0;
 }
@@ -764,6 +677,20 @@ textarea {
 #currentPageHeader {
   display: none;
 }
+#form-description-title {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.form-description{
+  width: 50px;
+  text-align: center;
+}
+#form-description-left {
+  margin-right: 8px;
+}
+#form-description-right {
+  margin-left: 8px;
+}
 @keyframes slide-down-formFill {
   from {transform: translateY(-65vh);}
   to {transform: translateY(0vh);}
@@ -773,35 +700,11 @@ textarea {
   to {transform: translateY(-65vh);}
 }
 
-
-@media only screen and (max-width:769px){
-  #weekly-form-fill {
-    height: 450px;
-    margin-left: 1vw;
-  }
-  #weekly-form-fill h4 {
-    margin-bottom: 1vh;
-  }
-  #course-form-fill {
-    height: 450px;
-    margin-left: 1vw;
-  }
-  #course-form-fill h4 {
-    margin-bottom: 1vh;
-  }
-  #send-form-fill-week, #send-form-fill-course {
-    width: 15vw;
-  }
-  #small-boxes-title{
-    font-size: 110%;
-  }
-  #my-evaluations {
-    margin-top: 13vh;
-  }
-}
 #course-evaluations {
   margin-right: 10px;
 }
+
+
 /*-----------------------SMILEYS-------------------*/
 .main-content {
   z-index: 1;
@@ -888,7 +791,7 @@ textarea {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 2vw;
+  border-radius: 10px;
 }
 .open-feedback-text:hover {
   background-color: #E40A0A;
@@ -897,6 +800,10 @@ textarea {
   width: calc(98% - 200px);
   left: 208px;
   top: 50px;
+}
+.form-description {
+  font-size: 13px;
+  margin-top: 10px;
 }
 @keyframes slide-in{
   from {transform: translateX(53px);}
@@ -942,26 +849,6 @@ textarea {
 }
       /*-----------------------ONLY TEST DATA-------------------*/
 
-@media only screen and (max-width:769px){
-  #course-evaluations {
-      margin-right: 0;
-  }
-  #course-form-fill, #weekly-form-fill {
-    width: calc(100vw - 30px);
-    left: 2px;
-  }
-  .feedback {
-    transform: translateX(-137px);
-  }
-  @keyframes slide-in{
-    from {transform: translateX(-137px);}
-    to{transform: translateX(80px);}
-  }
-  @keyframes slide-out {
-    0% {transform: translateX(80px);}
-    100% {transform: translateX(-270px);}
-  }
-}
 @media only screen and (max-width:1225px){
   .main-content{
     justify-content: center;
@@ -1011,21 +898,21 @@ textarea {
   background:rgba(245,245,245, 0.5);
 }
 
-.teacherAssignmentName{
+.teacherAssignmentName, .adminAccountName{
   color:#232323;
   margin:0px;
   font-size:17px;
   cursor:pointer;
   align-self: center;
 }
-.teacherAssignmentEdit{
+.teacherAssignmentEdit, .adminAccountEdit{
   color:#006ABF;
   font-size:21px;
   padding:0px;
   margin:0px;
   cursor:pointer;
 }
-.teacherAssignmentTrash{
+.teacherAssignmentTrash, .adminAccountDelete{
   color:#c12424;
   font-size:20px;
   padding:0px;
@@ -1035,20 +922,20 @@ textarea {
 #addGradeTitle{
   width:auto;
 }
-#teacher-assignment-dropdown, #teacher-examination-dropdown, #teacher-delete-dropdown, #teacher-setGrade-dropdown{
+#teacher-assignment-dropdown, #teacher-examination-dropdown, #teacher-delete-dropdown, #teacher-setGrade-dropdown, #admin-edit-dropdown, #admin-evaluation-dropdown, #admin-edit-evaluation-dropdown{
   position:fixed;
   top:0px;
   left:0px;
   width:100vw;
   display:none;
 }
-#teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid{
+#teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown-grid, #admin-account-edit-grid{
   display:grid;
   grid-template-columns: 200px auto;
   align-items:center;
 }
 
-#teacher-assignment-dropdown div div:nth-child(2), #teacher-examination-dropdown div div:nth-child(2), #teacher-delete-dropdown div div:nth-child(2), #teacher-setGrade-dropdown div div:nth-child(2){
+.center-content{
   justify-self:center;
   width:90%;
   background:rgb(46, 51, 68);
@@ -1057,28 +944,28 @@ textarea {
 }
 
 
-#teacher-assignment-dropdown div div:nth-child(2) div, #teacher-examination-dropdown div div:nth-child(2) div{
+#assignment-dropdown-error, #teacher-examination-dropdown div div:nth-child(2) div:first-of-type,#evaluation-dropdown-error{
   width:100%;
   height:40px;
   background:red;
   display:none;
 }
-#teacher-assignment-dropdown div div:nth-child(2) i, #teacher-examination-dropdown div div:nth-child(2) i,  #teacher-setGrade-dropdown div div:nth-child(2) i{
+.closeIconStyle{
   color:white;
   padding:10px;
   justify-self:right;
   transition: transform 0.5s;
 }
-#teacher-assignment-dropdown div div:nth-child(2) i:hover, #teacher-examination-dropdown div div:nth-child(2) i:hover{
+.closeIconStyle:hover{
   transform:rotate(90deg);
 }
 
-#teacher-assignment-dropdown div div:nth-child(2) input, #teacher-examination-dropdown div div:nth-child(2) input{
+#teacher-assignment-dropdown div div:nth-child(2) input, #teacher-examination-dropdown div div:nth-child(2) input, #admin-evaluation-dropdown div div:nth-child(2) input, #admin-edit-evaluation-dropdown div div:nth-child(2) input{
   margin:10px;
   height:50px;
 }
 
-#teacher-assignment-dropdown div div:nth-child(2) button, #teacher-examination-dropdown div div:nth-child(2) button{
+#teacher-assignment-dropdown div div:nth-child(2) button, #teacher-examination-dropdown div div:nth-child(2) button, #admin-evaluation-dropdown div div:nth-child(2) button, #admin-edit-evaluation-dropdown div div:nth-child(2) button {
   margin:10px;
   height:30px;
   border-bottom:none;
@@ -1086,7 +973,7 @@ textarea {
 }
 
 
-#teacher-assignment-dropdown div div:nth-child(2) div h3, #teacher-examination-dropdown div div:nth-child(2) div h3{
+#teacher-assignment-dropdown div div:nth-child(2) div h3, #teacher-examination-dropdown div div:nth-child(2) div h3, #admin-evaluation-dropdown div div:nth-child(2) div h3, #admin-edit-evaluation-dropdown div div:nth-child(2) div h3  {
   padding:0;
   margin:0;
   justify-self:center;
@@ -1099,16 +986,30 @@ textarea {
 }
 
 
-#teacher-delete-dropdown div div:nth-child(2) h2{
+#teacher-delete-dropdown div div:nth-child(2) h2, #admin-edit-dropdown div div:nth-child(2) h2, #admin-evaluation-dropdown div div:nth-child(2) h2, #admin-edit-evaluation-dropdown div div:nth-child(2) h2{
   text-align:center;
   color:white;
 }
+#teacherCourseName{
+  text-align:center;
+  padding:10px;
+}
+.teacherEvaluationsText{
+  text-align:center;
+
+}
+
+h2.teacherEvaluationsText {
+    margin-top: 10px;
+}
+
 .assignmentDelete{
   color:white;
   background:#c92424;
   border:none;
   border-radius: 3px;
   cursor:pointer;
+  margin-left:5px;
 }
 .assignmentCancel{
   color:white;
@@ -1116,6 +1017,7 @@ textarea {
   border:none;
   border-radius: 3px;
   cursor:pointer;
+  margin-right:16px;
 }
 .teacherSetGrade-button{
   color:white;
@@ -1163,10 +1065,569 @@ select{
   margin-left:10px;
   cursor:pointer;
 }
+.teacher-attendence-home{
+  display:grid;
+  background: rgba(249,249,249, 0.4);
+  border-top:solid 1px #efefef;
+  border-bottom:solid 1px #efefef;
+  margin: 10px 0px;
+}
+.teacher-attendence-home input, .teacher-attendence-home button{
+  margin: 5px 15px;
+}
+
+.teacher-attendence-home h2:first-of-type{
+  text-align:center;
+  padding: 5px 0px;
+  margin:0px;
+}
+.teacher-attendence-home h2{
+  text-align:center;
+  padding: 5px 0px;
+}
+.teacher-attendence-home h4{
+  height:20px;
+  margin:0px;
+  text-align:center;
+  padding: 5px 0px;
+}
+#code-holder, #code-holderr{
+  display:none;
+}
+.teacher-home-students{
+  display:grid;
+  grid-template-columns: 20px auto;
+  background:rgba(245,245,245, 0.5);
+  border-bottom: solid 1px #c6c6c6;
+}
+.teacher-home-students:first-of-type{
+  display:grid;
+  grid-template-columns: 20px auto;
+  background:rgba(245,245,245, 0.5);
+  border-bottom: solid 1px #c6c6c6;
+  border-top:solid 1px #c6c6c6;
+}
+.teacher-home-students p{
+  margin:0px;
+  padding:3px;
+  color:#232323;
+}
+.teacher-home-students i{
+  color:#006ABF;
+}
+.somethingelse{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.TeacherAssignmentSingleBox{
+  align-self: center;
+  background:#006ABF;
+  padding:5px;
+  cursor:pointer;
+}
+
+.TeacherAssignmentSingleBox h2{
+  text-align:center;
+  padding:0px;
+  margin:0px;
+  color:white;
+}
+#deselected{
+  background: #202430;
+}
+#deselected h2{
+  color:grey;
+}
+.teacherButtonAdd{
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+  background:#19b034;
+  border:none;
+  border-radius:3px;
+  cursor:pointer;
+}
+.teacherStudentGroup{
+  display:grid;
+  grid-template-columns: auto 20px;
+  padding:1px;
+  color: white;
+  margin: 2px 10px;
+  background: #353b4f73;
+  padding-left: 10px;
+}
+.trashColor{
+  color:#ff1d1d;
+  cursor:pointer;
+}
+.teacherGroupStudent{
+  background: #353b4f73;
+  padding:10px 5px;
+  align-self:center;
+  color:white;
+  cursor:pointer;
+  margin:0px;
+}
+
+.teacherGroupStudent i {
+  float:right;
+  padding:0px 3px;
+  color:#006ABF;
+  cursor:pointer;
+}
+.groupsStyling{
+  padding:0px;
+  border-left:solid 2px #006ABF;
+  height:40px;
+  overflow:hidden;
+  overflow-y:scroll;
+}
+
+.groupsStyling li{
+  background: #353b4f73;
+  list-style: none;
+  padding:3px 5px;
+  margin:0px;
+  color:white;
+  cursor:pointer;
+}
+
+.groupsStyling li:hover{
+  background: #21243173;
+}
+
+/** ADMIN ACCOUNT **/
+.radiowrapper {
+  text-align: center;
+}
+[type=radio] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.field-wrapper {
+  margin-top: 20px;
+}
+.field-wrapper-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+label {
+  width: 25%;
+  display: inline-block;
+  text-align: left;
+}
+form {
+  font-size: 20px;
+}
+#editform {
+  color: white;
+  text-align: center;
+}
+#editform {
+
+}
+.list div {
+  display: grid;
+}
+.list div div:first-child {
+    display: grid;
+    grid-template-columns: auto 20px 20px;
+    grid-column-gap: 15px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    padding: 5px;
+}
+.admin-center-content{
+  justify-self:center;
+  width:40%;
+  background:rgb(46, 51, 68);
+  display:grid;
+  height:100%;
+}
+
+
+
+
+
+.no-evaluations-found{
+    padding: 7px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    font-weight: bold;
+}
+
+.evaluation-list-course-title-box{
+    display: grid;grid-template-columns: auto 140px;
+}
+.evaluation-list-course-title{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.evaluation-title-box{
+   display: grid;grid-template-columns: 15px auto 30px 30px;
+}
+
+
+.evaluation-title{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.evaluation-title-in-lytbox{
+    color:#fff;
+}
+
+.evaluation-div, .edit-evaluation-div{
+    margin:10px;
+    height:600px;
+    overflow-y: scroll;
+}
+
+#evaluation-form input{
+    border: 1px solid #1c97f3;
+    width: 80%;
+    height: 30px;
+    margin-bottom:20px;
+}
+
+.delete-evaluation {
+    background-color: #fd1200;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/* ADMIN CLASSES */
+.adminClassStudents:first-of-type, .adminClass:first-of-type{
+  display:grid;
+  grid-template-columns: 20px auto 25px;
+  background:#f6f6f6;
+  border-top:#e5e5e5 solid 2px;
+
+}
+.adminClassStudents:last-of-type, .adminClass:last-of-type{
+  display:grid;
+  grid-template-columns: 20px auto 25px;
+  background:#f6f6f6;
+  border-bottom:#e5e5e5 solid 2px;
+
+}
+
+.adminClassStudents, .adminClass{
+  display:grid;
+  grid-template-columns: 20px auto 25px;
+  background:#f6f6f6;
+  border-top:#e5e5e5 solid 2px;
+}
+.adminClassStudents{
+  padding:10px
+}
+.adminClass{
+  padding:15px;
+}
+
+.adminClassStudents p, .adminClass p{
+  align-self:center;
+  margin:0px;
+  color:#006ABF;
+}
+.adminClassStudents h3, .adminClass h3{
+  margin:0px;
+  color:#1a1a1a;
+}
+.adminClassStudents button{
+  color:white;
+  background:#44b144;
+  border:none;
+  border-radius:3px;
+  cursor:pointer;
+  font-weight: bold;
+}
+
+.grid-style-box select{
+  margin:0px;
+  width:100%;
+  margin-bottom:5px;
+}
+.ClassCreator{
+  display:grid;
+  grid-template-columns: 100%;
+}
+.ClassCreator button{
+  border:none;
+  border-radius: 3px;
+  color:white;
+  font-weight: bold;
+  padding:12px;
+  background: #44b144;
+  margin: 5px 0px;
+  width:100%;
+  cursor:pointer;
+}
+.ClassCreator input{
+  padding:10px;
+  font-weight: bold;
+  margin-bottom:5px;
+}
+.news-box {
+  border:none;
+  background: #006ABF;
+  border-radius: 3px;
+  color:white;
+  font-weight: bold;
+  cursor:pointer;
+  margin-top:10px;
+  padding:5px 5px;
+  border-bottom:solid 1px white;
+}
+.news-input{
+  margin-right: 10px;
+}
+#news-text-input {
+  width: 80%;
+  height: 60px;
+}
+#news-text-input {
+  margin: 0;
+  margin-top: 10px;
+  border-width: 2px solid;
+  border-color: #AFAFAC;
+  width: 100%;
+}
+.titleNews {
+  display: inline;
+  margin-left: 3px;
+}
 
 @media only screen and (max-width:769px){
-  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid{
+  .grid-2-box {
+    grid-template-columns: auto;
+    margin-top: 100px;
+    }
+  #exams {
+    margin-right:0px;
+  }
+
+  .grid-1-box {
+    margin-top:100px;
+  }
+
+  .courses-box-grid{
+      grid-template-columns: 100%;
+  }
+
+  .student-navbar{
+    position: fixed;
+    background-color:#32374a;
+    width: 50vw;
+    min-width: 0px;
+    transform: translateX(-51vw);
+    z-index: 3;
+  }
+  .nav-menu p {
+  background-color: #32374a;
+
+ }
+ .grid-2-box{
+   grid-template-columns: auto;
+ }
+ .grid-3-box{
+   grid-template-columns: auto;
+   margin-top: 100px;
+ }
+
+
+  .mobile-nav{
+    position:fixed;
+    background-color: #3b4052;
+    width:100vw;
+    height:75px;
+    z-index:2;
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .mobile-nav div:first-child{
+    justify-self:start;
+  }
+
+
+img {
+  width: 75px;
+  float: left;
+}
+.mobile-nav h2 {
+  float: left;
+}
+
+
+  .main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100vw;
+    transform: translateX(0vw);
+  }
+  .small-box{
+    background: white;
+    border:solid 1px #dedede;
+    width: 80vw;
+    margin: auto;
+    margin-top:6vh;
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .small-box h2{
+
+    font-family: Arial;
+  }
+  .small-box hr{
+    width:99%;
+  }
+  .small-box h4{
+    margin-bottom:-5px;
+  }
+  .main-content .small-box:last-child{
+    margin-bottom:6vh;
+  }
+
+  #Courses .small-box{
+    width:80vw;
+  }
+  #Courses .small-box:first-child{
+    margin-top:100px;
+  }
+  #Courses .small-box p{
+    margin-top:10px;
+  }
+  #Courses .small-box div:last-child h4{
+    padding-bottom:20px;
+  }
+  .evaluation-div{
+    margin:10px;
+    height:200px;
+    overflow-y: scroll;
+  }
+
+  #Grades #finished-coursess .grid-style-box:nth-last-child(2) {
+      margin-bottom: 0px;
+  }
+
+  .Home-mobile-grid{
+    display:grid;
+    grid-template-columns: 10px 75px 5px auto 10px;
+    padding-top:100px;
+  }
+  .attendance-timeline-line{
+    width:10px;
+    justify-self:center;
+    height: 100px;
+    border-radius: 5px;
+  }
+  .attendance-box{
+    margin-bottom: 0px;
+    padding: 8px;
+    padding-top:5px;
+    border-radius:8px;
+  }
+  .attendance-course-checkbox{
+    padding: 2px;
+  }
+  .grid-main-content-row{
+    grid-template-columns: 0px auto;
+  }
+
+
+  .courses-box:first-child {
+    margin-top:0px;
+  }
+  .nav-wrapper-grid{
+    display:none;
+  }
+  #attendance-dropdown div div:nth-child(2){
+    height:auto;
+    margin-top:75px;
+  }
+  #attendance-dropdown-grid{
+    grid-template-columns: 0px auto;
+  }
+
+  #weekly-form-fill {
+    height: 450px;
+    margin-left: 1vw;
+  }
+  #weekly-form-fill h4 {
+    margin-bottom: 1vh;
+  }
+  #course-form-fill {
+    height: 450px;
+    margin-left: 1vw;
+  }
+  #course-form-fill h4 {
+    margin-bottom: 1vh;
+    margin-top: -2px;
+  }
+  #form-description-title {
+    text-align: center;
+  }
+  #form-description-left {
+    margin-right: 4px;
+    text-align: center;
+  }
+  #form-description-right {
+    margin-left: 4px;
+    text-align: center;
+  }
+  #send-form-fill-week, #send-form-fill-course {
+    width: 15vw;
+  }
+  #small-boxes-title{
+    font-size: 110%;
+  }
+  #my-evaluations {
+    margin-top: 13vh;
+  }
+  #course-evaluations {
+      margin-right: 0;
+  }
+  #course-form-fill, #weekly-form-fill {
+    width: calc(100vw - 30px);
+    left: 2px;
+  }
+  .feedback {
+    transform: translateX(-137px);
+  }
+  @keyframes slide-in{
+    from {transform: translateX(-137px);}
+    to{transform: translateX(80px);}
+  }
+  @keyframes slide-out {
+    0% {transform: translateX(80px);}
+    100% {transform: translateX(-270px);}
+  }
+  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown{
     grid-template-columns: 0px auto;
     margin-top:75px;
   }
+
+}
+
+
+@keyframes validationFeedback {
+  0%{background-color: white}
+  10%{background-color: red}
+  100%{background-color: white}
 }

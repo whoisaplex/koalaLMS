@@ -4,6 +4,7 @@ window.onload = hideLoginOption;
 let url = document.URL;
 let studentUrl = url.replace("/index.html", "/html/Student/home/Index.html");
 let teacherUrl = studentUrl.replace("/Student/", "/teacher/");
+let adminUrl = studentUrl.replace("/Student/", "/admin/");
 let logOutUrl = sessionStorage.getItem('logOutUrl')
 let modal = document.getElementById('userRegistration');
 
@@ -24,10 +25,10 @@ function populateStorage(loginUserName) {
 
 function loginFunction(){
     
-    var loginUserName    = document.getElementById("login-userName").value;
-    var loginPsw         = document.getElementById("login-psw").value;
-   
-    for(var i=0; i< students.length; i++){
+    let loginUserName    = document.getElementById("login-userName").value;
+    let loginPsw         = document.getElementById("login-psw").value;
+   //loop through students
+    for(let i=0; i< students.length; i++){
        if(students[i].username === loginUserName && students[i].password === loginPsw ){
             sessionStorage.setItem('loginName', JSON.stringify(userName));
            if(populateStorage(loginUserName)){
@@ -37,9 +38,9 @@ function loginFunction(){
                document.getElementById('register-btn').style.display='none';
                document.getElementById('login-btn').style.display='none';
                document.getElementById('userLogin').style.display='none';
-
            }
        } else {
+            //loop trough teachers
            for(let y=0; y< teachers.length; y++){
               if(teachers[y].username === loginUserName && teachers[y].password === loginPsw ){
                 sessionStorage.setItem('loginName', JSON.stringify(userName));
@@ -50,17 +51,30 @@ function loginFunction(){
                  document.getElementById('register-btn').style.display='none';
                  document.getElementById('login-btn').style.display='none';
                  document.getElementById('userLogin').style.display='none';
-           }
-      
+                }
            } else {
-            document.getElementById('login-error').innerHTML = "<span class='login-error info-alert warning-info-alert'>User Name / Password is not valid</span>";
-           }
-
-       }
-     }
-}
-}
-
+              // loop through admins
+              for(let z=0; z < admins.length; z++){
+                if(admins[z].username === loginUserName && admins[z].password === loginPsw){
+                  sessionStorage.setItem('loginName', JSON.stringify(userName));
+                  if(populateStorage(loginUserName)){
+                  location.assign(adminUrl);
+                  $('#login-name-display').append("Logged is as "+loginUserName);
+                  document.getElementById('logout-btn').style.display='block';
+                  document.getElementById('register-btn').style.display='none';
+                  document.getElementById('login-btn').style.display='none';
+                  document.getElementById('userLogin').style.display='none';
+                  }
+                }
+                  else {
+                    document.getElementById('login-error').innerHTML = "<span class='login-error info-alert warning-info-alert'>User Name / Password is not valid</span>";
+                  }    
+             }
+            }
+          }
+        }
+      }
+    } 
 
  function hideLoginOption() {     
      if( sessionStorage.getItem('logedInStatus') === 'YES'){

@@ -4,14 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Teacher - Home</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
     </head>
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
-        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="Profile Picture">
         <p>Welcome,</p>
         <h4 id="user-Name">Alexander</h4>
       </div>
@@ -26,9 +28,8 @@
         </div>
 
       </div>
-      
-      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
 
+      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
 
     </div>
     </nav>
@@ -51,12 +52,116 @@
         </div>
     </div>
 
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+        <div style=" grid-row: 1 / last-line;"></div>
+        <!-- A BOX IN A NEW ROW -->
+        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+          <div class="grid-style-box">
+          <div class="grid-2-box">
+              <div class="grid-style-box">
+                <h2>Attendence overview</h2>
+                <hr>
+                <div style="position: relative;">
+                <canvas id="chart"></canvas>
+                </div>
+              </div>
+              <div class="grid-style-box">
+                <h2>Issue attendence code</h2>
+                <hr>
+                <div class="teacher-attendence-home">
+                  <h2>Javascript</h2>
+                  <h4 id="code-holder"></h4>
+                  <input type="text" placeholder="Code..."/>
+                  <button class="attendance-button" onclick="teacherAddCode(this)">Add code</button>
+                  <div class="grid-2-box" style="grid-gap:5px; margin-top:10px;display:none; ">
+                      <div>
+                        <h2>Not Attended</h2>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Alexander</p>
+                        </div>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Simon</p>
+                        </div>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Oskar</p>
+                        </div>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Masud</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h2>Attended</h2>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Nasim</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+
+                <div class="teacher-attendence-home">
+                  <h2>Javascript</h2>
+                  <h4 id="code-holderr"></h4>
+                  <input type="text" placeholder="Code..."/>
+                  <button class="attendance-button" onclick="teacherAddCode(this)">Add code</button>
+                  <div class="grid-2-box" style="grid-gap:5px; margin-top:10px; display:none; ">
+                      <div>
+                        <h2>Not Attended</h2>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Alexander</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h2>Attended</h2>
+                        <div class="teacher-home-students">
+                          <p><i class="fa fa-user-circle-o"></i></p>
+                          <p>Alexander</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-1-box">
+          <div class="grid-style-box news-box">
+            <h2>News</h2>
+          </div>
+      </div>
+      <div class="grid-3-box">
+        <div class="grid-style-box" style="margin-top:0px; border-radius: 3px 0px; margin-bottom:10px;">
+          <h3>Random News #1</h3>
+          <h4>Etiam fringilla risus id pulvinar dictum. Fusce scelerisque, velit at elementum placerat, diam mauris vehicula nisl, et luctus dui nibh ac tellus. Donec posuere, urna ut rutrum efficitur, orci nisl cursus sapien, vel aliquet ex massa vitae enim. Cras fringilla consequat gravida. Aenean maximus velit ac tellus blandit blandit. Sed est sem, placerat at mi in, pellentesque gravida ante. Vivamus ex nunc, commodo ac fermentum nec, rhoncus et sem. Aliquam eu neque eget diam tempus accumsan. In quis ante sagittis, venenatis purus in, pulvinar erat.</h4>
+          <h5 style="text-align:center">Read More</h5>
+        </div>
+        <div class="grid-style-box" style="margin-top:0px; border-radius: 3px 0px; margin-bottom:10px;">
+          <h3>Random News #2</h3>
+          <h4>In efficitur, quam nec cursus fringilla, velit nisi varius est, sit amet facilisis sem velit at velit. Aliquam in tincidunt urna. Aliquam sollicitudin odio non nisi efficitur, eu dictum ligula condimentum. Donec feugiat nisi vitae est varius, et accumsan lorem eleifend. Duis scelerisque interdum sapien, in rhoncus nisl congue quis. Proin in nunc sem. Sed accumsan luctus congue. Pellentesque a felis eget lacus feugiat luctus.</h4>
+          <h5 style="text-align:center">Read More</h5>
+        </div>
+        <div class="grid-style-box" style="margin-top:0px; border-radius: 3px 0px; margin-bottom:10px;">
+          <h3>Random News #3</h3>
+          <h4>Sed vel auctor elit. Nullam ut dapibus magna. In et pellentesque purus. Cras sed scelerisque erat. Cras quis vehicula erat. In non nunc placerat, vestibulum metus id, aliquet ante. Etiam maximus, mauris sed vestibulum viverra, eros dolor scelerisque purus, eu convallis nibh urna vel risus</h4>
+          <h5 style="text-align:center">Read More</h5>
+        </div>
+      </div>
+      </div>
+
 
 
       <script src="../../../javascript/database.js"></script>
       <script src="../../../javascript/login.js"></script>
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/teacher/teacher.js"></script>
+      <script src="../../../javascript/teacher/charts.js"></script>
 
     </body>
 </html>

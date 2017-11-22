@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin - Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+        <link rel="stylesheet" href="../../../css/style.css"/>
+    </head>
+    <body>
+    <nav class="student-navbar" style="position:fixed;" id="www">
+      <div class="nav-user-block">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="Profile Picture">
+        <p>Welcome,</p>
+        <h4 id="user-Name">Alexander</h4>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+
+      <p onclick="changeContent(this)" style="border-right:3px solid orange;"><i class="fa fa-home" aria-hidden="true"></i>Home</p>
+      <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+
+      <div>
+
+        <div id="nav-courses" style="display:none">
+
+        </div>
+
+      </div>
+      <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
+      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+      <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
+      <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
+
+    </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <div>
+        <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
+      </div>
+      <div>
+        <h2 id="currentPageHeader"></h2>
+      </div>
+    </nav>
+
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+    <div class="nav-wrapper-grid" id="nav-wrapper">
+        <div class="nav-grid-space"></div>
+        <div class="top-nav-bar">
+              <h1>KYH Koalas</h1>
+              <button onclick="logOutUser()">Logout</button>
+        </div>
+    </div>
+
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+      <div style=" grid-row: 1 / last-line;"></div>
+      <!-- A BOX IN A NEW ROW -->
+      <div class="grid-2-box"> <!-- Change class to fit how many boxes you want -->
+            <!-- A NEW BOX IN THE SAME ROW -->
+            <div class="grid-style-box" id="current-news">
+              <h2>Current News</h2>
+              <hr>
+              <div class="news-box" onclick="editNews(this)"> <i class="fa fa-wrench" aria-hidden="true"></i>
+                updating website 24/7
+              </div>
+              <div class="edit-news-box">
+
+              </div>
+              <div class="news-box"> <i class="fa fa-wrench" aria-hidden="true"></i>
+                teachers are always sick
+              </div>
+              <div class="edit-news-box">
+
+              </div>
+              <div class="news-box"> <i class="fa fa-wrench" aria-hidden="true"></i>
+                Become member student union
+              </div>
+              <div class="edit-news-box">
+
+              </div>
+
+            </div>
+            <div class="grid-style-box" id="assignments">
+              <h2>Add News</h2>
+              <hr>
+              <input class="news-input" type="text" id="news-title-input" placeholder="News Title">
+              <input class="news-input" type="text" id="news-author-input" placeholder="Author Name">
+              <input class="news-input" type="submit" id="news-submit-input" value="Submit" onclick="addNews()">
+              <textarea id="news-text-input" placeholder="Text Body"></textarea>
+
+            </div>
+      </div>
+      <!-- A BOX ENDS -->
+    </div>
+
+      <script src="../../../javascript/database.js"></script>
+      <script src="../../../javascript/login.js"></script>
+      <script src="../../../javascript/nav.js"></script>
+      <script src="../../../javascript/teacher/teacher.js"></script>
+      <script src="../../../javascript/admin/addnews.js"></script>
+
+    </body>
+</html>

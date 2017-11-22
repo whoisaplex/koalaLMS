@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Teacher - Evaluations</title>
+        <title>Admin>Evaluations</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
     </head>
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
@@ -25,7 +25,10 @@
           </div>
         </div>
 
+        <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
         <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+        <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
+        <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
 
       </div>
     </nav>
@@ -50,30 +53,24 @@
 
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
         <div style=" grid-row: 1 / last-line;"></div>
-        <div class="grid-1-box">
-        <div class="grid-style-box">
-        <div class="grid-2-box">
-          <div class="grid-style-box" style="padding-bottom:10px;">
-            <div>
-              <h2 style="text-align: center;">Course evaluation avarage</h2>
-              <canvas id="chart2" style="width: 40vw; "></canvas>
-            </div>
+        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+          <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+            <h2 class="teacherEvaluationsText"> Evaluations List</h2>
+            <hr>
+            <div class="grid-2-box" id="evaluationsList">
 
-          </div>
-          <div class="grid-style-box" style="padding-bottom:10px;">
-            <h2 style="text-align: center;">Daily Happiness</h2>
-            <div>
-              <canvas id="chart3"></canvas>
-            </div>
-            
-          </div>
 
+            </div>
+          </div>
         </div>
-      </div>
     </div>
+
+
+    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+        <div style=" grid-row: 1 / last-line;"></div>
         <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
               <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-                <h2 id="teacherEvaluationsText">Evaluations</h2>
+                <h2 class="teacherEvaluationsText">Sent Evaluations</h2>
                 <hr>
                 <div class="grid-2-box" id="teacherEvaluationsContent">
 
@@ -83,6 +80,42 @@
     </div>
   </div>
 
+<div class="dark-overlay" id="admin-evaluation-overlay"></div>
+
+<div id="admin-evaluation-dropdown">
+    <div id="admin-evaluation-dropdown-grid">
+      <div></div>
+      <div class="center-content ">
+        <div class="evaluation-div">
+          <i onclick="closeEvaluationOverlay()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+           <div id="evaluation-dropdown-error"></div>
+
+                <h2><span id="add-edit-title"></span>Evaluation </h2>
+                <form id="evaluation-form">
+                <label class="evaluation-title evaluation-title-in-lytbox">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
+
+                <input type="hidden" name="evaluation-for-course" id="evaluation-for-course" value="">
+                <input type="hidden" name="evaluation-to-edit" id="evaluation-to-edit" value="">
+                <button class="attendance-button" id="add-evaluation-question-btn" >Add question to evaluation  &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                <div class="input-field-container">
+                </div>
+
+
+                <button class="attendance-button" id="add-evaluation" ><span id="add-edit-button"></span> Evaluation</button>
+                </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+
+ </script>
+
+
+
   <div class="dark-overlay" id="teacher-dark-overlay"></div>
   <!-- Dropdown assignments -->
   <div id="teacher-assignment-dropdown">
@@ -90,7 +123,7 @@
       <div></div>
       <div>
         <div id="assignment-dropdown-error"><h3>An Assignment can't be created without a title</h3></div>
-        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true"></i>
         <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
         <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
         <button class="attendance-button" onclick="addAssignmentConfirm()">Add Assignment</button>
@@ -104,8 +137,8 @@
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/teacher/teacher.js"></script>
       <script src="../../../javascript/teacher/TeacherEvaluations.js"></script>
-      <script src="../../../javascript/teacher/charts2.js"></script>
-      <script src="../../../javascript/teacher/charts3.js"></script>
+      <script src="../../../javascript/admin/adminEvaluation.js"></script>
+
 
 
     </body>
