@@ -110,14 +110,48 @@
         <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
         <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
         <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
+        <button onclick="makeGroup()">Make Group</button>
         <div class="somethingelse">
           <div onclick="toggleGroupAssignment(this)" class="TeacherAssignmentSingleBox"><h2>Individual Assignment</h2></div>
           <div onclick="toggleGroupAssignment(this)" class="TeacherAssignmentSingleBox" id="deselected"><h2>Group Assignment</h2></div>
+
         </div>
         <div class="somethingelse" id="groupShow" style="display:none;">
-          <div>
+
+          <div style="height:250px; overflow-y:scroll;" id="studentHolder">
+
               <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
                   <p  class="teacherGroupStudent" onclick="openGroups(this)">Alexander</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Simon</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Oskar</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Nasim</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Masud</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Tim</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Elias</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Celina</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Nathalie</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Catarina</p>
+              </div>
+              <div id="drag1" draggable="true" ondragstart="drag(event)" style="display:grid; grid-template-columns: auto 35%; padding:0px 10px;">
+                  <p  class="teacherGroupStudent" onclick="openGroups(this)">Jonas</p>
               </div>
 
           </div>
@@ -125,7 +159,7 @@
             <div style="display:grid;">
               <button class="teacherButtonAdd" onclick="addGroup(this)" id="teacherButtonAdd">+</button>
               <input type="text" id="teacherAddGroup" style="display:none; height:30px;">
-              <div id="groupHolder">
+              <div id="groupHolder" style="overflow-y:scroll; height:250px;">
 
               </div>
             </div>
@@ -190,6 +224,7 @@
       <script src="../../../javascript/nav.js"></script>
       <script src="../../../javascript/teacher/teacher.js"></script>
       <script src="../../../javascript/teacher/teacherCourses.js"></script>
+      <script src="../../../javascript/teacher/autoAssignGroups.js"></script>
 
     </body>
 </html>
