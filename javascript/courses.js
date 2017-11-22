@@ -3,8 +3,6 @@ let page = path.split("/").pop();
 page = page.replace(/[.].*/, "");
 page = page.charAt(0).toUpperCase() + page.slice(1);
 
-
-console.log(page);
 for(let i = 0; i < students.length; i++){
   if(students[i].username === 'alexander'){
   for(let z = 0; z < 1; z++){
@@ -21,30 +19,6 @@ for(let i = 0; i < students.length; i++){
     }
   }
 }
-
-/*
-const u_lengthh = users.length;
-for(let x = 0; x < u_lengthh; x++){
-  if(users[x].username === logged_in_user && users[x].role === 'student'){
-    //Adding ongoing courses to the html
-    for(let a = 0; a < users[x].all_courses[0].ongoing.length; a++){
-      let temp_course = users[x].all_courses[0].ongoing[a];
-      document.getElementById('ongoing-courses').innerHTML += '<div><h4 onclick="toggle_course(this)" style="cursor:pointer">'+temp_course.name+'</h4><div style="display:none;"><p>Tempo: '+temp_course.tempo+'</p><p>Description: '+temp_course.description+'</p></div></div>';
-    }
-    //Adding upcoming courses to the html
-    for(let b = 0; b < users[x].all_courses[1].upcoming.length; b++){
-      let temp_course = users[x].all_courses[1].upcoming[b];
-      document.getElementById('upcoming-courses').innerHTML += '<div><h4 onclick="toggle_course(this)" style="cursor:pointer">'+temp_course.name+'</h4><div style="display:none;"><p>Tempo: '+temp_course.tempo+'</p><p>Description: '+temp_course.description+'</p></div></div>';
-    }
-    //Adding finished courses to the html
-    for(let c = 0; c < users[x].all_courses[2].finished.length; c++){
-      let temp_course = users[x].all_courses[2].finished[c];
-      document.getElementById('finished-courses').innerHTML += '<div><h4 onclick="toggle_course(this)" style="cursor:pointer">'+temp_course.name+'</h4><div style="display:none;"><p>Tempo: '+temp_course.tempo+'</p><p>Description: '+temp_course.description+'</p><p>Grade: '+temp_course.grade+'</p></div></div>';
-    }
-  }
-}
-*/
-
 
 //Shows/Hides course content on click
 function toggle_course(current){
