@@ -7,11 +7,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
         <script src="https://use.fontawesome.com/f832093fcd.js"></script>
         <link rel="stylesheet" href="../../../css/style.css"/>
+        <title>Accounts</title>
     </head>
     <body>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
-        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg">
+        <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="user">
         <p>Welcome,</p>
         <h4 id="user-Name">Alexander</h4>
       </div>
@@ -27,7 +28,7 @@
 
       </div>
 
-      <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i></i>Add Courses</a></p>
+      <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
       <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
       <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
       <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
@@ -40,7 +41,7 @@
         <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
       </div>
       <div>
-        <h2 id="currentPageHeader"></h2>
+        <h2 id="currentPageHeader">&nbsp;</h2>
       </div>
     </nav>
 
@@ -78,7 +79,7 @@
                   </div>
                   <div class="field-wrapper">
                     <label for="account-email">E-mail:</label>
-                    <input id="account-email" type="e-mail"><br>
+                    <input id="account-email" type="text"><br>
                   </div>
                   <div class="field-wrapper">
                     <label for="account-password">Password:</label>
@@ -122,7 +123,7 @@
   </div>
 
   <div id="admin-edit-dropdown">
-    <div id="teacher-delete-dropdown-grid">
+    <div id="admin-account-edit-grid">
       <div></div>
       <div style="padding-bottom:10px;" id="admin-account-header" class="admin-center-content">
         <h2>Editing .... Account</h2>
@@ -141,7 +142,7 @@
                   </div>
                   <div class="field-wrapper">
                     <label for="account-edit-email">E-mail:</label>
-                    <input id="account-edit-email" type="e-mail" placeholder="">
+                    <input id="account-edit-email" type="text" placeholder="">
                   </div>
                   <div class="field-wrapper">
                     <label for="account-edit-password">Password:</label>

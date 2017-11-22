@@ -929,7 +929,7 @@ textarea {
   width:100vw;
   display:none;
 }
-#teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown-grid{
+#teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown-grid, #admin-account-edit-grid{
   display:grid;
   grid-template-columns: 200px auto;
   align-items:center;
