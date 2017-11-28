@@ -41,6 +41,10 @@
         cursor:pointer;
             
     }
+
+    .display-none{
+        display: none;
+    }
         
     .nav-bar-menu li a
     {
