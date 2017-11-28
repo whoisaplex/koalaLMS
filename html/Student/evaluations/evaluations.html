@@ -11,6 +11,43 @@
     </head>
     <body>
     <div class="dark-overlay" id="evaluation-dark-overlay"></div>
+
+    <!-- Dropdown daily Evaluation -->
+    <div id="daily-evaluation-dropdown">
+        <div id="evaluation-dropdown-grid">
+            <div></div>
+            <div class="center-content">
+                <i class="fa fa-times fa-2x closeIconStyle" aria-hidden="true"></i>
+                <div class="feedback" id="feedback">
+                        <div class="feedback-button" id="lectureFeedback" onclick="inputLectureFeedback()">
+                            <div class="smiles">
+                                <div class="eyeLeft"></div>
+                                <div class="eyeRight"></div>
+                                <div class="mouth" id="mouth-lecture"></div>
+                            </div>
+                        </div>
+                        <div class="feedback-button" id="websiteFeedback" onclick="inputWebsiteFeedback()">
+                            <div class="smiles">
+                                <div class="eyeLeft"></div>
+                                <div class="eyeRight"></div>
+                                <div class="mouth" id="mouth-website"></div>
+                            </div>
+                        </div>
+                        <div class="feedback-button" id="facilitiesFeedback" onclick="inputFacilitiesFeedback()">
+                            <div class="smiles">
+                                <div class="eyeLeft"></div>
+                                <div class="eyeRight"></div>
+                                <div class="mouth" id="mouth-facilities"></div>
+                            </div>
+                        </div>
+                        <div class="open-feedback-text" id="open-feedback-text" onclick="openFeedback()">
+                            Dagens utvärdering
+                        </div>
+                    </div>
+                <button class="daily-evaluation-button" onclick="closeDailyDropdown()">Send Daily Evaluation</button>
+            </div>
+        </div>
+    </div>
     <nav class="student-navbar" style="position:fixed;" id="www">
       <div class="nav-user-block">
         <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" alt="Profile Picture">
@@ -65,38 +102,6 @@
     </div>
 
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
-
-        <div class="feedback" id="feedback">
-            <div class="feedback-button" id="lectureFeedback" onclick="inputLectureFeedback()">
-                <div class="smiles">
-                    <div class="eyeLeft"></div>
-                    <div class="eyeRight"></div>
-                    <div class="mouth" id="mouth-lecture"></div>
-                </div>
-            </div>
-            <div class="feedback-button" id="websiteFeedback" onclick="inputWebsiteFeedback()">
-                <div class="smiles">
-                    <div class="eyeLeft"></div>
-                    <div class="eyeRight"></div>
-                    <div class="mouth" id="mouth-website"></div>
-                </div>
-            </div>
-            <div class="feedback-button" id="facilitiesFeedback" onclick="inputFacilitiesFeedback()">
-                <div class="smiles">
-                    <div class="eyeLeft"></div>
-                    <div class="eyeRight"></div>
-                    <div class="mouth" id="mouth-facilities"></div>
-                </div>
-            </div>
-            <div class="open-feedback-text" id="open-feedback-text" onclick="openFeedback()">
-                Dagens utvärdering
-            </div>
-            <!-- <div class="feedback-text">
-                <p id="interactive-feedback-text">
-                    Klicka på en av gubbarna för att utvärdera
-                </p>
-            </div> -->
-        </div>
 
         <!-- course form sliding down -->
         <article class="small-box" id="course-form-fill" onfocus="clearContents(this)">
@@ -167,7 +172,7 @@
                 <div class="evaluation-overview" id="v41">
                     <div class="evaluation-day" id="monday41"><h4>Mo</h4></div>
                     <div class="evaluation-day" id="tuesday41"><h4>Ti</h4></div>
-                    <div class="evaluation-day" id="wednesday41" onclick="openFeedback()"><h4>On</h4></div>
+                    <div class="evaluation-day" id="wednesday41" onclick="openDailyDropdown()"><h4>On</h4></div>
                     <div class="evaluation-day" id="thursday41"><h4>To</h4></div>
                     <div class="evaluation-day" id="friday41"><h4>Fr</h4></div>
                     <div class="evaluation-day" id="saturday41"><h4>Lö</h4></div>

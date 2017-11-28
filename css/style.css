@@ -713,10 +713,29 @@ textarea {
   z-index: 3;
 }
 
-.daily-feedback {
-  background-color: yellow;
-  padding: 10px 0px 10px 25px;
-  margin: 0px;
+#daily-evaluation-dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: none;
+}
+#evaluation-dropdown-grid {
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-items: center;
+}
+.daily-evaluation-button {
+  border: none;
+  background-color: #006ABF;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 5px;
+  margin: 10px;
+  height: 30px;
+  border-bottom: none;
 }
 
 .feedback {
