@@ -1,42 +1,17 @@
-(function ($) {
-	"use strict";
+function showRegistrationForm(){
+    document.getElementById('userRegistration').style.display='block';
+}
 
-    jQuery(document).ready(function($){
+function showLoginForm(){
+    document.getElementById('userLogin').style.display='block';
+}
 
- 
-        $("#client-testimonial-carousel").owlCarousel({
-           
-            items : 3,
-            margin : 30,
-            nav : false,
-            dots : true,
-            loop : true,
-            autoplay : true,
-            responsiveClass: true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:4
-                }
-            }
-        });
+function closeUserRegistrationFrom(){
+    document.getElementById('userRegistration').style.display='none';
+}
+
+function closeUserLoginFrom(){
+    document.getElementById('userLogin').style.display='none';
+}
 
 
-        
-
-
-    });
-
-
-    jQuery(window).load(function(){
-
-        
-    });
-
-
-}(jQuery));	
