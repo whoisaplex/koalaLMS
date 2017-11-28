@@ -712,6 +712,13 @@ textarea {
 .student-navbar {
   z-index: 3;
 }
+
+.daily-feedback {
+  background-color: yellow;
+  padding: 10px 0px 10px 25px;
+  margin: 0px;
+}
+
 .feedback {
   z-index: 2;
   transform: translateX(49px);
