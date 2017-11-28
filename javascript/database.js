@@ -1,6 +1,6 @@
 let students = [{username: 'alexander',
               password: 'dahlberg123',
-              full_name: 'Alexander Dahlberg',
+              full_name: 'Student',
               role: 'student',
               all_courses: [{ongoing: [{name: 'Html', description: '<div class="courses-box-grid"><div class="courses-box-first"><h2>Kurspoäng</h2><p>30 Poäng</p><h2>Mål</h2><ul><li>HTML 5</li><li>Responsiv Design</li><li>Grundläggande SEO</li><li>Tillgänglighetsanpassing</li><li>Olika css-ramverk</li></ul></div><div class="courses-box-second"><h2>Innehåll</h2><p>Syftet med kursen är att den studerande ska få kunskap och färdigheter i hur man utvecklar webblösningar i HTML 5 och CSS3, både fristående och i publiceringssystem. Kursen belyser även den senaste  tekniken och ramverken inom HTML5/CSS3</p></div></div>', tempo: '100%', teacher: 'Mac Nucklemuckle'},
                                       {name: 'Css3', description: '<div class="courses-box-grid"><div class="courses-box-first"><h2>Kurspoäng</h2><p>30 Poäng</p><h2>Mål</h2><ul><li>HTML 5</li><li>Responsiv Design</li><li>Grundläggande SEO</li><li>Tillgänglighetsanpassing</li><li>Olika css-ramverk</li></ul></div><div class="courses-box-second"><h2>Innehåll</h2><p>Syftet med kursen är att den studerande ska få kunskap och färdigheter i hur man utvecklar webblösningar i HTML 5 och CSS3, både fristående och i publiceringssystem. Kursen belyser även den senaste  tekniken och ramverken inom HTML5/CSS3</p></div></div>', tempo: '50%', teacher: 'Mac Nucklemuckle'},
@@ -59,7 +59,7 @@ let students = [{username: 'alexander',
 let teachers = [
   {username: 'aplex',
   password: '123',
-  full_name: 'Mr Macnucklemuckle',
+  full_name: 'Teacher',
   role: 'teacher',
   courses: [
     {name: 'Html',
@@ -100,11 +100,11 @@ let courses = [
     {
         course_id:2, course_title:"CSS", description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorum fugit rem ipsum sit placeat modi suscipit nobis laboriosam, qui eum, accusamus dolor"
     },
-    
+
     {
         course_id:3, course_title:"CSS3", description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorum fugit rem ipsum sit placeat modi suscipit nobis laboriosam, qui eum, accusamus dolor"
     }
-    
+
 ];
 
 let evaluations = [{evaluation_id:1, course_id:1, evaluation_title:"HTML Evaluation 1"},{evaluation_id:2, course_id:1,              evaluation_title:"HTML Evaluation 2"}, {evaluation_id:3, course_id:2, evaluation_title:"CSS Evaluation 1"}];
