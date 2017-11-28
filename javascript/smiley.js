@@ -139,6 +139,10 @@ function inputFacilitiesFeedback(){
 function openFeedback(){
     let feedbackArea = document.getElementById("feedback");
     let openFeedbackBox = document.getElementById("open-feedback-text");
+    let darkOverlay = document.getElementById("evaluation-dark-overlay");
+
+    //dark overlay display
+    darkOverlay.style = "display: block;";
 
     feedbackArea.style.animation = "slide-in 2.0s ease-in-out";
     
