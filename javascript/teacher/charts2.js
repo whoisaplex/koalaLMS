@@ -4,19 +4,17 @@ type: 'bar',
 data: {
     labels: ["HTML", "CSS", "Javascript"],
     datasets: [{
-        data: [70,80,90],
+        data: [7,8,9],
         backgroundColor: ['#e44c27','#563d7b','#f1e15a'],
         borderWidth: 2
     }]
 },
     options: {
-         legend: {
-            display: false
-         },        
     scales: {
         yAxes: [{
             ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                max:10
             }
         }]
     }
