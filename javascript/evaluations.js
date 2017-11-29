@@ -148,3 +148,6 @@ function evaluateCircle(circle){
             break;
     }
 }
+function doDailyEvaluation(){
+    
+}

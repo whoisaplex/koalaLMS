@@ -29,13 +29,13 @@ function inputLectureFeedback(){
 
     if(daily.isClicked < 1){
         daily.isClicked = 1;
-    }
+    }/*
     if(daily.isClicked == 1){
         let openFeedbackBox = document.getElementById("open-feedback-text");
         openFeedbackBox.style.animation = "close-box 2.0s ease";
         openFeedbackBox.style.backgroundColor = "yellow";
         openFeedbackBox.innerHTML = "SKICKA";
-    }
+    }*/
 
     switch (daily.lecture){
         case 1:
@@ -70,13 +70,13 @@ function inputWebsiteFeedback(){
 
     if(daily.isClicked < 1){
         daily.isClicked = 1;
-    }
+    }/*
     if(daily.isClicked == 1){
         let openFeedbackBox = document.getElementById("open-feedback-text");
         openFeedbackBox.style.animation = "close-box 2.0s ease";
         openFeedbackBox.style.backgroundColor = "yellow";
         openFeedbackBox.innerHTML = "SKICKA";
-    }
+    }*/
 
     switch (daily.website){
         case 1:
@@ -110,13 +110,13 @@ function inputFacilitiesFeedback(){
 
     if(daily.isClicked < 1){
         daily.isClicked = 1;
-    }
+    }/*
     if(daily.isClicked == 1){
         let openFeedbackBox = document.getElementById("open-feedback-text");
         openFeedbackBox.style.animation = "close-box 2.0s ease";
         openFeedbackBox.style.backgroundColor = "yellow";
         openFeedbackBox.innerHTML = "SKICKA";
-    }
+    }*/
 
     switch (daily.facilities){
         case 1:
@@ -135,43 +135,22 @@ function inputFacilitiesFeedback(){
             break;
     }
 }
+function openDailyDropdown(){
+    let darkOverlay = document.getElementById("evaluation-dark-overlay");
+    let dailyDropdown = document.getElementById("daily-evaluation-dropdown");
 
-function openFeedback(){
-    let feedbackArea = document.getElementById("feedback");
-    let openFeedbackBox = document.getElementById("open-feedback-text");
+    //show daily dropdown evaluation
+    darkOverlay.style.display = "block";
+    dailyDropdown.style.display = "block";
+}
+function closeDailyDropdown(){
+    let darkOverlay = document.getElementById("evaluation-dark-overlay");
+    let dailyDropdown = document.getElementById("daily-evaluation-dropdown");
+    let wednesday41 = document.getElementById("wednesday41");
+    wednesday41.style.backgroundColor = "green";
+    wednesday41.style.pointerEvents = "none";
 
-    feedbackArea.style.animation = "slide-in 2.0s ease-in-out";
-    
-    if(window.innerWidth < 769){
-        feedbackArea.style.transform = "translateX(80px)";
-    }
-    if(window.innerWidth > 768){
-        feedbackArea.style.transform = "translateX(200px)";
-    }
-    openFeedbackBox.addEventListener("mouseover", function(){
-        openFeedbackBox.style.backgroundColor = "red";
-    });
-    if(daily.isClicked == 0){
-        openFeedbackBox.style.animation = "onclick-color-changeRed 0.2s ease";
-        openFeedbackBox.addEventListener("mouseover", function(){
-            openFeedbackBox.style.backgroundColor = "#E4EA0B";
-        });
-        openFeedbackBox.addEventListener("mouseout", function(){
-            openFeedbackBox.style.backgroundColor = "yellow";
-        });
-    }
-    if(daily.isClicked == 1){
-        openFeedbackBox.style.animation = "onclick-color-changeYellow 0.2s ease";
-        daily.isClicked = 2;
-        console.log("gulllllish");
-    }
-    if(daily.isClicked == 2){
-        console.log("HEEJ");
-        feedbackArea.style.animation = "slide-out 6.0s ease-in";
-        feedbackArea.style.transform = "translateX(-60vw)"; 
-
-        openFeedbackBox.style.animation = "feedback-done 2.0s ease-out";
-        openFeedbackBox.style.backgroundColor = "green";
-        document.getElementById("wednesday41").style.backgroundColor = "green";
-    }
+    //show daily dropdown evaluation
+    darkOverlay.style.display = "none";
+    dailyDropdown.style.display = "none";
 }
