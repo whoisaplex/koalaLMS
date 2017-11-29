@@ -1653,9 +1653,6 @@ img {
     width: calc(100vw - 30px);
     left: 2px;
   }
-  .feedback {
-    transform: translateX(-137px);
-  }
   @keyframes slide-in{
     from {transform: translateX(-137px);}
     to{transform: translateX(80px);}
@@ -1664,7 +1661,7 @@ img {
     0% {transform: translateX(80px);}
     100% {transform: translateX(-270px);}
   }
-  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown, #admin-account-edit-grid{
+  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown, #admin-account-edit-grid, #evaluation-dropdown-grid{
     grid-template-columns: 0px auto;
     margin-top:75px;
   }
