@@ -146,6 +146,46 @@ function evaluateCircle(circle){
                     circleArray[i].style.backgroundColor = "grey";
             }
             break;
+        case "evaluate-scale-circle-week-1":
+            for (let i=0; i < circleArray.length; i++){
+                if(circleArray[i].id == "evaluate-scale-circle-week-1")
+                    circleArray[i].style.backgroundColor = "#FF0C00";
+                else
+                    circleArray[i].style.backgroundColor = "grey";
+            }
+            break;
+        case "evaluate-scale-circle-week-2":
+            for (let i=0; i < circleArray.length; i++){
+                if(circleArray[i].id == "evaluate-scale-circle-week-2")
+                    circleArray[i].style.backgroundColor = "#E8700C";
+                else
+                    circleArray[i].style.backgroundColor = "grey";
+            }
+            break;
+        case "evaluate-scale-circle-week-3":
+            for (let i=0; i < circleArray.length; i++){
+                if(circleArray[i].id == "evaluate-scale-circle-week-3")
+                    circleArray[i].style.backgroundColor = "#FFC700";
+                else
+                    circleArray[i].style.backgroundColor = "grey";
+            }
+            break;
+        case "evaluate-scale-circle-week-4":
+            for (let i=0; i < circleArray.length; i++){
+                if(circleArray[i].id == "evaluate-scale-circle-week-4")
+                    circleArray[i].style.backgroundColor = "#B6E800";
+                else
+                    circleArray[i].style.backgroundColor = "grey";
+            }
+            break;
+        case "evaluate-scale-circle-week-5":
+            for (let i=0; i < circleArray.length; i++){
+                if(circleArray[i].id == "evaluate-scale-circle-week-5")
+                    circleArray[i].style.backgroundColor = "#11FF37";
+                else
+                    circleArray[i].style.backgroundColor = "grey";
+            }
+            break;
     }
 }
 function doDailyEvaluation(){
