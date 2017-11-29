@@ -1053,6 +1053,23 @@ h2.teacherEvaluationsText {
   padding:5px;
   margin:5px;
 }
+.accountSave{
+  color:white;
+  background: #4da702;
+  border:none;
+  border-radius: 3px;
+  cursor:pointer;
+  margin-left: 5px;
+}
+.accountCancel { 
+  color:white;
+  background:#d00000;
+  border:none;
+  border-radius: 3px;
+  cursor:pointer;
+  margin-right:16px;
+
+}
 textarea{
   resize: vertical;
   margin:5px;
@@ -1270,6 +1287,9 @@ form {
   background:rgb(46, 51, 68);
   display:grid;
   height:100%;
+}
+.admin-center-content h2{
+  align-self: center;
 }
 
 
@@ -1644,11 +1664,13 @@ img {
     0% {transform: translateX(80px);}
     100% {transform: translateX(-270px);}
   }
-  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown{
+  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown, #admin-account-edit-grid{
     grid-template-columns: 0px auto;
     margin-top:75px;
   }
-
+  .admin-center-content{
+    width: 90%;
+  } 
 }
 
 
