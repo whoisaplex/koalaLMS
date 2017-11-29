@@ -147,10 +147,25 @@ function closeDailyDropdown(){
     let darkOverlay = document.getElementById("evaluation-dark-overlay");
     let dailyDropdown = document.getElementById("daily-evaluation-dropdown");
     let wednesday41 = document.getElementById("wednesday41");
-    wednesday41.style.backgroundColor = "green";
-    wednesday41.style.pointerEvents = "none";
+    if(daily.isClicked === 1){
+        wednesday41.style.backgroundColor = "green";
+        wednesday41.style.pointerEvents = "none";
+        //show daily dropdown evaluation
+        darkOverlay.style.display = "none";
+        dailyDropdown.style.display = "none";
+    }
+    else{
+        let dailyDropownError = document.getElementById("evaluation-dropdown-error");
+        dailyDropownError.style.display = "grid";
+    }
+}
+function crossCloseDailyDropdown(){
+    let darkOverlay = document.getElementById("evaluation-dark-overlay");
+    let dailyDropdown = document.getElementById("daily-evaluation-dropdown");
+    let dailyDropownError = document.getElementById("evaluation-dropdown-error");
 
     //show daily dropdown evaluation
     darkOverlay.style.display = "none";
     dailyDropdown.style.display = "none";
+    dailyDropownError.style.display = "none";
 }

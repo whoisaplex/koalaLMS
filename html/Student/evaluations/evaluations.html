@@ -17,7 +17,10 @@
         <div id="evaluation-dropdown-grid">
             <div></div>
             <div class="center-content">
-                <i class="fa fa-times fa-2x closeIconStyle" aria-hidden="true"></i>
+                <div id="evaluation-dropdown-error">
+                    <h3>Evaluation can't be completed without a selected smiley</h3>
+                </div>
+                <i class="fa fa-times fa-2x closeIconStyle" onclick="crossCloseDailyDropdown()" aria-hidden="true"></i>
                 <div class="feedback" id="feedback">
                         <div class="feedback-button" id="lectureFeedback" onclick="inputLectureFeedback()">
                             <div class="smiles">
