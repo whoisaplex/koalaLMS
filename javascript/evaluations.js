@@ -16,7 +16,7 @@ function makeWeeklyEvaluation(){
         }
         let formFill = document.getElementById("weekly-form-fill");
         let formName = document.getElementById("form-title-week");
-        formName.textContent = "Utvärdering V.41";
+        formName.textContent = "Evaluation week 41";
         formFill.style.visibility = "visible";
         formFill.style.animation = "slide-down-formFill 2.0s ease";
         formFill.style.transform = "translateY(0)";
@@ -60,7 +60,7 @@ function finishCourseForm(courseObject){
         let formFill = document.getElementById("course-form-fill");
         let formOpenButton = document.getElementById(courseObject.id);
         let formName = document.getElementById("form-title");
-        formName.textContent = "Utvärdering " + courseObject.name;
+        formName.textContent = "Evaluation " + courseObject.name;
 
         let buttonID = formOpenButton.id;
         courseObject.isClickable = true;

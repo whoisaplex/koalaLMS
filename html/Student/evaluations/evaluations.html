@@ -105,25 +105,23 @@
 
             <!-- name changes depends of whitch course -->
             <h2 id="form-title"></h2><hr>
-            <h4>Hur var lektionerna under kursen</h4>
+            <h4>How was the lessions during this course? </h4>
             <textarea id="course-lecture-feedback"></textarea>
-            <h4>Hur fungerade kommunikationen under kursen?</h4>
+            <h4>How was the communication during this course?</h4>
             <textarea id="course-communication-feedback"></textarea>
-            <h4>Vad var bra/dåligt med kursen?</h4>
+            <h4>What was good/bad during this course?</h4>
             <textarea id="course-goodBad-feedback"></textarea>
-            <h4 id="form-description-title">Ange din allmänna upplvelse</h4>
+            <h4 class="form-description-title">Grade your general experience</h4>
             <div class="evaluate-scale">
-                <h4 class="form-description" id="form-description-left">väldigt dåligt</h4>
+                <h4 class="form-description" id="form-description-left">Very Bad</h4>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-1" onclick="evaluateCircle(this)" title="Väldigt dåligt"><p>1</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-2" onclick="evaluateCircle(this)" title="Dåligt"><p>2</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-3" onclick="evaluateCircle(this)" title="Okej"><p>3</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-4" onclick="evaluateCircle(this)" title="Bra"><p>4</p></div>
                 <div class="evaluate-scale-circle" id="evaluate-scale-circle-5" onclick="evaluateCircle(this)" title="Väldigt bra"><p>5</p></div>
-                <h4 class="form-description" id="form-description-right">väldigt bra</h4>
+                <h4 class="form-description" id="form-description-right">Very Good</h4>
             </div>
-            <div class="send-form-fill" id="send-form-fill-course">
-                Klar
-            </div>
+            <div class="send-form-fill" id="send-form-fill-course">Finish</div>
         </article>
 
         <!-- weekly form sliding down -->
@@ -131,25 +129,23 @@
 
             <!-- name changes depends of whitch course -->
             <h2 id="form-title-week"></h2><hr>
-            <h4>Hur var lektionerna under kursen</h4>
+            <h4>How was the lessions during this week?</h4>
             <textarea></textarea>
-            <h4>Hur fungerade kommunikationen under kursen?</h4>
+            <h4>How was the communication during this week?</h4>
             <textarea></textarea>
-            <h4>Vad var bra/dåligt med kursen?</h4>
+            <h4>What was good/bad during this week?</h4>
             <textarea></textarea>
-            <h4>Ange din allmänna upplvelse</h4>
+            <h4 class="form-description-title">Grade your general experience</h4>
             <div class="evaluate-scale">
-                    <h4 class="form-description">väldigt dåligt</h4>
+                    <h4 class="form-description">Very Bad</h4>
                     <div class="evaluate-scale-circle"  id="evaluate-scale-circle-week-1" onclick="evaluateCircle(this)" title="Väldigt dåligt"><p>1</p></div>
                     <div class="evaluate-scale-circle"  id="evaluate-scale-circle-week-2" onclick="evaluateCircle(this)" title="Dåligt"><p>2</p></div>
                     <div class="evaluate-scale-circle"  id="evaluate-scale-circle-week-3" onclick="evaluateCircle(this)" title="Okej"><p>3</p></div>
                     <div class="evaluate-scale-circle"  id="evaluate-scale-circle-week-4" onclick="evaluateCircle(this)" title="Bra"><p>4</p></div>
                     <div class="evaluate-scale-circle"  id="evaluate-scale-circle-week-5" onclick="evaluateCircle(this)" title="Väldigt bra"><p>5</p></div>
-                    <h4 class="form-description" >väldigt bra</h4>
+                    <h4 class="form-description" >Very Good</h4>
             </div>
-            <div class="send-form-fill" id="send-form-fill-course" onclick="finishWeeklyForm()">
-                Klar
-            </div>
+            <div class="send-form-fill" id="send-form-fill-course" onclick="finishWeeklyForm()">Finish</div>
         </article>
 
 
@@ -158,43 +154,43 @@
       <div class="grid-2-box"> <!-- Change class to fit how many boxes you want -->
             <!-- A NEW BOX IN THE SAME ROW -->
             <div class="grid-style-box" id="course-evaluations">
-                <h2 id="small-boxes-title">Kursutvärdering</h2>
+                <h2 id="small-boxes-title">Course Evaluations</h2>
                 <hr>
             </div>
             <div class="grid-style-box" id="my-evaluations">
                 <!-- possible to make for loop making these divs-->
-                <h2 >My Evaluations</h2>
+                <h2 >Daily / Weekly Evaluations</h2>
                 <hr>
             <div>
                 <div class="evaluation-overview" id="v41">
                     <div class="evaluation-day" id="monday41"><h4>Mo</h4></div>
-                    <div class="evaluation-day" id="tuesday41"><h4>Ti</h4></div>
-                    <div class="evaluation-day" id="wednesday41" onclick="openDailyDropdown()"><h4>On</h4></div>
-                    <div class="evaluation-day" id="thursday41"><h4>To</h4></div>
+                    <div class="evaluation-day" id="tuesday41"><h4>Tu</h4></div>
+                    <div class="evaluation-day" id="wednesday41" onclick="openDailyDropdown()"><h4>We</h4></div>
+                    <div class="evaluation-day" id="thursday41"><h4>Th</h4></div>
                     <div class="evaluation-day" id="friday41"><h4>Fr</h4></div>
-                    <div class="evaluation-day" id="saturday41"><h4>Lö</h4></div>
-                    <div class="evaluation-day" id="sunday41"><h4>Sö</h4></div>
-                    <div class="evaluation-week" id="week41" onclick="makeWeeklyEvaluation()"><h4>Vecka 41 (nu)</h4></div>
+                    <div class="evaluation-day" id="saturday41"><h4>Sa</h4></div>
+                    <div class="evaluation-day" id="sunday41"><h4>Su</h4></div>
+                    <div class="evaluation-week" id="week41" onclick="makeWeeklyEvaluation()"><h4>Week 41 (nu)</h4></div>
                 </div>
                 <div class="evaluation-overview">
                     <div class="evaluation-day" id="monday40"><h4>Mo</h4></div>
-                    <div class="evaluation-day" id="tuesday40"><h4>Ti</h4></div>
-                    <div class="evaluation-day" id="wednesday40"><h4>On</h4></div>
-                    <div class="evaluation-day" id="thursday40"><h4>To</h4></div>
+                    <div class="evaluation-day" id="tuesday40"><h4>Tu</h4></div>
+                    <div class="evaluation-day" id="wednesday40"><h4>We</h4></div>
+                    <div class="evaluation-day" id="thursday40"><h4>Th</h4></div>
                     <div class="evaluation-day" id="friday40"><h4>Fr</h4></div>
-                    <div class="evaluation-day" id="saturday40"><h4>Lö</h4></div>
-                    <div class="evaluation-day" id="sunday40"><h4>Sö</h4></div>
-                    <div class="evaluation-week" id="week40"><h4>Vecka 40</h4></div>
+                    <div class="evaluation-day" id="saturday40"><h4>Sa</h4></div>
+                    <div class="evaluation-day" id="sunday40"><h4>Su</h4></div>
+                    <div class="evaluation-week" id="week40"><h4>Week 40</h4></div>
                 </div>
                 <div class="evaluation-overview">
                     <div class="evaluation-day" id="monday39"><h4>Mo</h4></div>
-                    <div class="evaluation-day" id="tuesday39"><h4>Ti</h4></div>
-                    <div class="evaluation-day" id="wednesday39"><h4>On</h4></div>
-                    <div class="evaluation-day" id="thursday39"><h4>To</h4></div>
+                    <div class="evaluation-day" id="tuesday39"><h4>Tu</h4></div>
+                    <div class="evaluation-day" id="wednesday39"><h4>We</h4></div>
+                    <div class="evaluation-day" id="thursday39"><h4>Th</h4></div>
                     <div class="evaluation-day" id="friday39"><h4>Fr</h4></div>
-                    <div class="evaluation-day" id="saturday39"><h4>Lö</h4></div>
-                    <div class="evaluation-day" id="sunday39"><h4>Sö</h4></div>
-                    <div class="evaluation-week" id="week39"><h4>Vecka 39</h4></div>
+                    <div class="evaluation-day" id="saturday39"><h4>Sa</h4></div>
+                    <div class="evaluation-day" id="sunday39"><h4>Su</h4></div>
+                    <div class="evaluation-week" id="week39"><h4>Week 39</h4></div>
                 </div>
               </div>
             </div>

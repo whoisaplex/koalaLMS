@@ -668,7 +668,7 @@ textarea {
   font-weight: 700;
   text-align: center;
 }
-#evaluate-scale-circle-5 {
+#evaluate-scale-circle-5, #evaluate-scale-circle-week-5 {
   margin-right: 0;
 }
 .small-box h4 {
@@ -678,7 +678,7 @@ textarea {
 #currentPageHeader {
   display: none;
 }
-#form-description-title {
+.form-description-title {
   text-align: center;
   padding-bottom: 5px;
 }
