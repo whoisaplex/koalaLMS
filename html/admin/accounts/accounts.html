@@ -31,7 +31,7 @@
 
       <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
       <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
-      <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
+      <p onclick="changeContent(this)" style="background: rgb(50, 55, 74); border-right: 3px solid orange;"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
       <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
 
     </div>
@@ -62,7 +62,6 @@
                 <hr>
                 <form id="form">
                   <div class="radiowrapper">
-                    <input type="radio" name="privilege" value="Administrator" id="radio-admin">Administrator
                     <input type="radio" name="privilege" value="Teacher" id="radio-teacher">Teacher
                     <input type="radio" name="privilege" value="Student" id="radio-student">Student<br>
                   </div>
@@ -152,8 +151,8 @@
                 </form>
 
         <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;" >
-          <button class="assignmentDelete" id="save">Save</button>
-          <button class="assignmentCancel" id="canceledit">Cancel</button>
+          <button class="accountSave" id="save">Save</button>
+          <button class="accountCancel" id="canceledit">Cancel</button>
         </div>
       </div>
   </div>
