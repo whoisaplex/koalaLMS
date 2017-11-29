@@ -29,13 +29,13 @@ function inputLectureFeedback(){
 
     if(daily.isClicked < 1){
         daily.isClicked = 1;
-    }
+    }/*
     if(daily.isClicked == 1){
         let openFeedbackBox = document.getElementById("open-feedback-text");
         openFeedbackBox.style.animation = "close-box 2.0s ease";
         openFeedbackBox.style.backgroundColor = "yellow";
         openFeedbackBox.innerHTML = "SKICKA";
-    }
+    }*/
 
     switch (daily.lecture){
         case 1:
@@ -70,13 +70,13 @@ function inputWebsiteFeedback(){
 
     if(daily.isClicked < 1){
         daily.isClicked = 1;
-    }
+    }/*
     if(daily.isClicked == 1){
         let openFeedbackBox = document.getElementById("open-feedback-text");
         openFeedbackBox.style.animation = "close-box 2.0s ease";
         openFeedbackBox.style.backgroundColor = "yellow";
         openFeedbackBox.innerHTML = "SKICKA";
-    }
+    }*/
 
     switch (daily.website){
         case 1:
@@ -110,13 +110,13 @@ function inputFacilitiesFeedback(){
 
     if(daily.isClicked < 1){
         daily.isClicked = 1;
-    }
+    }/*
     if(daily.isClicked == 1){
         let openFeedbackBox = document.getElementById("open-feedback-text");
         openFeedbackBox.style.animation = "close-box 2.0s ease";
         openFeedbackBox.style.backgroundColor = "yellow";
         openFeedbackBox.innerHTML = "SKICKA";
-    }
+    }*/
 
     switch (daily.facilities){
         case 1:
@@ -146,7 +146,9 @@ function openDailyDropdown(){
 function closeDailyDropdown(){
     let darkOverlay = document.getElementById("evaluation-dark-overlay");
     let dailyDropdown = document.getElementById("daily-evaluation-dropdown");
-    document.getElementById("wednesday41").style.backgroundColor = "green";
+    let wednesday41 = document.getElementById("wednesday41");
+    wednesday41.style.backgroundColor = "green";
+    wednesday41.style.pointerEvents = "none";
 
     //show daily dropdown evaluation
     darkOverlay.style.display = "none";
