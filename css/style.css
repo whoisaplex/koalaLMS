@@ -76,6 +76,7 @@
   grid-template-columns:33.3% auto auto;
   grid-column-start: 2;
   grid-gap:10px;
+  height: 72%;
 }
 .grid-4-box{
   display:grid;
@@ -1237,6 +1238,7 @@ form {
     border-top: solid 1px grey;
     border-bottom: solid 1px grey;
     padding: 5px;
+    margin-top: -1px;
 }
 .admin-center-content{
   justify-self:center;
