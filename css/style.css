@@ -1480,6 +1480,9 @@ form {
   margin-left: 3px;
   margin: 0;
 }
+.textNews, .authorNews {
+  display: none;
+}
 
 @media only screen and (max-width:769px){
   .grid-2-box {

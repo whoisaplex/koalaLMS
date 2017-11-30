@@ -1,3 +1,5 @@
+let newsHolder;
+
 function addNews(){
     let title = document.getElementById("news-title-input");
     let author = document.getElementById("news-author-input");
@@ -47,12 +49,33 @@ function addNews(){
     }
 }
 function editNews(elementEdit){
-    /*let editTitle = elementEdit
-    let editAuthor = elementEdit
-    let editText = elementEdit*/
-    console.log(elementEdit);
-    elementEdit.style.backgroundColor = "grey";
+    document.getElementById("news-submit-input").value = "Update News";
+    document.getElementById("news-submit-input").removeAttribute("onclick");
+    document.getElementById("news-submit-input").setAttribute("onclick", "updateNews()");
+
+    elementEdit.parentNode.style.backgroundColor = "grey";
+    document.getElementById("news-title-input").value = elementEdit.parentNode.childNodes[1].innerHTML;
+    document.getElementById("news-author-input").value = elementEdit.parentNode.childNodes[3].innerHTML;
+    document.getElementById("news-text-input").value = elementEdit.parentNode.childNodes[5].innerHTML;
+    newsHolder = elementEdit.parentNode;
 }
 function trashNews(elementTrash){
     elementTrash.parentNode.parentNode.removeChild(elementTrash.parentNode);
+}
+function updateNews(newsDiv){
+    document.getElementById("news-submit-input").value = "Submit";
+    document.getElementById("news-submit-input").setAttribute("onclick", "addNews()");
+    let newsBoxArray = document.getElementsByClassName("news-box");
+    for(let i=0; i < newsBoxArray.length; i++)
+        newsBoxArray[i].style.backgroundColor = "#006ABF";
+
+    newsHolder.childNodes[1].innerHTML = document.getElementById("news-title-input").value;
+    newsHolder.childNodes[3].innerHTML = document.getElementById("news-author-input").value;
+    newsHolder.childNodes[5].innerHTML = document.getElementById("news-text-input").value;
+    console.log(newsHolder);
+
+    //clear "Add News" input boxes
+    document.getElementById("news-title-input").value = "";
+    document.getElementById("news-author-input").value = "";
+    document.getElementById("news-text-input").value = "";
 }
