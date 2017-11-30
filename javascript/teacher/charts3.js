@@ -12,14 +12,14 @@
         },
         {
             label: ':|',
-            data: [3,4,5,6,7,8],
+            data: [2,6,6,6,2],
             backgroundColor: 'rgba(249, 255, 76, 0.4)',
             borderColor: 'rgba(249, 255, 76, 1)',
             borderWidth: 2
         },
         {
             label: ':(',
-            data: [7,4,5,6,7,8],
+            data: [7,5,4,3,1],
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255,99,132,1)',
             borderWidth: 2
@@ -31,7 +31,7 @@
     scales: {
         yAxes: [{
             ticks: {
-                beginAtZero: true
+                beginAtZero: true,
             }
         }]
     }
