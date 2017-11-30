@@ -11,135 +11,119 @@
         <link rel="stylesheet" href="../../../css/style.css"/>
     </head>
     <body>
-    <nav class="student-navbar" style="position:fixed;" id="www">
-      <div class="nav-user-block">
-        <img src="../../../imgs/admin.png" alt="Profile Picture">
-        <p>Welcome,</p>
-        <h4 id="user-Name">Alexander</h4>
-      </div>
-      <div class="nav-menu" id="nav-menu">
-        <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p></a>
-        <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
-        <div>
-          <div id="nav-courses" style="display:none">
-          </div>
-        </div>
-
-        <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
-        <p onclick="changeContent(this)" style="background: rgb(50, 55, 74); border-right: 3px solid orange;"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
-        <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
-        <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
-
-      </div>
-    </nav>
-
-    <nav class="mobile-nav">
-      <div>
-        <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
-      </div>
-      <div>
-        <h2 id="currentPageHeader"></h2>
-      </div>
-    </nav>
-
-    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
-    <div class="nav-wrapper-grid" id="nav-wrapper">
-        <div class="nav-grid-space"></div>
-        <div class="top-nav-bar">
-              <h1>KYH Koalas</h1>
-              <button onclick="logOutUser()">Logout</button>
-        </div>
-    </div>
-
-    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
-        <div style=" grid-row: 1 / last-line;"></div>
-        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
-          <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-            <h2 class="teacherEvaluationsText"> Evaluations List</h2>
-            <hr>
-            <div class="grid-2-box" id="evaluationsList">
-
-
+        <nav class="student-navbar" style="position:fixed;" id="www">
+            <div class="nav-user-block">
+                <img src="../../../imgs/admin.png" alt="Profile Picture">
+                <p>Welcome,</p>
+                <h4 id="user-Name">Alexander</h4>
             </div>
-          </div>
-        </div>
-    </div>
-
-
-    <div class="grid-main-content-row" onclick="toggleNavBar(this)">
-        <div style=" grid-row: 1 / last-line;"></div>
-        <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
-              <div class="grid-style-box courses-box" style="padding-bottom:10px;">
-                <h2 class="teacherEvaluationsText">Sent Evaluations</h2>
-                <hr>
-                <div class="grid-2-box" id="teacherEvaluationsContent">
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div class="dark-overlay" id="admin-evaluation-overlay"></div>
-
-<div id="admin-evaluation-dropdown">
-    <div id="admin-evaluation-dropdown-grid">
-      <div></div>
-      <div class="center-content ">
-        <div class="evaluation-div">
-          <i onclick="closeEvaluationOverlay()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
-           <div id="evaluation-dropdown-error"></div>
-
-                <h2><span id="add-edit-title"></span>Evaluation </h2>
-                <form id="evaluation-form">
-                <label class="evaluation-title evaluation-title-in-lytbox">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
-
-                <input type="hidden" name="evaluation-for-course" id="evaluation-for-course" value="">
-                <input type="hidden" name="evaluation-to-edit" id="evaluation-to-edit" value="">
-                <button class="attendance-button" id="add-evaluation-question-btn" >Add question to evaluation  &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
-                <div class="input-field-container">
+            <div class="nav-menu" id="nav-menu">
+                <a href="../home/index.html"><p onclick="changeContent(this)"><i class="fa fa-home" aria-hidden="true"></i>Home</p></a>
+                <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+                <div>
+                  <div id="nav-courses" style="display:none">
+                  </div>
                 </div>
 
+                <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
+                <p onclick="changeContent(this)" style="background: rgb(50, 55, 74); border-right: 3px solid orange;"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+                <p onclick="changeContent(this)"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
+                <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
 
-                <button class="attendance-button" id="add-evaluation" ><span id="add-edit-button"></span> Evaluation</button>
-                </form>
+            </div>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div>
+                <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
+            </div>
+            <div>
+                <h2 id="currentPageHeader"></h2>
+            </div>
+        </nav>
+
+    <!-- MAIN GRID FOR NAVIGATION ON TOP -->
+        <div class="nav-wrapper-grid" id="nav-wrapper">
+            <div class="nav-grid-space"></div>
+            <div class="top-nav-bar">
+                <h1>KYH Koalas</h1>
+                <button onclick="logOutUser()">Logout</button>
+            </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-
-  <script>
-
-
- </script>
-
-
-
-  <div class="dark-overlay" id="teacher-dark-overlay"></div>
-  <!-- Dropdown assignments -->
-  <div id="teacher-assignment-dropdown">
-    <div id="teacher-assignment-dropdown-grid">
-      <div></div>
-      <div>
-        <div id="assignment-dropdown-error"><h3>An Assignment can't be created without a title</h3></div>
-        <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true"></i>
-        <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
-        <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
-        <button class="attendance-button" onclick="addAssignmentConfirm()">Add Assignment</button>
-      </div>
-    </div>
-  </div>
+        <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+            <div style=" grid-row: 1 / last-line;"></div>
+            <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+                <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+                    <h2 class="teacherEvaluationsText"> Evaluations List</h2>
+                    <hr>
+                    <div class="grid-2-box" id="evaluationsList"></div>
+                </div>
+            </div>
+        </div>
 
 
-      <script src="../../../javascript/database.js"></script>
-      <script src="../../../javascript/login.js"></script>
-      <script src="../../../javascript/nav.js"></script>
-      <script src="../../../javascript/teacher/teacher.js"></script>
-      <script src="../../../javascript/teacher/TeacherEvaluations.js"></script>
-      <script src="../../../javascript/admin/adminEvaluation.js"></script>
+        <div class="grid-main-content-row" onclick="toggleNavBar(this)">
+            <div style=" grid-row: 1 / last-line;"></div>
+            <div class="grid-1-box"> <!-- Change class to fit how many boxes you want -->
+                <div class="grid-style-box courses-box" style="padding-bottom:10px;">
+                    <h2 class="teacherEvaluationsText">Sent Evaluations</h2>
+                    <hr>
+                    <div class="grid-2-box" id="teacherEvaluationsContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dark-overlay" id="admin-evaluation-overlay"></div>
+
+        <div id="admin-evaluation-dropdown">
+            <div id="admin-evaluation-dropdown-grid">
+                <div></div>
+                <div class="center-content ">
+                    <div class="evaluation-div">
+                        <i onclick="closeEvaluationOverlay()" class="fa fa-times fa-2x closeIconStyle" aria-hidden="true" id="attendance-dropdown-close-icon"></i>
+                        <div id="evaluation-dropdown-error"></div>
+
+                        <h2><span id="add-edit-title"></span>Evaluation </h2>
+                        <form id="evaluation-form">
+                            <label class="evaluation-title evaluation-title-in-lytbox">Evaluation Title</label><input type="text" name="evaluation-title" id="evaluation-title">
+
+                            <input type="hidden" name="evaluation-for-course" id="evaluation-for-course" value="">
+                            <input type="hidden" name="evaluation-to-edit" id="evaluation-to-edit" value="">
+                            <button class="attendance-button" id="add-evaluation-question-btn" >Add question to evaluation  &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                            <div class="input-field-container">
+                            </div>
+                            <button class="attendance-button" id="add-evaluation" ><span id="add-edit-button"></span> Evaluation</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+ 
+        <div class="dark-overlay" id="teacher-dark-overlay"></div>
+        <!-- Dropdown assignments -->
+        <div id="teacher-assignment-dropdown">
+            <div id="teacher-assignment-dropdown-grid">
+                <div></div>
+                <div>
+                    <div id="assignment-dropdown-error"><h3>An Assignment can't be created without a title</h3></div>
+                    <i onclick="closeAssignmentBox()" class="fa fa-times fa-2x" aria-hidden="true"></i>
+                    <input type="text" placeholder="Title of Assignment" id="addAssignmentTitle">
+                    <input type="text" placeholder="Description of Assignment" id="addAssignmentDescription">
+                    <button class="attendance-button" onclick="addAssignmentConfirm()">Add Assignment</button>
+                </div>
+            </div>
+        </div>
 
 
+        <script src="../../../javascript/database.js"></script>
+        <script src="../../../javascript/login.js"></script>
+        <script src="../../../javascript/nav.js"></script>
+        <script src="../../../javascript/teacher/teacher.js"></script>
+        <script src="../../../javascript/teacher/TeacherEvaluations.js"></script>
+        <script src="../../../javascript/admin/adminEvaluation.js"></script>
 
     </body>
 </html>

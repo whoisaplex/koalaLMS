@@ -10,55 +10,6 @@
 <link href="css/index.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-<style>
-* Style inputs with type="text", select elements and textareas */
-input[type=text]/*, select, textarea */{
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-    #text-message{
-        width: 100%;
-        height: 73px;
-        margin-top: 6px; /* Add a top margin */
-        margin-bottom: 16px;
-    }
-    
-    #email{
-        width: 100%;
-        padding: 12px 20px;
-        margin-top: 6px; /* Add a top margin */
-        margin-bottom: 16px;
-    }
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-/* Add a background color and some padding around the form */
-.contact-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-</style>
 </head>
 <body>
 	<div class="container" >
@@ -67,12 +18,11 @@ input[type=submit]:hover {
                 <div class="row">
                     <div class="col-sm-2 col-md-12 col-wd-9">
                        <img class="logo" src="images/logo_koala.png" alt=""> 
-
                     </div>
-                    <div  class="col-wd-3 mobile-menu" onclick="myMobileMenu(this);">
-                          <span class="bar1"></span>
-                          <span class="bar2"></span>
-                          <span class="bar3"></span>
+                    <div class="col-wd-3 mobile-menu" onclick="myMobileMenu(this);">
+                        <span class="bar1"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
                     </div>
                     
                     <div id="nav-menu" class="col-sm-10 col-md-12 col-wd-12 nav-menu">
@@ -106,59 +56,56 @@ input[type=submit]:hover {
             </div>
         </section>
         <section class="banner">
-          <div class="grid">
-              <div class="row banner-content">
-                  <div class="col-sm-6">
-                      <h1>Hi! We're Koala LMS</h1>
-                      <h3>Manage and train your team with our easy to use online LMS!</h3>
+            <div class="grid">
+                <div class="row banner-content">
+                    <div class="col-sm-6">
+                        <h1>Hi! We're Koala LMS</h1>
+                        <h3>Manage and train your team with our easy to use online LMS!</h3>
 
-                       <form action="/" id="request-demo">
-                         <div class="row">
+                        <form action="/" id="request-demo">
+                            <div class="row">
                              <div class="col-sm-6"><input type="text" class="emailform-email" id="emailform-email"  name="EmailForm[email]" value="" placeholder="Your e-mail address"></div>
                              <div class="col-sm-6 submit-email" > <a href="">Submit</a></div>
-                          </div>
-
+                            </div>
                         </form>
+                    </div>   
 
-                  </div>   
-
-                  <div class="col-sm-6">
-                     <div class="col">
-                         <img class="request-demo-img" src="images/request_demo.png" alt="">
-                     </div>
-
-                  </div>
+                    <div class="col-sm-6">
+                        <div class="col">
+                            <img class="request-demo-img" src="images/request_demo.png" alt="">
+                        </div>
+                    </div>
               </div>
-          </div>
+            </div>
         </section>
         <section id="contact-us">
             <div class="row">
                 <div class="col">
                     <div id="userRegistration" class="modal">
-                      <span onclick="closeUserRegistrationFrom();" class="close" title="Close Modal">×</span>
-                      <div class="modal-content animate">
-                        <div class="modal-container">
-                          <label><b>Name</b></label>
-                          <input type="text" placeholder="Enter Your Name" name="name" id="name">
+                        <span onclick="closeUserRegistrationFrom();" class="close" title="Close Modal">×</span>
+                        <div class="modal-content animate">
+                            <div class="modal-container">
+                              <label><b>Name</b></label>
+                              <input type="text" placeholder="Enter Your Name" name="name" id="name">
 
-                          <label><b>UserName</b></label>
-                          <input type="text" placeholder="Enter User Name" name="userName" id="userName" required>
+                              <label><b>UserName</b></label>
+                              <input type="text" placeholder="Enter User Name" name="userName" id="userName" required>
 
-                          <label><b>Email</b></label>
-                          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                              <label><b>Email</b></label>
+                              <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-                          <label><b>Password</b></label>
-                          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                              <label><b>Password</b></label>
+                              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-                          <label><b>Repeat Password</b></label>
-                          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                              <label><b>Repeat Password</b></label>
+                              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
 
-                          <div class="clearfix">
-                            <button type="button" onclick="closeUserRegistrationFrom();" class="cancelbtn">Cancel</button>
-                            <button class="signupbtn" onclick="signUpFunction();">Sign Up</button>
-                          </div>
+                              <div class="clearfix">
+                                <button type="button" onclick="closeUserRegistrationFrom();" class="cancelbtn">Cancel</button>
+                                <button class="signupbtn" onclick="signUpFunction();">Sign Up</button>
+                              </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
                 </div>
             </div>
@@ -169,22 +116,22 @@ input[type=submit]:hover {
             <div class="row">
                 <div class="col">
                     <div id="userLogin" class="modal">
-                      <span onclick="closeUserLoginFrom();" class="close" title="Close Modal">×</span>
-                      <div class="Login-modal-content animate" >
-                        <div class="modal-container">
-                          <div id="login-error"></div>
-                          <label><b>User Name</b></label>
-                          <input type="text" placeholder="Enter User Name" name="userName" id="login-userName" >
+                        <span onclick="closeUserLoginFrom();" class="close" title="Close Modal">×</span>
+                        <div class="Login-modal-content animate" >
+                            <div class="modal-container">
+                              <div id="login-error"></div>
+                              <label><b>User Name</b></label>
+                              <input type="text" placeholder="Enter User Name" name="userName" id="login-userName" >
 
-                          <label><b>Password</b></label>
-                          <input type="password" placeholder="Enter Password" name="psw" id="login-psw" >
+                              <label><b>Password</b></label>
+                              <input type="password" placeholder="Enter Password" name="psw" id="login-psw" >
 
-                          <div class="clearfix">
-                            <button type="button" onclick="closeUserLoginFrom();" class="cancelbtn">Cancel</button>
-                            <button class="signupbtn" onclick="loginFunction();">Login</button>
-                          </div>
+                              <div class="clearfix">
+                                <button type="button" onclick="closeUserLoginFrom();" class="cancelbtn">Cancel</button>
+                                <button class="signupbtn" onclick="loginFunction();">Login</button>
+                              </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
                 </div>
             </div>
@@ -195,7 +142,7 @@ input[type=submit]:hover {
                     <div class="col-sm-12 section-title ">
                         <div class="col">
                             <h2><span>Contact Us</span></h2>
-                        <p>I Stockholm hittar du oss på Västra Finnbodavägen 4 vid Danvik Center, 131 30 Nacka</p>
+                            <p>I Stockholm hittar du oss på Västra Finnbodavägen 4 vid Danvik Center, 131 30 Nacka</p>
                             <div class="section-borders">
                                 <span></span>
                                 <span class="black-border"></span>
@@ -208,35 +155,30 @@ input[type=submit]:hover {
                     <div class="col-sm-6">
                         
                         <div class="contact-form">
-                          <form action="">
+                            <form id="contact-form" action="">
 
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name.." autofocus>
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name.." autofocus>
 
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                            
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email Address..">
-                            
-                            <label for="subject">Subject</label>
-                            <textarea id="text-message" name="subject" placeholder="Write something.."></textarea>
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                            <button>Submit</button>
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email Address..">
 
-                          </form>
+                                <label for="subject">Subject</label>
+                                <textarea id="text-message" name="subject" placeholder="Write something.."></textarea>
+
+                                <button>Submit</button>
+
+                            </form>
                         </div>
                         
                     </div>
                     <div class="col-sm-6">
-                        
-                       
-                        
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1746.2161858774205!2d18.108757686318242!3d59.313452686506444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f780f4127db71%3A0xb87182496ad12c2c!2sV%C3%A4stra+Finnbodav%C3%A4gen+4%2C+131+30+Nacka!5e1!3m2!1sen!2sse!4v1508878389298" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                         
-
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -245,13 +187,8 @@ input[type=submit]:hover {
                 Made with <i class="fa fa-heart" aria-hidden="true" ></i> by KYH-Koala
             </div> 
         </footer>
+    </div>
 
-        </div>
-        
-        
-        <script>
-
-</script>
     
     <script type="text/javascript">
         
