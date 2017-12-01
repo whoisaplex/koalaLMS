@@ -1,170 +1,157 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Admin - Accounts</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-        <script src="https://use.fontawesome.com/f832093fcd.js"></script>
-        <link rel="stylesheet" href="../../../css/style.css"/>
-        <title>Accounts</title>
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin - Accounts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <script src="https://use.fontawesome.com/f832093fcd.js"></script>
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <title>Accounts</title>
+</head>
+<body>
     <nav class="student-navbar" style="position:fixed;" id="www">
-      <div class="nav-user-block">
-        <img src="../../../imgs/admin.png" alt="Profile Picture">
-        <p>Welcome,</p>
-        <h4 id="user-Name">Alexander</h4>
-      </div>
-      <div class="nav-menu" id="nav-menu">
-
-      <p onclick="changeContent(this)"><a href="../home/index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></p>
-      <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
-      <div>
-
-        <div id="nav-courses" style="display:none">
-
+        <div class="nav-user-block">
+            <img src="../../../imgs/admin.png" alt="Profile Picture">
+            <p>Welcome,</p>
+            <h4 id="user-Name">Alexander</h4>
         </div>
+        <div class="nav-menu" id="nav-menu">
 
-      </div>
-
-      <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
-      <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
-      <p onclick="changeContent(this)" style="background: rgb(50, 55, 74); border-right: 3px solid orange;"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
-      <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
-
-    </div>
+            <p onclick="changeContent(this)"><a href="../home/index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></p>
+            <p onclick="toggleCourses()"><i class="fa fa-book" aria-hidden="true"></i>Courses</p>
+            <div>
+                <div id="nav-courses" style="display:none">
+                </div>
+            </div>
+            <p onclick="changeContent(this)"><a href="../courses/addcourses.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Courses</a></p>
+            <p onclick="changeContent(this)"><a href="../evaluations/evaluations.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Evaluations</a></p>
+            <p onclick="changeContent(this)" style="background: rgb(50, 55, 74); border-right: 3px solid orange;"><a href="../accounts/accounts.html"><i class="fa fa-user-o" aria-hidden="true"></i>Accounts</a></p>
+            <p onclick="changeContent(this)"><a href="../programs/programs.html"><i class="fa fa-server" aria-hidden="true"></i>Programs</a></p>
+        </div>
     </nav>
-
     <nav class="mobile-nav">
-      <div>
-        <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
-      </div>
-      <div>
-        <h2 id="currentPageHeader">&nbsp;</h2>
-      </div>
+        <div>
+            <p><i class="fa fa-bars" onclick="toggleNavBar(this)" id="openNav"></i></p>
+        </div>
+        <div>
+            <h2 id="currentPageHeader">&nbsp;</h2>
+        </div>
     </nav>
-
     <!-- MAIN GRID FOR NAVIGATION ON TOP -->
     <div class="nav-wrapper-grid" id="nav-wrapper">
         <div class="nav-grid-space"></div>
         <div class="top-nav-bar">
-              <h1>KYH Koalas</h1>
-              <button onclick="logOutUser()">Logout</button>
+            <h1>KYH Koalas</h1>
+            <button onclick="logOutUser()">Logout</button>
         </div>
     </div>
     <div class="grid-main-content-row" onclick="toggleNavBar(this)">
         <div style=" grid-row: 1 / last-line;"></div>
         <div class="grid-3-box">
-              <div class="grid-style-box">
+            <div class="grid-style-box">
                 <h2>Add account</h2>
                 <hr>
                 <form id="form">
-                  <div class="radiowrapper">
-                    <input type="radio" name="privilege" value="Teacher" id="radio-teacher">Teacher
-                    <input type="radio" name="privilege" value="Student" id="radio-student">Student<br>
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-first-name">First name:</label>
-                    <input id="account-first-name" type="text"><br>
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-last-name">Last name:</label>
-                    <input id="account-last-name" type="text"><br>
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-username">Username:</label>
-                    <input id="account-username" type="text"><br>
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-email">E-mail:</label>
-                    <input id="account-email" type="text"><br>
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-password">Password:</label>
-                    <input id="account-password" type="password">
-                  </div>
+                    <div class="radiowrapper">
+                        <input type="radio" name="privilege" value="Teacher" id="radio-teacher">Teacher
+                        <input type="radio" name="privilege" value="Student" id="radio-student">Student
+                        <br>
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-first-name">First name:</label>
+                        <input id="account-first-name" type="text">
+                        <br>
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-last-name">Last name:</label>
+                        <input id="account-last-name" type="text">
+                        <br>
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-username">Username:</label>
+                        <input id="account-username" type="text">
+                        <br>
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-email">E-mail:</label>
+                        <input id="account-email" type="text">
+                        <br>
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-password">Password:</label>
+                        <input id="account-password" type="password">
+                    </div>
                 </form>
                 <div class="field-wrapper-button">
-                  <button class="attendance-button" onclick="addAccount(this)">Create Account</button>
+                    <button class="attendance-button" onclick="addAccount(this)">Create Account</button>
                 </div>
-
-              </div>
-              <div class="grid-style-box">
+            </div>
+            <div class="grid-style-box">
                 <h2>Teachers</h2>
                 <div class="list" id="teacherbox">
-
-
                 </div>
-              </div>
-              <div class="grid-style-box">
+            </div>
+            <div class="grid-style-box">
                 <h2>Students</h2>
                 <div class="list" id="studentbox">
-
-
                 </div>
-              </div>
+            </div>
         </div>
-      </div>
-<!-- Dropdown delete Confirm -->
-  <div class="dark-overlay" id="teacher-dark-overlay"></div>
-  <div id="teacher-delete-dropdown">
-    <div id="teacher-delete-dropdown-grid">
-      <div></div>
-      <div style="padding-bottom:10px;" class="center-content">
-        <h2>Are you sure you want to delete this Account?</h2>
-        <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;" >
-          <button class="assignmentDelete" id="delete">Delete</button>
-          <button class="assignmentCancel" id="cancel">Cancel</button>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <div id="admin-edit-dropdown">
-   <div id="admin-account-edit-grid">
-      <div></div>
-      <div style="padding-bottom:10px;" id="admin-account-header" class="admin-center-content">
-        <h2>Editing .... Account</h2>
-                  <form id="editform">
-                  <div class="field-wrapper">
-                    <label for="account-edit-first-name">First name:</label>
-                    <input id="account-edit-first-name" type="text" placeholder="">
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-edit-last-name">Last name:</label>
-                    <input id="account-edit-last-name" type="text" placeholder="">
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-edit-username">Username:</label>
-                    <input id="account-edit-username" type="text" placeholder="">
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-edit-email">E-mail:</label>
-                    <input id="account-edit-email" type="text" placeholder="">
-                  </div>
-                  <div class="field-wrapper">
-                    <label for="account-edit-password">Password:</label>
-                    <input id="account-edit-password" type="password" placeholder="">
-                  </div>
-                </form>
-
-        <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;" >
-          <button class="accountSave" id="save">Save</button>
-          <button class="accountCancel" id="canceledit">Cancel</button>
+    <!-- Dropdown delete Confirm -->
+    <div class="dark-overlay" id="teacher-dark-overlay"></div>
+    <div id="teacher-delete-dropdown">
+        <div id="teacher-delete-dropdown-grid">
+            <div></div>
+            <div style="padding-bottom:10px;" class="center-content">
+                <h2>Are you sure you want to delete this Account?</h2>
+                <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;">
+                    <button class="assignmentDelete" id="delete">Delete</button>
+                    <button class="assignmentCancel" id="cancel">Cancel</button>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
-  </div>
-
-
-
-
-      <script src="../../../javascript/database.js"></script>
-      <script src="../../../javascript/login.js"></script>
-      <script src="../../../javascript/nav.js"></script>
-      <script src="../../../javascript/teacher/teacher.js"></script>
-      <script src="../../../javascript/admin/accounts.js"></script>
-    </body>
+    </div>
+    <div id="admin-edit-dropdown">
+        <div id="admin-account-edit-grid">
+            <div></div>
+            <div style="padding-bottom:10px;" id="admin-account-header" class="admin-center-content">
+                <h2>Editing .... Account</h2>
+                <form id="editform">
+                    <div class="field-wrapper">
+                        <label for="account-edit-first-name">First name:</label>
+                        <input id="account-edit-first-name" type="text" placeholder="">
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-edit-last-name">Last name:</label>
+                        <input id="account-edit-last-name" type="text" placeholder="">
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-edit-username">Username:</label>
+                        <input id="account-edit-username" type="text" placeholder="">
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-edit-email">E-mail:</label>
+                        <input id="account-edit-email" type="text" placeholder="">
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="account-edit-password">Password:</label>
+                        <input id="account-edit-password" type="password" placeholder="">
+                    </div>
+                </form>
+                <div style="display:grid; grid-template-columns: 50% 50%; grid-column-gap: 10px;">
+                    <button class="accountSave" id="save">Save</button>
+                    <button class="accountCancel" id="canceledit">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../javascript/database.js"></script>
+    <script src="../../../javascript/login.js"></script>
+    <script src="../../../javascript/nav.js"></script>
+    <script src="../../../javascript/teacher/teacher.js"></script>
+    <script src="../../../javascript/admin/accounts.js"></script>
+</body>
 </html>

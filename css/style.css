@@ -1310,6 +1310,7 @@ form {
   background:rgb(46, 51, 68);
   display:grid;
   height:100%;
+  padding-bottom:10px;
 }
 .admin-center-content h2{
   align-self: center;
