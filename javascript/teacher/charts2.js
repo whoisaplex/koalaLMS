@@ -3,21 +3,21 @@
     var myDailyChart = new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['Courses'],
+        labels: [' '],
         datasets: [{
             label: 'Javascript',
             data: [9],
-            backgroundColor: '#e44c27'
+            backgroundColor: '#f1e15a'
         },
         {
             label: 'HTML',
             data: [6],
-            backgroundColor: '#563d7b'
+            backgroundColor: '#e44c27'
         },
         {
             label: 'CSS',
             data: [7],
-            backgroundColor: '#f1e15a'
+            backgroundColor: '#563d7b'
         }
 
         ]
