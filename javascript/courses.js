@@ -3,8 +3,9 @@ let page = path.split("/").pop();
 page = page.replace(/[.].*/, "");
 page = page.charAt(0).toUpperCase() + page.slice(1);
 
+//Display Courses information
 for(let i = 0; i < students.length; i++){
-  if(students[i].username === 'alexander'){
+  if(students[i].username === window.sessionStorage.getItem('userName')){
   for(let z = 0; z < 1; z++){
       for(let x = 0; x < students[i].all_courses[0].ongoing.length; x++){
         if(students[i].all_courses[0].ongoing[x].name === page){

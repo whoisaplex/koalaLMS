@@ -1,7 +1,7 @@
 let pathCourses = window.location.pathname;
 let pageCourses = pathCourses.split("/").pop();
 pageCourses = pageCourses.replace(/[.].*/, "");
-document.getElementById('teacherCourseName').innerHTML = pageCourses;
+document.getElementById('teacherCourseName').innerHTML = 'Add Courses';
 
 updateClass();
 document.getElementById('createClassInput').addEventListener('keypress', function(e){

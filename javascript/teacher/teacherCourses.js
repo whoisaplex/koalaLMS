@@ -2,6 +2,7 @@ let pathCourses = window.location.pathname;
 let pageCourses = path.split("/").pop();
 pageCourses = pageCourses.replace(/[.].*/, "");
 document.getElementById('teacherCourseName').innerHTML = pageCourses;
+//Check if 'Enter' button is pressed
 document.getElementById('teacherAddGroup').addEventListener('keypress', function(e){
   let key = e.which || e.keyCode;
   if(key === 13){
@@ -16,7 +17,7 @@ document.getElementById('teacherAddGroup').addEventListener('keypress', function
     document.getElementById('teacherButtonAdd').style.display = 'block';
   }
 });
-
+//Display assignments and examinations
 for(let x = 0; x < teachers.length; x++){
   for(let z = 0; z < teachers[x].courses.length; z++){
     if(teachers[x].courses[z].name === pageCourses){
@@ -39,6 +40,7 @@ for(let x = 0; x < teachers.length; x++){
     }
   }
 }
+//Fix navigation border to display right page
 const pTag = document.getElementsByTagName('p');
 for(let i = 0; i < pTag.length; i++){
   if(pTag[i].innerHTML.replace(/[\<].*[\>]/, "") === pageCourses){
@@ -46,7 +48,7 @@ for(let i = 0; i < pTag.length; i++){
     pTag[i].style.borderRight = 'solid 3px orange';
     pTag[i].parentNode.parentNode.parentNode.children[0].style.display = 'block';
   }else{
-    //console.log(pTag[i].innerHTML);
+
   }
 }
 
@@ -135,7 +137,6 @@ function drag(ev){
 }
 function allowDrop(ev) {
     ev.preventDefault();
-    console.log('hello');
 }
 
 function drop(ev) {
@@ -154,13 +155,13 @@ function toggleGroupAssignment(current){
       //Hide group
       document.getElementById('groupShow').style.display = 'none';
       for(let i = 0; i < current.parentNode.children.length; i++){
-        console.log(current.parentNode.children[i].id = 'deselected');
+        current.parentNode.children[i].id = 'deselected';
       }
     }else{
       //show groups
       document.getElementById('groupShow').style.display = 'grid';
       for(let i = 0; i < current.parentNode.children.length; i++){
-        console.log(current.parentNode.children[i].id = 'deselected');
+        current.parentNode.children[i].id = 'deselected';
       }
     }
       current.id = '';

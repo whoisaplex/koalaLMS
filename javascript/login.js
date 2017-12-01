@@ -10,7 +10,7 @@ let modal = document.getElementById('userRegistration');
 
 // When the user clicks anywhere outside of the modal, close it
 document.onclick = function(event) {
-   
+
     if (event.target.className == "modal") {
        event.target.style.display = "none";
     }
@@ -24,13 +24,14 @@ function populateStorage(loginUserName) {
 }
 
 function loginFunction(){
-    
+
     let loginUserName    = document.getElementById("login-userName").value;
     let loginPsw         = document.getElementById("login-psw").value;
    //loop through students
     for(let i=0; i< students.length; i++){
        if(students[i].username === loginUserName && students[i].password === loginPsw ){
             sessionStorage.setItem('loginName', JSON.stringify(userName));
+            sessionStorage.setItem('full_name', students[i].full_name);
            if(populateStorage(loginUserName)){
                location.assign(studentUrl);
                $('#login-name-display').append("Logged is as "+loginUserName);
@@ -44,6 +45,7 @@ function loginFunction(){
            for(let y=0; y< teachers.length; y++){
               if(teachers[y].username === loginUserName && teachers[y].password === loginPsw ){
                 sessionStorage.setItem('loginName', JSON.stringify(userName));
+                sessionStorage.setItem('full_name', teachers[y].full_name);
                 if(populateStorage(loginUserName)){
                  location.assign(teacherUrl);
                  $('#login-name-display').append("Logged is as "+loginUserName);
@@ -57,6 +59,7 @@ function loginFunction(){
               for(let z=0; z < admins.length; z++){
                 if(admins[z].username === loginUserName && admins[z].password === loginPsw){
                   sessionStorage.setItem('loginName', JSON.stringify(userName));
+                  sessionStorage.setItem('full_name', admins[z].full_name);
                   if(populateStorage(loginUserName)){
                   location.assign(adminUrl);
                   $('#login-name-display').append("Logged is as "+loginUserName);
@@ -68,29 +71,29 @@ function loginFunction(){
                 }
                   else {
                     document.getElementById('login-error').innerHTML = "<span class='login-error info-alert warning-info-alert'>User Name / Password is not valid</span>";
-                  }    
+                  }
              }
             }
           }
         }
       }
-    } 
+    }
 
- function hideLoginOption() {     
+ function hideLoginOption() {
      if( sessionStorage.getItem('logedInStatus') === 'YES'){
           $('#login-name-display').append("Logged is as "+sessionStorage.getItem('userName'));
           document.getElementById('logout-btn').style.display='block';
           document.getElementById('register-btn').style.display='none';
           document.getElementById('login-btn').style.display='none';
-          document.getElementById('userLogin').style.display='none';   
+          document.getElementById('userLogin').style.display='none';
      }
-            
+
 
   }
 
 
 
-       
+
 
 function logOutUser(){
     sessionStorage.clear();

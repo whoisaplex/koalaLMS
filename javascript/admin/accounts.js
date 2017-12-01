@@ -85,7 +85,7 @@ addInfoIcon.setAttribute('class', 'fa fa-pencil-square-o')
 const addRemoveIcon = document.createElement("i");
 addRemoveIcon.setAttribute('class', 'fa fa-trash-o')
 // add new teacher
-if(document.getElementsByName('privilege')[1].checked && firstName != "" && lastName != ""){
+if(document.getElementsByName('privilege')[0].checked && firstName != "" && lastName != ""){
 	 	let first = document.getElementById('teacherbox').appendChild(d).appendChild(div).appendChild(p);
 		first.setAttribute('class','adminAccountName')
 		div.setAttribute('data-value1', fullName)
@@ -110,7 +110,7 @@ if(document.getElementsByName('privilege')[1].checked && firstName != "" && last
 		document.getElementById('account-password').value = "";
 	}
 	//add new student
-	else if(document.getElementsByName('privilege')[2].checked && firstName != "" && lastName != ""){
+	else if(document.getElementsByName('privilege')[1].checked && firstName != "" && lastName != ""){
 	 	let first = document.getElementById('studentbox').appendChild(d).appendChild(div).appendChild(p);
 		first.setAttribute('class','adminAccountName')
 		div.setAttribute('data-value1', fullName)

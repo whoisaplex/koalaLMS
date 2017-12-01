@@ -76,6 +76,7 @@
   grid-template-columns:33.3% auto auto;
   grid-column-start: 2;
   grid-gap:10px;
+  height: 72%;
 }
 .grid-4-box{
   display:grid;
@@ -667,7 +668,7 @@ textarea {
   font-weight: 700;
   text-align: center;
 }
-#evaluate-scale-circle-5 {
+#evaluate-scale-circle-5, #evaluate-scale-circle-week-5 {
   margin-right: 0;
 }
 .small-box h4 {
@@ -677,7 +678,7 @@ textarea {
 #currentPageHeader {
   display: none;
 }
-#form-description-title {
+.form-description-title {
   text-align: center;
   padding-bottom: 5px;
 }
@@ -712,66 +713,95 @@ textarea {
 .student-navbar {
   z-index: 3;
 }
+
+#daily-evaluation-dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: none;
+}
+#evaluation-dropdown-grid {
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-items: center;
+}
+.daily-evaluation-button {
+  border: none;
+  background-color: #006ABF;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 5px;
+  margin: 10px;
+  height: 30px;
+  border-bottom: none;
+}
+
 .feedback {
   z-index: 2;
-  transform: translateX(49px);
-  width: 0;
+  width: 100%;
   height: 98%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr ;
+  grid-template-columns: 33.3% 33% 33.3%;
   margin-bottom: 2vh;
-  position: absolute;
+}
+.feedback #lectureFeedback {
+  justify-self: end;
+}
+.feedback #websiteFeedback {
+  justify-self: center;
 }
 .feedback-button {
   background-color: green;
-  width: 36px;
-  height: 36px;
+  width: 60px;
+  height: 60px;
   border-radius: 10vw;
   float: left;
   margin: 0.5vw;
-  margin-left: 8px;
 }
 .eyeLeft {
   position: absolute;
-  transform: translate(6px, 10px);
+  transform: translate(14px, 15px);
   background-color: black;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 2vw;
 }
 .eyeRight {
   position: absolute;
-  transform: translate(20px, 10px);
+  transform: translate(34px, 15px);
   background-color: black;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 2vw;
 }
 .mouth {
   position: absolute;
   transform: translate(1.7vw, 0.25vh);
   height: 23px;
-  width: 25px;
+  width: 38px;
   border-bottom: 3px solid #222;
   border-radius: 100%
 }
 #mouth-lecture {
-  transform: translate(6px, 21px) rotateX(180deg);
+  transform: translate(11px, 32px) rotateX(180deg);
   border-radius: 100%;
 }
 #lectureFeedback{
   background-color: red;
 }
 #mouth-website {
-  transform: translate(6px, 1px) rotateX(0deg);
+  transform: translate(11px, 13px) rotateX(0deg);
   border-radius: 0;
 }
 #websiteFeedback{
   background-color: yellow;
 }
 #mouth-facilities {
-  transform: translate(6px, 5px) rotateX(0);
+  transform: translate(11px, 20px) rotateX(0);
   border-radius: 100%;
 }
 #facilitiesFeedback{
@@ -800,6 +830,18 @@ textarea {
   width: calc(98% - 200px);
   left: 208px;
   top: 50px;
+}
+#evaluation-dropdown-error {
+  width: 100%;
+  height: 40px;
+  background: red;
+}
+#evaluation-dropdown-error h3{
+  padding: 0;
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  color: white;
 }
 .form-description {
   font-size: 13px;
@@ -912,7 +954,13 @@ textarea {
   margin:0px;
   cursor:pointer;
 }
-.teacherAssignmentTrash, .adminAccountDelete{
+.adminNewsEdit{
+  font-size:21px;
+  padding:0px;
+  margin:0px;
+  cursor:pointer;
+}
+.teacherAssignmentTrash, .adminAccountDelete, .adminNewsTrash{
   color:#c12424;
   font-size:20px;
   padding:0px;
@@ -1027,6 +1075,23 @@ h2.teacherEvaluationsText {
   cursor:pointer;
   padding:5px;
   margin:5px;
+}
+.accountSave{
+  color:white;
+  background: #4da702;
+  border:none;
+  border-radius: 3px;
+  cursor:pointer;
+  margin-left: 5px;
+}
+.accountCancel { 
+  color:white;
+  background:#d00000;
+  border:none;
+  border-radius: 3px;
+  cursor:pointer;
+  margin-right:16px;
+
 }
 textarea{
   resize: vertical;
@@ -1149,7 +1214,7 @@ select{
 }
 .teacherStudentGroup{
   display:grid;
-  grid-template-columns: auto 20px;
+  grid-template-columns: auto;
   padding:1px;
   color: white;
   margin: 2px 10px;
@@ -1237,6 +1302,7 @@ form {
     border-top: solid 1px grey;
     border-bottom: solid 1px grey;
     padding: 5px;
+    margin-top: -1px;
 }
 .admin-center-content{
   justify-self:center;
@@ -1244,6 +1310,10 @@ form {
   background:rgb(46, 51, 68);
   display:grid;
   height:100%;
+  padding-bottom:10px;
+}
+.admin-center-content h2{
+  align-self: center;
 }
 
 
@@ -1386,8 +1456,11 @@ form {
   font-weight: bold;
   cursor:pointer;
   margin-top:10px;
-  padding:5px 5px;
+  padding:5px;
   border-bottom:solid 1px white;
+  display: grid;
+  grid-template-columns: auto 20px 20px;
+  grid-column-gap: 15px;
 }
 .news-input{
   margin-right: 10px;
@@ -1406,6 +1479,10 @@ form {
 .titleNews {
   display: inline;
   margin-left: 3px;
+  margin: 0;
+}
+.textNews, .authorNews {
+  display: none;
 }
 
 @media only screen and (max-width:769px){
@@ -1607,9 +1684,6 @@ img {
     width: calc(100vw - 30px);
     left: 2px;
   }
-  .feedback {
-    transform: translateX(-137px);
-  }
   @keyframes slide-in{
     from {transform: translateX(-137px);}
     to{transform: translateX(80px);}
@@ -1618,11 +1692,13 @@ img {
     0% {transform: translateX(80px);}
     100% {transform: translateX(-270px);}
   }
-  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown{
+  #teacher-assignment-dropdown-grid, #teacher-examination-dropdown-grid, #teacher-delete-dropdown-grid, #teacher-setGrade-dropdown-grid, #admin-evaluation-dropdown-grid, #admin-edit-evaluation-dropdown, #admin-account-edit-grid, #evaluation-dropdown-grid{
     grid-template-columns: 0px auto;
     margin-top:75px;
   }
-
+  .admin-center-content{
+    width: 90%;
+  } 
 }
 
 

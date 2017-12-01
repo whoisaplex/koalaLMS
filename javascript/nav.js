@@ -1,15 +1,10 @@
 let currentPage = "Home";
 let mobileNavActive = false;
 let logged_in_user = window.sessionStorage.getItem('userName');
+let pages = ['Home', 'Courses','Upcoming', 'Grades'];
 
-/*let num;
-for(let x = 0; x < users.length; x++){
-  if(users[x].username === sessionStorage.getItem('userName')){
-    num = x;
-  }
-}
-document.getElementById('user-Name').innerHTML = users[num].full_name;
-*/
+document.getElementById('user-Name').innerHTML = sessionStorage.getItem('full_name');
+
 
 function toggleCourses(){
   if(document.getElementById('nav-courses').style.display === 'none'){
@@ -43,23 +38,6 @@ function toggleUpcoming(){
     document.getElementById('nav-upcoming-courses-text').style.background = 'none';
   }
 }
-
-
-
-
-
-let pages = ['Home', 'Courses','Upcoming', 'Grades'];
-for(let countPages = 0; countPages < pages.length; countPages++){
-  if(pages[countPages] === currentPage){
-    //document.getElementById(currentPage).style.display = 'grid';
-    //document.getElementById('nav-menu').childNodes[1].style.background = '#2e3344';
-    //document.getElementById('nav-menu').childNodes[1].style.borderRight = 'solid 4px orange';
-  }else{
-    //document.getElementById(pages[countPages]).style.display = 'none';
-  }
-}
-
-
 
 function changeContent(currentNavP){
   document.getElementById('Home-mobile').style.display = 'none';
