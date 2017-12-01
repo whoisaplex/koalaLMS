@@ -954,7 +954,13 @@ textarea {
   margin:0px;
   cursor:pointer;
 }
-.teacherAssignmentTrash, .adminAccountDelete{
+.adminNewsEdit{
+  font-size:21px;
+  padding:0px;
+  margin:0px;
+  cursor:pointer;
+}
+.teacherAssignmentTrash, .adminAccountDelete, .adminNewsTrash{
   color:#c12424;
   font-size:20px;
   padding:0px;
@@ -1449,8 +1455,11 @@ form {
   font-weight: bold;
   cursor:pointer;
   margin-top:10px;
-  padding:5px 5px;
+  padding:5px;
   border-bottom:solid 1px white;
+  display: grid;
+  grid-template-columns: auto 20px 20px;
+  grid-column-gap: 15px;
 }
 .news-input{
   margin-right: 10px;
@@ -1469,6 +1478,10 @@ form {
 .titleNews {
   display: inline;
   margin-left: 3px;
+  margin: 0;
+}
+.textNews, .authorNews {
+  display: none;
 }
 
 @media only screen and (max-width:769px){
