@@ -1472,7 +1472,7 @@ form {
 #news-text-input {
   margin: 0;
   margin-top: 10px;
-  border-width: 2px solid;
+  border-width: 2px;
   border-color: #AFAFAC;
   width: 100%;
 }
