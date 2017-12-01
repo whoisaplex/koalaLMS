@@ -53,6 +53,7 @@ Password: 123
 * CSS
 * Javascript
 * Some parts contain Jquery
+* Chart.js - for graphs
 
 ## Contributing
 
